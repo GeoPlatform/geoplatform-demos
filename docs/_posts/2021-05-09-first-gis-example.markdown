@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "First JSFiddle example"
+title:  "JSFiddle example"
 date:   2021-05-09 13:50:55 -0600
+post_url: /jsfiddle-example-steps.html
 --- 
 
-This [JSFiddle example](/fiddle.html) uses an [OpenLayers](https://openlayers.org/) JSFiddle as a starting point and modifies it to use a zip code tile server.
+This demo uses a JSFiddle to create a new map and shows how to embed it in a web page, and then how to bring the map into a Jekyll framework.
