@@ -1,0 +1,36 @@
+[{
+    "date": "2021-05-09",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/jsfiddle-example-logo.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/jsfiddle-example-steps.html",
+    "name": "JSFiddle Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "JSFiddle"]
+}, {
+    "date": "2021-05-10",
+    "img": "https://geoplatform.github.io/geoplatform-demos/qgis-example.html",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/qgis-example.html",
+    "name": "QGIS Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "QGIS"]
+}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
