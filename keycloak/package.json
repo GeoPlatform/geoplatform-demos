@@ -1,0 +1,40 @@
+{
+  "name": "keycloak",
+  "version": "1.0.0",
+  "description": "keycloak setup for geoplatform, utilized for testing integration with legacy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "dependencies": "npm list --depth=0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GeoPlatform/geoplatform-demos.git"
+  },
+  "keywords": [
+    "legacy",
+    "geoplatform",
+    "integration",
+    "testing",
+    "simplesamlphp",
+    "simplesaml",
+    "saml",
+    "oauth",
+    "openid",
+    "OIDC"
+  ],
+  "author": "Kaska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoPlatform/geoplatform-demos/issues"
+  },
+  "homepage": "https://github.com/GeoPlatform/geoplatform-demos#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "keycloak-admin": "^1.14.17",
+    "nodemon": "^2.0.7",
+    "openid-client": "^4.7.3"
+  }
+}
