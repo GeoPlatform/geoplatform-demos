@@ -42,6 +42,10 @@ module.exports = {
         link: '/config/'
       },
       {
+        text: 'TechNotes',
+        link: '/technotes/'
+      },
+      {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
       }
@@ -54,9 +58,24 @@ module.exports = {
           children: [
             '',
             'using-vue',
+            'highlighting-authorization',
+            'testing-authorization'
           ]
         }
       ],
+    '/technotes/': [
+        {
+          title: 'TechNotes',
+          collapsable: false,
+          children: [
+            '',
+            'findings',
+            'hypotheses',
+            'suggestions',
+            'testing-procedures'
+          ]
+        }
+      ]
     }
   },
 
