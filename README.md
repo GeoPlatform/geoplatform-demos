@@ -1,9 +1,11 @@
 # geoplatform-demos
-Used for various code snippets and demos of GeoPlatform
+This repository is used for various code snippets and GeoPlatform demos.
+
+[Geoplatform Demos Home Page](https://geoplatform.github.io/geoplatform-demos)
 
 ## Demos Website
-This website [geoplatform-demos](https://geoplatform.github.io/geoplatform-demos) 
-is run out of the docs folder of the gh-pages branch of this repo. It is built using [GitHub Pages](https://pages.github.com/)
+This [geoplatform-demos](https://geoplatform.github.io/geoplatform-demos) 
+is run out of the docs folder of the gh-pages branch of this repo and is built using [GitHub Pages](https://pages.github.com/)
 and [Jekyll](https://jekyllrb.com/).
 
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) 
