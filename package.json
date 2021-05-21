@@ -1,0 +1,31 @@
+{
+  "name": "geoplatform-demos",
+  "version": "1.0.0",
+  "description": "demos for geoplatform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps": "npm list --depth=0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoPlatform/geoplatform-demos.git"
+  },
+  "keywords": [
+    "geoplatform",
+    "demos",
+    "doks"
+  ],
+  "author": "Chris MacDermaid, Kaska Miskolczi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoPlatform/geoplatform-demos/issues"
+  },
+  "homepage": "https://github.com/GeoPlatform/geoplatform-demos#readme",
+  "devDependencies": {
+    "npm-check": "^5.9.2"
+  },
+  "dependencies": {
+    "@hyas/doks": "^0.2.3"
+  }
+}
