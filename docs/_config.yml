@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: GIS Example Site
+title: Geoplatform Demo Site
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This site is for testing GIS examples.
+  This site is for testing demos.
 baseurl: "/geoplatform-demos" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
