@@ -34,8 +34,8 @@ plugins:
 
 #Jekyll theme settings
 show_excerpts: true
-header_pages:
-  - about.md 
+header_pages: 
+  - gp-demos.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
