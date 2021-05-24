@@ -68,12 +68,24 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'testing-procedures',
-            'findings',
+            'testing-procedures/hypothesis-1',
+            'testing-procedures/hypothesis-2',
+            'testing-procedures/hypothesis-3',
             'suggestions'
           ]
         }
-      ]
+      ],
+      '/findings/': [
+        {
+          title: 'Research & Development Findings Per Hypothesis',
+          collapsable: false,
+          children: [
+            'findings-hypothesis-1',
+            'findings-hypothesis-2',
+            'findings-hypothesis-3',
+          ]
+        }
+      ],
     }
   },
 
