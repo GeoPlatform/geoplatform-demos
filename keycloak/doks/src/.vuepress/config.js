@@ -59,7 +59,8 @@ module.exports = {
             '',
             'using-vue',
             'highlighting-authorization',
-            'testing-authorization'
+            'testing-authorization',
+            'resources-cited'
           ]
         }
       ],
