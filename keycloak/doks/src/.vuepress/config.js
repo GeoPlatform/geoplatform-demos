@@ -38,12 +38,12 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
         text: 'TechNotes',
         link: '/technotes/'
+      },
+      {
+        text: 'Config',
+        link: '/config/'
       },
       {
         text: 'VuePress',
@@ -57,23 +57,20 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
             'highlighting-authorization',
-            'testing-authorization',
             'resources-cited'
           ]
         }
       ],
     '/technotes/': [
         {
-          title: 'TechNotes',
+          title: 'Technical Notes',
           collapsable: false,
           children: [
             '',
+            'testing-procedures',
             'findings',
-            'hypotheses',
-            'suggestions',
-            'testing-procedures'
+            'suggestions'
           ]
         }
       ]

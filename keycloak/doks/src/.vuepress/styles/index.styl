@@ -5,7 +5,8 @@
  */
 
 .home .hero img
-  max-width 450px!important
+  max-width 450px!important;
+  float: none;
 
 h2 
   color: $mintMist;
@@ -34,9 +35,17 @@ img:nth-child(even)
     color: $lavendar;
     font-style: italic;
 
-.next a:hover
+.prev a
+    color: $purple;
+    font-style: italic;
+
+.prev a:hover, .next a:hover
     text-decoration: underline;
 
 h4, th 
   color: $perriwinkle;
   text-decoration: underline;
+
+span.emphasis 
+  text-decoration: underline;
+  background-color: $canary;

@@ -2,17 +2,19 @@
 
 There's a plethora of information out there regarding authentication, but it's almost too much to consume. So our goal here, is to provide you with just enough of what you need to know, in order to follow this demo & guide. Feel to re-reference as often as needed.
 
-Let's get started! :)
+### Let's get started! 🤓
+
+_**Disclaimer:** You do not have to read this completely, but this guide has been written to build upon foundational topics, that help make the hypotheses & findings more logically clear._
 
 ## Authorization Protocols
-A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
+Protocols are essentially standards of performing a task/objective and that's the best place to start when discussing authentication & authorization, because there are quite a few relevant differences within the space we're covering, and though understanding the differences deeply is neither germane to the information presented in the findings, nor the setup steps covered in the local lab configuration, understanding _something_ about these differences, is **preeminent**.
 
-![Placeholder](https://via.placeholder.com/780x300)     
+![Placeholder - Split Screen, Stamped Paper holding to screen vs Badge or Fingerprint to Screen Spaceship](../Scene_Intro.svg)     
 
 #### Security Assertion Markup Language (SAML)
-Security Assertion Markup Language (SAML) is an open standard that allows identity providers (IdP) to pass authorization credentials to service providers (SP). It’s much simpler to manage one login per user than it is to manage separate logins to email, customer relationship management (CRM) software, Active Directory, etc.
+**Security Assertion Markup Language (SAML)** is an open standard that allows identity providers **(IdPs)** to pass authorization credentials to service providers **(SPs)**. It’s much simpler to manage one login per user than it is to manage separate logins to email, customer relationship management (CRM) software, Active Directory, etc.
 
-SAML transactions use Extensible Markup Language (XML) for standardized communications between the identity provider and service providers. SAML is the link between the authentication of a user’s identity and the authorization to use a service. 
+**SAML** transactions use `Extensible Markup Language (XML)` for standardized communications between the **IdPs** and **SPs**. **SAML** is the link between the <span class="emphasis">authentication of a user’s identity</span> and the <span class="emphasis">authorization to use a service</span>. 
 
 _**So in a nutshell:**_ SAML enables Single-Sign On (SSO), a term that means users can log in once, and those same credentials can be reused to log into other service providers.
 
@@ -22,9 +24,11 @@ SimpleSAML-PHP is a package put out via [UNINETT](http://uninett.no/) and it's e
 _It can be provisioned to work with other standards like CAS and OpenID, even WS-Federation, but that's not germane to our discussion here. If you'd like to learn more, you can review the [SimpleSAML-PHP docs](https://simplesamlphp.org/) another time._
 
 #### OAuth 2.0
-The main differentiator between these three players is that OAuth 2.0 is a framework that controls authorization to a protected resource such as an application or a set of files, while OpenID Connect and SAML are both industry standards for federated authentication. _GitHub and Google are two OAuth provider examples, you might use to log into other internet sites._
+The main differentiator between these three players is that <span class="emphasis">OAuth 2.0 is a framework that controls **authorization** to a protected resource</span> such as an application or a set of files, <span class="emphasis">while OpenID Connect and SAML are both industry standards for **federated authentication**</span>. 
 
-_**So in a nutshell:**_  OAuth 2.0 is used in fundamentally different situations than the other two standards (examples of which can be seen below), and can be used simultaneously with either OpenID Connect or SAML.
+_GitHub and Google are two OAuth provider examples, you might use to log into other internet sites._
+
+_**So in a nutshell:**_ `OAuth 2.0` is used in **fundamentally different situations** and may require special integrations to work properly with `SAML`, but is ideally a necessary part of a properly setup `OpenID Connect (OIDC)` instance.
 
 #### OpenID Connect (OIDC)
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból. 
@@ -44,7 +48,7 @@ _Though both OpenID and SAML deal with logins, they have different strengths and
 ## Configuration Endpoints 
 Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürköp által talány plusz öntésöknek cick se többese se dözése a cigáknál. Ezt akkor telődte, mikor hans tázta, hogy kiket hemlevődt ki a síelés vártinda. A a sányos maznan tetetelmet közöttes volt tögerekednie, mivel a teredés pülés ezt tekedte. (Olyan virkákról volt duttyó, akik amúgy is már mázásban voltak.) 
 
-![Placeholder](https://via.placeholder.com/780x300)     
+![Placeholder - Guy Choosing Satelitte vs Rocket vs Rover](https://via.placeholder.com/780x300)     
 
 ### Service Provider
 A service provider is a federation partner that provides services to the end user. Typically, service providers do not authenticate users but instead request authentication decisions from an identity provider. Service providers rely on identity providers to assert the identity of a user, and typically certain attributes about the user that are managed by the identity provider. Service providers may also maintain a local account for the user along with attributes that are unique to their service.
@@ -74,7 +78,7 @@ Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürkö
 ## Token Types
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból. 
 
-![Placeholder](https://via.placeholder.com/780x300)     
+![Placeholder - Guy in Space with Commets and Token Types on Them Flying Past](https://via.placeholder.com/780x300)     
 
 ### Access Token
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
@@ -86,3 +90,10 @@ A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domá
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból. 
 
 Each page generated by VuePress has its own pre-rendered static HTML, providing great loading performance and is SEO-friendly. Once the page is loaded, however, Vue takes over the static content and turns it into a full Single-Page Application (SPA). Additional pages are fetched on demand as the user navigates around the site.
+
+
+### Final Takeaways
+1. Ordinarily SAML and OpenID don't exactly jive well, due to the natural limitations of the requirements and cross-talk between the two standards.
+2. SimpleSAML-PHP _can_ or _could have been_ setup in a manner _hypothetically_, that _would_ allow for the successful communication between the Legacy auth platforms and the newer Keycloak instances, **however:**
+    * SimpleSAML-PHP was not setup where OpenID, and the other necessary parameters in the metadata would be populated for a successful authentication with Keycloak AND
+    * Even if we performed a "janky" bandaid method, of forcing those parameters with hard-coded identities, _(which is of course anti-pattern 101)_, we would still be unable to successfully authenticate against the Keycloak instances, due to the nested parameters that are are either dynamically generated, directly dependent upon user credentials _(hashed or otherwise)_, and deeply nested within another cookie _(causing timeouts, authentication mismatches, etc.)_
