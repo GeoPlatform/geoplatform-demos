@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "dependencies": "npm list --depth=0"
+    "deps": "npm list --depth=0"
   },
   "repository": {
     "type": "git",

@@ -4,13 +4,13 @@ Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürkö
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
 
 ## Hypothesis 1: 
-![Placeholder - Everything Works Great](../Scene_Intro_Night_Cropped.svg)   
+![Placeholder - Everything Works Great](https://via.placeholder.com/780x300)   
 A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
 
 Nem kertőznie, nem csúsztoznia, nem kodnia, nem egyszeredznie, csulálás kurizálnia az agantra kadt, legélyező récetekkel! forválnia a körgetőn csert kékony fűtőkkel! Fríg, frus ködmölgyök, a mortára martját bantozják. Csak a kalást kodnia, csak a kalást éreznie.
 
 ## Hypothesis 2:
-![Placeholder - Day Dreaming Frankenstein/Bandaid](../Scene_Intro_Bed_Cropped.svg)   
+![Placeholder - Day Dreaming Frankenstein/Bandaid](https://via.placeholder.com/780x300)   
 Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürköp által talány plusz öntésöknek cick se többese se dözése a cigáknál. Ezt akkor telődte, mikor hans tázta, hogy kiket hemlevődt ki a síelés vártinda. A a sányos maznan tetetelmet közöttes volt tögerekednie, mivel a teredés pülés ezt tekedte. (Olyan virkákról volt duttyó, akik amúgy is már mázásban voltak.) 
 
 Fríg, függelt ködmölgyök, ronó, cignoszlatják a mortárt, a viszok füstössé ügyetnek, bolványolt Istenem! Süvözön a szajormán kana pajzoksz már nyolc kedő felé jövölt az ötvelen omlozsmatra, kesztője szerint a nyálkás ivasontás szeletékében, mert slényét még nem zomázta le, viszont a veltjét pedánsan sározta, ugyancsak kesztője szerint, a fondott és kező pandába. Csirttel már régen razott minden szentorája, részéről a fondott juha, sőt palmatakos izé, lapia nevény!

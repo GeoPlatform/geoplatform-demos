@@ -9,7 +9,7 @@ _**Disclaimer:** You do not have to read this completely, but this guide has bee
 ## Authorization Protocols
 Protocols are essentially standards of performing a task/objective and that's the best place to start when discussing authentication & authorization, because there are quite a few relevant differences within the space we're covering, and though understanding the differences deeply is neither germane to the information presented in the findings, nor the setup steps covered in the local lab configuration, understanding _something_ about these differences, is **preeminent**.
 
-![Placeholder - Split Screen, Stamped Paper holding to screen vs Badge or Fingerprint to Screen Spaceship](../Scene_Intro.svg)     
+![Placeholder - Split Screen, Stamped Paper holding to screen vs Badge or Fingerprint to Screen Spaceship](https://via.placeholder.com/780x300)     
 
 #### Security Assertion Markup Language (SAML)
 **Security Assertion Markup Language (SAML)** is an open standard that allows identity providers **(IdPs)** to pass authorization credentials to service providers **(SPs)**. It’s much simpler to manage one login per user than it is to manage separate logins to email, customer relationship management (CRM) software, Active Directory, etc.
