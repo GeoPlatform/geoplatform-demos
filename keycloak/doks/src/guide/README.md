@@ -51,21 +51,21 @@ Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürkö
 ![Placeholder - Guy Choosing Satelitte vs Rocket vs Rover](https://via.placeholder.com/780x300)     
 
 ### Service Provider
-A service provider is a federation partner that provides services to the end user. Typically, service providers do not authenticate users but instead request authentication decisions from an identity provider. Service providers rely on identity providers to assert the identity of a user, and typically certain attributes about the user that are managed by the identity provider. Service providers may also maintain a local account for the user along with attributes that are unique to their service.
+A service provider is a federation partner that provides services to the end user. Typically, <span class="emphasis">service providers do not authenticate users</span> but instead <u>**request authentication decisions from an identity provider**</u>. **Service providers rely on identity providers to assert the identity of a user**, and typically certain attributes about the user that are managed by the identity provider. Service providers may also maintain a local account for the user <u>_along with attributes that are unique to their service_</u>.
 
 Service providers can maintain a local account for the user, which can be referenced by an identifier for the user.
 
 **Some federation protocols use different terminology to refer to the service provider role:**
-* **Relying party**
-    * The Information Card protocol specification uses the term Relying Party to describe the service provider role. When you configure the Information Card federation, using the Tivoli® Federated Identity Manager wizard, you will choose the Service Provider role for your Relying Party.
-* **Consumer**
-    * The OpenID protocol specification uses the term Consumer to describe the service provider role. When you configure the OpenID, using the Tivoli Federated Identity Manager wizard, you will choose the Service Provider role for your Consumer.
+* **Relying Party**
+    * The **Information Card** protocol specification uses the term <span class="emphasis">Relying Party</span> to describe the service provider role. When you configure the Information Card federation, you will choose the Service Provider role for your Relying Party.
+* **Consumer/Client**
+    * The **OpenID** protocol specification uses the term <span class="emphasis">Consumer/Client</span> to describe the service provider role. When you configure **OpenID**, you will choose the Service Provider role for your Consumer/Client.
 
 
 ### Identity Provider
-An identity provider is a federation partner that vouches for the identity of a user. The Identity Provider authenticates the user and provides an authentication token (that is, information that verifies the authenticity of the user) to the service provider. 
+<span class="emphasis">An identity provider is a federation partner that vouches for the identity of a user</span>. The Identity Provider authenticates the user and provides an **authentication token** _(that is, information that verifies the **authenticity** of the user)_ to the service provider. 
 
-The identity provider either directly authenticates the user, such as by validating a user name and password, or indirectly authenticates the user, such as by validating an assertion about the user's identity as presented by a separate identity provider. 
+The identity provider either directly authenticates the user, such as by validating a user name and password, or indirectly authenticates the user, such as by validating an **assertion** about the user's identity as presented by a **separate identity provider**. 
 
 _The identity provider is ideally there to handle the management of user identities in order to ultimately free the service provider from this responsibility._
 
