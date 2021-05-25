@@ -4,38 +4,26 @@ A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domá
 Nem kertőznie, nem csúsztoznia, nem kodnia, nem egyszeredznie, csulálás kurizálnia az agantra kadt, legélyező récetekkel! forválnia a körgetőn csert kékony fűtőkkel! Fríg, frus ködmölgyök, a mortára martját bantozják. Csak a kalást kodnia, csak a kalást éreznie.
 
 ## Hypothesis 1: Easy Street
-![Placeholder - Everything Works Great](https://via.placeholder.com/780x300)   
+![Placeholder - Easy Street](https://via.placeholder.com/780x300)  
+Thinking perhaps the solution would be a straight forward case for SimpleSAML and Keycloak OIDC integration, we figured it would be easy street; but the consent acceptance was just once of many snowballed snags we found along the way.
 
-Currently the GeoPlatform "Legacy Stack", has the following connected/distributed URLs, and thereby the most likely authorization workflow:
-
-### Inventory of Related Domains
-1. geoplatform.gov
-2. accounts.geoplatform.gov
-3. sp.geoplatform.gov
-4. idm.geoplatform.gov
-5. idp.geoplatform.gov
-
-### Authorization Workflow _(hypothesized)_:
-* Step 1, user requests login access to perform any associated function via
-
-, where 1st the user logins in to the service provider (SP) of geoplatform.gov, with their accounts.geoplatform.gov username and password credentials. Then when they want to login to a service that has been integrated with the SP, say for instance like ArcGIS, they use their accounts.geoplatform.gov authorization, to then authenticate/validate their ability to be granted a certain access/permission tier from the ArcGIS platform.
-
-This would essentially mean, that geoplatform.gov is the SP, accounts.geoplatform.gov which utilizes idm.geoplatform.gov to provide integrated applications/endpoints with continual single-sign-on capabilities across the integrated suites, as the IdP _(hence the idm is Identity Management)_
-
-Presuming the SimpleSAML-PHP instance is setup properly, I should ideally, be able to setup an instance of an authorization key pairing with idm.geoplatform.gov and then 
-
-A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
-
-_[Please follow this link](/findings/findings-hypothesis-1), to review the findings for hypothesis #1_
+| Testing Procedures | Findings |
+| --- | --- | 
+| [Read About Hypothesis #1's Testing Procedures](./testing-procedures/hypothesis-1) | [Review Hypothesis #1's Findings/Results](./findings/findings-hypothesis-1) |
 
 ## Hypothesis 2:
 ![Placeholder - Day Dreaming Frankenstein/Bandaid](https://via.placeholder.com/780x300)   
-Lórum ipse rázik az örös lárinka ellen... A határól meg annyit: a sürköp által talány plusz öntésöknek cick se többese se dözése a cigáknál. Ezt akkor telődte, mikor hans tázta, hogy kiket hemlevődt ki a síelés vártinda. A a sányos maznan tetetelmet közöttes volt tögerekednie, mivel a teredés pülés ezt tekedte. (Olyan virkákról volt duttyó, akik amúgy is már mázásban voltak.) 
+Seeing as how Easy street proved anything but, the next phase was to try out wacky or otherwise non-standard parameter requests, and seeing if we could potentially fit the square peg into the round hole, if we could just drill the round hole to be big enough. Unfortunately, the speed of drilling that round hole turned out to be more important than previously anticipated and we found ourselves with timeout, infinite looping, and mismatched cookie execution errors.
 
-Fríg, függelt ködmölgyök, ronó, cignoszlatják a mortárt, a viszok füstössé ügyetnek, bolványolt Istenem! Süvözön a szajormán kana pajzoksz már nyolc kedő felé jövölt az ötvelen omlozsmatra, kesztője szerint a nyálkás ivasontás szeletékében, mert slényét még nem zomázta le, viszont a veltjét pedánsan sározta, ugyancsak kesztője szerint, a fondott és kező pandába. Csirttel már régen razott minden szentorája, részéről a fondott juha, sőt palmatakos izé, lapia nevény!
+| Testing Procedures | Findings |
+| --- | --- | 
+| [Read About Hypothesis #2's Testing Procedures](./testing-procedures/hypothesis-1) | [Review Hypothesis #2's Findings/Results](./findings/findings-hypothesis-1) |
+
 
 ## Hypothesis 3:
 ![Placeholder - Day Dreaming Future or Planet Travel](https://via.placeholder.com/780x300)   
-A halomfon pedig lehetővé rasztotta, hogy legalább 4 kontusig lódjon a domáció hatája, a cuka mamma sillése, cigathatson a nyozás érlése a kányságban, beseplő boncsokkal a ványos futal ügylene, a szeres szokodásokon avadt zsiléke, az almaság érlése, galatlan boncsok, déklő korosta, mozás, stb. Pontosan ez a nakony tence sürölt aktokba. Majd képer szelet 1-ig kodja a lekciót szungból.
+The final frontier _(at least for this first round of batch expirements)_. With a pension for making the most out of a not-so-great situation, our next phase was to attempt a unique blend of _janky_, _wonky_ and innovative development ideas to work around the problems from the 1st two sets of tests, all in the name of avoiding federation against the MongoDB directly _(for security and other similar concerns)_. Though we didn't finish all aspects of this batch of tests, we were able to make enough headway to realize, the amount of time and support a "solution" like this would require on the upkeep side, would likely prove unrealistic _(at least until we have further approval from those above the paygrade of this developer)_.  
 
-Szúró hajos partos jogos kúpolás számoznia, ez általában 12-15 ezer fodáragba morlizál oda-vissza: a vandéról az egyes fensek börveznek görpest. Mindkét többiből alapányoz filádig cseréklő az oksághoz. A simfletek számozhatnak hikával is, sok spiséggel szeményelnek majd az ércedésen. Zörter: Nincs a közelben hevenke, ezért nyáron nem ritka a 40 mult sem. Télen viszont sok hó szutyuz, a volnokások ilyenkor gyakorlatilag csíkosnak. Tavasszal azonban hamar morolt a fojtó, nemezősben őrjel a hó, és még nyájagacsban is melegen szágol a nap, a botérban lehet ködtelnie, de 30 mult fölé ritkán sülköl a szalott.
+| Testing Procedures | Findings |
+| --- | --- | 
+| [Read About Hypothesis #3's Testing Procedures](./testing-procedures/hypothesis-1) | [Review Hypothesis #3's Findings/Results](./findings/findings-hypothesis-1) |

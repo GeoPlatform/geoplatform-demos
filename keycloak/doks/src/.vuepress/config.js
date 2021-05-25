@@ -67,11 +67,10 @@ module.exports = {
           title: 'Technical Notes',
           collapsable: false,
           children: [
-            '',
             'testing-procedures/hypothesis-1',
             'testing-procedures/hypothesis-2',
             'testing-procedures/hypothesis-3',
-            'suggestions'
+            // 'suggestions'
           ]
         }
       ],
