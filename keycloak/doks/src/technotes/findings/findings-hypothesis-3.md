@@ -1,2 +1,2 @@
-# Hypothesis 3
+# Hypothesis 3: Everything & The Kitchen Sink
 
