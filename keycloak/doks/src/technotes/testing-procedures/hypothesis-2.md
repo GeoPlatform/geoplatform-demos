@@ -62,19 +62,19 @@ Mind you, `https://sp.geoplatform.com/simplesamlidp/sharing/rest/generateToken` 
 * **Step 4:** create user credentials on the Vanguard SSO side, with basic authentication
 * **Step 5:** integrate GitHub OAuth credentials with the Vanguard SSO application
 * **Step 6:** create a GitHub identity provider in Keycloak, and create a Vanguard SSO client, whereby the Vanguard SSO is the service providing endpoint and GitHub is the initial provider of authentication
-* **Step 7:** integrate Vanguard SSO with GitHub & then do the same with Keycloak
-* **Step 8:** initialize the first end-to-end workflow for the user, by accessing the Keycloak landing point, then loggining into Keycloak with GitHub, and then logging into the Vanguard SSO application with that successful authorization from Keycloak _(scope matching where needed)_
-* **Step 9:** review data passed and mapped over across all applications and workflow instances, and then document the proposal of their crossovers in the real/dev environment for the GeoPlatform Legacy transition/migration.
-* **Step 10/BONUS:** setup authentication with ArcGIS in the Vanguard SSO application with GeoPlatform.gov as the relegator of authentication
+* **Step 7:** create an IDM/ALGOL credential set via [accounts.geoplatform.gov](https://accounts.geoplatform.gov), _(under "Manage Applications" & adding a new application endpoint)_
+* **Step 8:** utilize the IDM/ALGOL credential set into the Vanguard SSO and associated [sit-login.geoplatform.gov](https://sit-login.geoplatform.gov) Keycloak instance
+* **Step 9:** integrate Vanguard SSO with GitHub & then do the same with Keycloak
+* **Step 10:** initialize the first end-to-end workflow for the user, by accessing the Keycloak landing point, then loggining into Keycloak with GitHub, and then logging into the Vanguard SSO application with that successful authorization from Keycloak  _(scope matching where needed)_
+* **Step 11:** review data passed and mapped over across all applications and workflow instances, and then document the proposal of their crossovers in the real/dev environment for the GeoPlatform Legacy transition/migration.
+* **Step 12/BONUS:** setup authentication with ArcGIS in the Vanguard SSO application with GeoPlatform.gov as the relegator of authentication
 
-<span class="emphasis">**Results of Integration Test: Success!**</span>
+<span class="emphasis">**Results of Integration Test:&nbsp;** </span><span class="emphasis-alert">**&nbsp;Failure!&nbsp;**</span>
 
-_To review more detailed information regarding integratio test a, including the instructions on how to setup your own instance, [please visit the detailed procedure review](./config/instructions-for-test-1a)._
+_To review more detailed information regarding integratio test a, including the instructions on how to setup your own instance, [please visit the detailed procedure review](./config/instructions-for-test-2a)._
 
-**!ALERT**      
-> If we had a successful integration test, what was the problem? Why have we marked this hypothesis as failed?
+<span class="emphasis-warning">**!! ALERT**</span>      
+> What failed exactly? The process seems so straight forward, what's failing?
 
-Unfortunately, the integration test itself was performed 1st, because the developer already familiar with Keycloak, wanted to test and see if the integration itself, from the Keycloak side of things, would cause any issues, before choosing to tackle the legitimate legacy environment. You normally want to avoid testing against production as much as possible, even if you aren't touching data.
-
-Ultimately this led to a false positive, or a false sense of confidence that the current GeoPlatform Legacy setup, should be able to integrate with Keycloak serving as the IdP without many problems at all. Once the testing to confirm the traceroute for the current GeoPlatform authentication traceroute was performed, the sad truth was highlighted that this would be anything but easy street. You can see more about those details in our [final findings write-up for hypothesis #1.](../../findings/findings-hypothesis-1)
+Unfortunately, the integration test performed in the similar way as hypothesis #1, still passed without issues, BUT for the extensive additions added to this test, all instances failed 50%; meaning, we don't appear to have issues integrating SimpleSAML-PHP and Keycloak whereby Keycloak is the SP and SimpleSAML-PHP is the IdP; which is  beyond strange; but we get 100% packet-loss on SimpleSAML as the SP and Keycloak as the IdP. You can see more about those details in our [final findings write-up for hypothesis #2.](../../findings/findings-hypothesis-2)
 

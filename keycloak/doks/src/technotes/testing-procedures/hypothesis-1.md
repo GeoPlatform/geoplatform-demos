@@ -37,7 +37,7 @@ Currently the GeoPlatform "Legacy Stack", has the following connected/distribute
 
 _To review more detailed information regarding integratio test a, including the instructions on how to setup your own instance, [please visit the detailed procedure review](./config/instructions-for-test-1a)._
 
-**!ALERT**      
+<span class="emphasis-warning">**!ALERT**</span>      
 > If we had a successful integration test, what was the problem? Why have we marked this hypothesis as failed?
 
 Unfortunately, the integration test itself was performed 1st, because the developer already familiar with Keycloak, wanted to test and see if the integration itself, from the Keycloak side of things, would cause any issues, before choosing to tackle the legitimate legacy environment. You normally want to avoid testing against production as much as possible, even if you aren't touching data.
