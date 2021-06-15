@@ -1,49 +1,30 @@
 # ArcGIS Pro
 
-## ArcGIS example using a zip code tile service and WMS to add a zip code layers
+## ArcGIS example using a tile service laye and WMS to add a zip code layers
 This example goes through the steps to create a new project in ArcGIS and then add a basemap, a tile layer, and a WMS layer.
 
-This example will be using services listed on the Geoplatform [Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) metadata page
+This example will be using services listed on the Geoplatform [Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) metadata page.
 
-* Vector Tile Service: https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt
+* Geoplatform Tile Service: https://tileservice.geoplatform.gov/tile/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.png
 
 * Web Map Service: https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_Current/MapServer/WMSServer
 
+If you are new to ArcGIS Pro see: [ArcGIS Getting Started](https://www.esri.com/training/catalog/57630435851d31e02a43f007/getting-started-with-arcgis-pro/).
+
+If you don't have ArcGIS Pro, they have a [Free Trial](https://www.esri.com/en-us/arcgis/trial?rsource=%2Fsoftware%2Farcgis%2Farcgis-for-desktop%2Ffree-trial).
+
 ### Example Steps
-
-If you are new to ArcGIS Pro see: [QGIS Getting Started](https://www.esri.com/training/catalog/57630435851d31e02a43f007/getting-started-with-arcgis-pro/) to install and get started with QGIS
-
-
-If you don't have ArcGIS Pro, they have a [Free Trial](https://www.esri.com/en-us/arcgis/trial?rsource=%2Fsoftware%2Farcgis%2Farcgis-for-desktop%2Ffree-trial)
-
-
-1. Open ArcGIS and start with a Map template
-![](https://user-images.githubusercontent.com/64213093/117860579-b131f800-b24d-11eb-8d30-926a4a264f84.png)
+1. Open ArcGIS and start with a Map template![map-template](https://user-images.githubusercontent.com/64213093/122089770-55b2d700-cdc4-11eb-829a-cb3c31733b5d.png)
 2. This will have the World Topographic Map and World Hillshade maps as basemaps.
-3. 
+3. To find links to resources and the the tile service layer go to [Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) metadata page.![get-raster-url](https://user-images.githubusercontent.com/64213093/122091515-1c7b6680-cdc6-11eb-9910-dfc117c913d7.png)
+4. Click on the View on Map button for the layer and copy the URL.![copy-raster-url](https://user-images.githubusercontent.com/64213093/122091753-5ea4a800-cdc6-11eb-970b-2de1daf6ad8a.png)
+5. In ArcGIS click Add Data from Path.![add-data-to-path](https://user-images.githubusercontent.com/64213093/122091898-898efc00-cdc6-11eb-9afc-d77a99745617.png)
+6. Add the copied URL for the tile service. ![enter-tile-path](https://user-images.githubusercontent.com/64213093/122092045-ba6f3100-cdc6-11eb-9cbd-1d26339ace7d.png)
+7. From the Census 5-Digit ZIP Code Tabulation Area metadta page get the link to the WMS.
+8. In ArcGIS add the WMS under Connections on the Insert tab.![add-wms connection](https://user-images.githubusercontent.com/64213093/122092652-687adb00-cdc7-11eb-881e-42b28d525502.png)
+9. Enter the copied URL from the metadata page.
 
+    ![add-wms-url](https://user-images.githubusercontent.com/64213093/122092730-7f213200-cdc7-11eb-8be1-b418df1ef98b.png)
 
-
-
- [QuickMapServices Plugin](https://docs.qgis.org/3.16/en/docs/training_manual/qgis_plugins/plugin_examples.html#basic-fa-the-quickmapservices-plugin)
-![Screenshot from 2021-05-11 11-51-33](https://user-images.githubusercontent.com/64213093/117861969-4f728d80-b24f-11eb-9d51-cf7f062b5158.png)
-4. Add the Vector Tile Sevice by right-clicking the Vector Tiles and adding a New Generic Connection. Enter the tile service url from above.
-![Screenshot from 2021-05-11 11-54-18](https://user-images.githubusercontent.com/64213093/117862584-0c64ea00-b250-11eb-91ae-da8dae97cd2a.png)
-5. Change the Vector Tile properties by right-clicking on the layer and selecting properties. Uncheck the polygons with the fill and click apply
-![Screenshot from 2021-05-11 12-43-12](https://user-images.githubusercontent.com/64213093/117868344-bc3d5600-b256-11eb-89d3-00cd039ce80e.png)
-6. Add the WMS to QGIS by right-clicking WMS/WMTS and adding a new connection using the WMS url 
-![Screenshot from 2021-05-11 12-48-50](https://user-images.githubusercontent.com/64213093/117868809-44bbf680-b257-11eb-89d6-8a9d00939427.png)
-from above.
-7. Next add the 2010 Census Zip Code Tabulation Areas Labels by right-clicking to add the layer to your project.
-![Screenshot from 2021-05-11 12-53-22](https://user-images.githubusercontent.com/64213093/117869372-f22f0a00-b257-11eb-8d68-64d814409f89.png)
-8. Now you should see zip code labels for each of the zip code areas.
-![Screenshot from 2021-05-11 12-54-25](https://user-images.githubusercontent.com/64213093/117869552-299db680-b258-11eb-8357-e9544126ae82.png)
-
-
-## Tools
-
-## [QGIS](https://qgis.org/en/site/about/index.html)
-QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
-
-[Download QGIS for your platform](https://qgis.org/en/site/forusers/download.html)
-QGIS is available on Windows, macOS, Linux and Android.
+11. In the Catalog pane add the Zip Code Tabulation Areas to the map.![add-to-current-map](https://user-images.githubusercontent.com/64213093/122093002-d32c1680-cdc7-11eb-8784-1562a6b29d6e.png)
+12. The map now shows the zip code tabulation areas with labels.![result](https://user-images.githubusercontent.com/64213093/122093158-0078c480-cdc8-11eb-8612-5e623c7a3902.png)
