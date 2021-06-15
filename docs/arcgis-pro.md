@@ -1,6 +1,6 @@
 # ArcGIS Pro
 
-## ArcGIS example using a tile service laye and WMS to add a zip code layers
+## ArcGIS example using a tile service layer and WMS to add a zip code layers
 This example goes through the steps to create a new project in ArcGIS and then add a basemap, a tile layer, and a WMS layer.
 
 This example will be using services listed on the Geoplatform [Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) metadata page.
