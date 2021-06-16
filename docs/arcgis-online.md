@@ -25,7 +25,7 @@ If you don't have a Geoplatform ArcGIS Online account, see [GeoPlatform.gov Acco
 9. Final result.![result](https://user-images.githubusercontent.com/64213093/122103358-c3b2ca80-cdd3-11eb-96a3-de96896644d1.png)
 10. To share the map first save it with at leaste one tag.![save-map](https://user-images.githubusercontent.com/64213093/122103446-dc22e500-cdd3-11eb-8992-20ec12d10087.png)
 11. Then click the link button to get a shortened URL to the map.![share-map](https://user-images.githubusercontent.com/64213093/122103563-007ec180-cdd4-11eb-949c-39def0254b3d.png)
-12. Link to the [final map](https://arcg.is/1HHjLm)
+12. Link to the [final map](https://arcg.is/18eejj)
 
 
 
