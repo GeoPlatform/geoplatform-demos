@@ -18,6 +18,36 @@
     "supportLevel": "GP Example",
     "synonyms": [],
     "tags": ["Geospatial", "QGIS"]
+}, {
+    "date": "2021-06-01",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/terriamap.html",
+    "name": "Terriamap Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "Terriamap"]
+}, {
+    "date": "2021-06-01",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-pro.html",
+    "name": "ArcGIS Pro Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "ArcGIS"]
+}, {
+    "date": "2021-06-01",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-online.html",
+    "name": "ArcGIS Online Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "ArcGIS"]
 }]
 
 
