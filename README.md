@@ -33,8 +33,9 @@ for running locally.
 Jekyll converts the Markdown to HTML during the build process.
 For an example, see the [QGIS demo](/blob/gh-pages/docs/qgis-example.md).
 * For an example off adding JS and CSS to your web page see the [JSFiddle demo](/blob/gh-pages/docs/fiddle-example.md).
-* See above for testing your changes locally. After you are satisfied with the changes, 
-create a [PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to push the changes to the gh-pages branch.
+* Test locally until you are satisfied with you changes (See above for testing your changes).
+* Upate the [Demos JSON Index](https://geoplatform.github.io/geoplatform-demos/demos.json) with the link to your demo and add a 108x108 logo for your demo to docs/assets/images.  
+* Create a [PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to push the changes to the gh-pages branch.
 
 
 **In addition to Jekyll, GitHub Pages can be built and deployed using React or Angular**
