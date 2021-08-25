@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JSFiddle example"
+title:  "JSFiddle Example"
 date:   2021-05-09 13:50:55 -0600
 post_url: /jsfiddle-example-steps.html
 --- 

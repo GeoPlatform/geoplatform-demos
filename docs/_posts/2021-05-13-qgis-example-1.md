@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "QGIS example"
+title:  "QGIS Example"
 date:   2021-05-13
 post_url: /qgis-example.html
 ---

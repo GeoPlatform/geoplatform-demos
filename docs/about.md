@@ -5,4 +5,4 @@ permalink: /about/
 ---
 
 # GIS Example Site
-This site is for testing Geoplatform Demos.
+This site is for testing GeoPlatform Demos.
