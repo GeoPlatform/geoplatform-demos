@@ -60,7 +60,7 @@
     "tags": ["Geospatial", "Harvest Pipeline"]
 
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/gaq68j9t/3/",
     "name": "GeoPlatform - MapboxGL - NAD v4 Example - MVT",
@@ -70,7 +70,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/n8pmbaos/7/",
     "name": "GeoPlatform - Leaflet - NAD v4 Example - Raster PNG",
@@ -80,7 +80,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/68t75c3g/",
     "name": "GeoPlatform - Leaflet - NTAD Examples - MVT",
@@ -90,7 +90,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/9xsoqr2k/",
     "name": "GeoPlatform - Leaflet - NTAD Examples - Raster PNG",
@@ -100,7 +100,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/sLh2qu0a/200/",
     "name": "GeoPlatform - Leaflet - NTAD Examples - MVT",
@@ -110,7 +110,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/dtL1aufb/28/",
     "name": "GeoPlatform - OpenLayers -Add an MVT Layer",
@@ -120,7 +120,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/hnbacpqz/",
     "name": "GeoPlatform - MapBoxGL - Add an MVT Layer",
@@ -130,7 +130,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/Lep1xo6n/28/",
     "name": "GeoPlatform - Leaflet- Add an MVT Example",
@@ -140,7 +140,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/45jbfv9a/",
     "name": "GeoPlatform - OpenLayers - Layers MVT Example",
@@ -150,7 +150,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/eyow1j69/",
     "name": "GeoPlatform - Leaflet- Layers MVT Example",
@@ -160,7 +160,7 @@
     "synonyms": [],
     "tags": ["Geospatial", "JSFiddle"]
 }, {
-    "date": "2021-06-01",
+    "date": "2021-08-25",
     "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/gz3c27w1/33/",
     "name": "GeoPlatform - MapBoxGL- Layers MVT Example",
