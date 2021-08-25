@@ -18,7 +18,7 @@ to leverage community-maintained templates and styles to customize your site’s
 themes specify plugins and package up assets, layouts, includes, and stylesheets in a way that 
 can be overridden by your site’s content.
 
-**Notes on installation for building the site locally:**
+**Notes on installation for building the site locally**
 * For an understanding of GitHub Pages and Jekyll see 
 [Creating a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
 * Also, see the Jekyll documentation for [Understanding gem-based themes](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes). 
@@ -28,14 +28,18 @@ This has changed since the GitHub Pages with Jekyll was written. This website us
 for running locally.
 
 
-**To add demos:**
+**Adding Demos**
 * Jekyll pages can be created in either [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) or HTML. 
 Jekyll converts the Markdown to HTML during the build process.
 For an example, see the [QGIS demo](/blob/gh-pages/docs/qgis-example.md).
 * For an example off adding JS and CSS to your web page see the [JSFiddle demo](/blob/gh-pages/docs/fiddle-example.md).
 * Test locally until you are satisfied with you changes (See above for testing your changes).
-* Upate the [Demos JSON Index](https://geoplatform.github.io/geoplatform-demos/demos.json) with the link to your demo and add a 108x108 logo for your demo to docs/assets/images.  
 * Create a [PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to push the changes to the gh-pages branch.
+
+**Showcasing Demos**
+* Upate the [Demos JSON Index](https://geoplatform.github.io/geoplatform-demos/demos.json) with the link to your demo
+* Add a 108x108 logo for your demo to docs/assets/images for an example [see](https://geoplatform.github.io/geoplatform-demos/assets/images/qgis-example-logo.png).
+* Add tags such as Geospatial and JSFiddle so your demo will be more easily discovered.  
 
 
 **In addition to Jekyll, GitHub Pages can be built and deployed using React or Angular**
