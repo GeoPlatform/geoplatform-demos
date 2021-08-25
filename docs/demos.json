@@ -20,7 +20,7 @@
     "tags": ["Geospatial", "QGIS"]
 }, {
     "date": "2021-06-01",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/terriamap.html",
     "name": "Terriamap Example",
     "type": "Demo Example",
@@ -30,7 +30,7 @@
     "tags": ["Geospatial", "Terriamap"]
 }, {
     "date": "2021-06-01",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-pro.html",
     "name": "ArcGIS Pro Example",
     "type": "Demo Example",
@@ -40,7 +40,7 @@
     "tags": ["Geospatial", "ArcGIS"]
 }, {
     "date": "2021-06-01",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-online.html",
     "name": "ArcGIS Online Example",
     "type": "Demo Example",
@@ -48,6 +48,16 @@
     "supportLevel": "GP Example",
     "synonyms": [],
     "tags": ["Geospatial", "ArcGIS"]
+}, {
+    "date": "2021-06-01",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/magic-pipeline.html",
+    "name": "GeoPlatform Harvest Pipeline Example",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["Geospatial", "Harvest Pipeline"]
 }]
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Harvest Pipeline example"
+title:  "Harvest Pipeline Example"
 date:   2021-08-24
 post_url: /magic-pipeline.html
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  Return to Beta Geoplatform Apps & Demos Page
+title:  GeoPlatform Apps & Demos
 permalink:
 ---
 
-<meta http-equiv="refresh" content="time; URL=https://beta.geoplatform.gov/apps-demos" />
+<meta http-equiv="refresh" content="time; URL=https://geoplatform.gov/apps-demos" />

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ArcGIS Pro example"
+title:  "ArcGIS Pro Example"
 date:   2021-06-15
 post_url: /arcgis-pro.html
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ArcGIS Online example"
+title:  "ArcGIS Online Example"
 date:   2021-06-15
 post_url: /arcgis-online.html
 ---

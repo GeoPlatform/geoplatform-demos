@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Terriamap example"
+title:  "Terriamap Example"
 date:   2021-06-01
 post_url: /terriamap.html
 ---
