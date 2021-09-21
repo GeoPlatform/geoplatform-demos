@@ -1,4 +1,4 @@
-# GeoPlarform Harvest Pipeline
+# GeoPlatform Harvest Pipeline
 The harvest pipeline is comprized of a sequence of AWS services (Lambdas, SQS and scheduled tasks) which are used to ensure that all metadata records and source data in GeoPlatform are up to date with published resources in Data.gov. GeoPlatform metadata record cache and services (raster and vector tiles, web map services and web features services) are monitored to ensure that they remain current with what is published at Data.gov. Emails and reports are generated at crucial steps in the pipeline detailing the state of GeoPlatform's services.
 
 The pipeline is broken up into two major tasks - caching metadata records displayed in GeoPlatform and managing the spatial data and services of the metadata's sources. Caching the metadata records and source data ensures that the metadata and services in GeoPlatform are kept in sync with the resources published at Data.gov
