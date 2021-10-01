@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  font-family: Nunito, sans-serif;
+}
+.root .hero-push {
+  height: 450px;
+  z-index: 1;
+}
+.root .hero-container {
+  position: absolute;
+  top: 0;
+  height: 450px;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+.root .hero-container .hero-root {
+  position: relative;
+  height: 450px;
+}
+.root .hero-container .hero-root .hero-content-container {
+  padding: 40px;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 370px;
+  font-weight: bold;
+  color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.root .hero-container .hero-root .hero-content-container .hero-title {
+  color: #efefef;
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+.root .hero-container .hero-root .hero-content-container .hero-subtitle {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.root .hero-container .hero-root .hero-content-container .hero-subtitle span {
+  font-weight: bold;
+}
+.root .hero-container .hero-root .hero-content-container .hero-title span,
+.root .hero-container .hero-root .hero-content-container .hero-subtitle span {
+  color: #ffb74d;
+}
+.root .hero-container .hero-root .hero-image-container {
+  z-index: 0;
+  height: 450px;
+  width: -webkit-fill-available;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+.root .hero-container .hero-root .hero-image-container .hero-image {
+  filter: blur(5px);
+  width: calc(100vw + 16px);
+  height: calc(100% + 16px);
+  background-image: url("https://refinedsites.refinedwiki.com/images/44227a41-3712-47a4-ae70-26c48e4b63b1");
+  margin: -8px 0 0 -8px;
+  background-size: cover;
+}
+.root .main-content {
+  padding: 40px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .main-content img { max-width: 100%; }
+.root .main-content h1 {
+  font-size: 3rem;
+}
+.root .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #24282b;
+  padding: 40px 60px;
+}
+.root .footer-container .footer-logo {
+  flex: 1;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  line-height: 1;
+}
+.root .footer-container .footer-logo img {
+  width: 211px;
+}
+.root .footer-container p {
+  color: #efefef;
+  font-size: 0.8em;
+  line-height: 1.7;
+  margin-top: 17px;
+  margin-bottom: 0;
+}
+.root .footer-container p a {
+  color: #efefef;
+  text-decoration: underline;
+  border-right: 2px solid #efefef;
+  padding: 0 10px;
+}
+.root .footer-container p a:first-child {
+  padding-left: 0;
+}
+.root .footer-container p a:last-child {
+  border: none;
+}
+.root .footer-container p a:hover {
+  text-decoration: none;
+}
+.root .footer-container small {
+  font-size: 80%;
+}
