@@ -12,8 +12,17 @@ a:hover {
 }
 
 p {
+    margin-bottom: 12px;
+}
+
+p,
+li {
+    word-break: break-word;
     line-height: 1.4em;
-    margin-bottom: 16px;
+}
+
+.post {
+    width: 100%
 }
 
 
@@ -22,6 +31,7 @@ p {
  */
 
 .post-list li {
+    list-style: none;
     margin-bottom: 28px;
     padding: 1px;
     /* prevents collapsing margins */

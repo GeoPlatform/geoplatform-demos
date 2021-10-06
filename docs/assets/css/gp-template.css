@@ -43,11 +43,13 @@
 .root .navbar .navbar-collapse links .nav-link {
     color: #efefef !important;
     transition: all 0.15s ease;
+    text-decoration: none;
 }
 
 .root .navbar .navbar-collapse links .nav-link:hover {
     border-bottom: 3px solid #2079c5;
     margin-top: -3px;
+    text-decoration: none;
 }
 
 .root .hero-push {
@@ -129,6 +131,11 @@
     align-items: center;
     align-self: center;
     max-width: 960px;
+    width: 100%;
+}
+
+.root .main-content h1#codepen-showcase {
+    font-size: 3rem;
 }
 
 .root .main-content img {
@@ -165,7 +172,6 @@
 }
 
 .root .footer-container p span {
-    text-decoration: underline;
     border-right: 2px solid #efefef;
     padding: 0 10px;
 }
@@ -178,12 +184,13 @@
     border: none;
 }
 
-.root .footer-container p span:hover {
-    text-decoration: none;
+.root .footer-container p span a {
+    text-decoration: underline;
+    color: inherit;
 }
 
-.root .footer-container p span a {
-    color: inherit;
+.root .footer-container p span a:hover {
+    text-decoration: none;
 }
 
 .root .footer-container small {

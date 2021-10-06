@@ -1,5 +1,3 @@
-# JSFiddle Example
-
 ## Modify a JSFiddle and add it to your web page
 This example goes through the steps to modify an [OpenLayers](https://openlayers.org/) JSFiddle demo to use a different tile server. First this we will test our changes in JSFiddle using the embed link. The example will show how to add the JSFiddle to a web page and then show moving HTML, CSS and JS to the web site. 
 
