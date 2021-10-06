@@ -1,3 +1,7 @@
+/* 
+ * CSS from https://codepen.io/dlennox24/pen/powYJrz
+ */
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito");
 .root {
     display: flex;
@@ -117,11 +121,6 @@
     background-size: cover;
 }
 
-.root .page-content {
-    display: flex;
-    justify-content: center;
-}
-
 .root .main-content {
     padding: 40px;
     flex-grow: 1;
@@ -130,10 +129,6 @@
     align-items: center;
     align-self: center;
     max-width: 960px;
-}
-
-.root .main-content h1 {
-    font-size: 3rem;
 }
 
 .root .main-content img {

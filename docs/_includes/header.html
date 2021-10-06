@@ -43,10 +43,17 @@
         <section class="hero-root">
             <div class="hero-content-container">
                 <h1 class="hero-title">
-                    Making Federal Geospatial <span>FAIR</span>
+                    {{ page.title }}
                 </h1>
-                <h5 class="hero-subtitle">GeoPlatform is making Federal GeoData <span>F</span>indable,
+                <h5 class="hero-subtitle">
+                    {%- if page.subtitle -%}
+                    {{ page.subtitle }}
+                    {%- endif -%}
+
+                    {%- if page.subtitle == nil -%}
+                    GeoPlatform is making Federal GeoData <span>F</span>indable,
                     <span>A</span>ccessible,<span>I</span>nteroperable, and <span>R</span>eusable
+                    {%- endif -%}
                 </h5>
             </div>
             <div id="hero-image" aria-label="decorative" class="hero-image-container">
