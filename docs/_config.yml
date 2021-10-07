@@ -22,7 +22,7 @@ title: GeoPlatform Demos
 email: servicedesk@geoplatform.gov
 description: >- # this means to ignore newlines until "baseurl:"
   This site is for testing demos.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/geoplatform-demos" # the subpath of your site, e.g. /blog
 url: "https://geoplatform.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
