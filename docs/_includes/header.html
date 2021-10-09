@@ -1,8 +1,8 @@
 <header class="site-header">
   <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img title="Home" src="/assets/images/gp-logo/gp-logo-full-light.svg" alt="GeoPlatform Logo" height="30">
+      <a class="navbar-brand" href="/geoplatform-demos/">
+        <img title="Home" src="https://sit.geoplatform.info/assets/images/logos/gp/full-light.svg" alt="GeoPlatform Logo" height="30">
       </a>
       <div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -44,16 +44,20 @@
     <section class="hero-root">
       <div class="hero-content-container">
         <h1 class="hero-title">
+          {%- if page.title == nil or page.title == 404 -%}
+          <h1 class="hero-title">
+            Making Federal Geospatial <span>FAIR</span>
+          </h1>
+          {%- elsif page.title -%}
           {{ page.title }}
+          {%- endif -%}
         </h1>
         <h5 class="hero-subtitle">
-          {%- if page.subtitle -%}
-          {{ page.subtitle }}
-          {%- endif -%}
-
-          {%- if page.subtitle == nil -%}
+          {%- if page.subtitle == nil or page.subtitle == "Page Not Found" -%}
           GeoPlatform is making Federal GeoData <span>F</span>indable,
           <span>A</span>ccessible, <span>I</span>nteroperable, and <span>R</span>eusable
+          {%- elsif page.subtitle -%}
+          {{ page.subtitle }}
           {%- endif -%}
         </h5>
       </div>
