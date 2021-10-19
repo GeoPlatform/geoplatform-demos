@@ -1,6 +1,6 @@
 # Introduction
 
-In order to create MVT tiles via TippeCanoe https://github.com/mapbox/tippecanoe it requires a GeoJSON file, high compute and memory servers, and the ability to create multiple variations of the tiles to determine which is best for the zoom ranges of 0-7. These steps make use of EC2 Spot intances to process the data. For demonstration the PLSS dataset will be used to walk through the process.
+In order to create MVT tiles via TippeCanoe https://github.com/mapbox/tippecanoe it requires a GeoJSON file, high compute and memory servers, and the ability to create multiple variations of the tiles to determine which is best for the zoom ranges of 1-12. These steps make use of EC2 Spot intances to process the data. For demonstration the PLSS dataset will be used to walk through the process.
 
 ## Encoding User Data
 
@@ -8,10 +8,10 @@ When wanting to change the User Data for different sources and steps it needs to
 
 ```bash
 # Mac Example
-> openssl base64 -in /data/fgdc/userdata01.txt
+> openssl base64 -in /data/plss/userdata01.txt
 
 # Windows example
-"C:\Program Files\Git\usr\bin\openssl.exe" base64 -in D:\Data\fgdc\nad_r6\userdata01.txt
+"C:\Program Files\Git\usr\bin\openssl.exe" base64 -in D:\Data\fgdc\plss\userdata01.txt
 ```
 
 ## Creating GeoJSON from the source
@@ -41,7 +41,7 @@ In order for TippeCanoe to work it requires the source file to be in a GeoJSON o
             "Encrypted": false
         }
     }],
-   "UserData":  "IyEvYmluL2Jhc2gNCnN1ZG8geXVtIHVwZGF0ZSAteQ0Kc3VkbyB5dW0gaW5zdGFsbCAteSBkb2NrZXINCnN1ZG8gc3lzdGVtY3RsIHN0YXJ0IGRvY2tlcg0KDQojIERvd25sb2FkIHNvdXJjZSBhbmQgY29udmVydCB0byBHZW9KU09ODQpjZCAvdG1wDQphd3MgczMgY3AgczM6Ly9uYXRpb25hbGFkZHJlc3NkYXRhL05BRF9yNy56aXAgbmFkX3I3LnppcA0KbXYgbmFkX3I3LnppcCBuYWRfcjcuZ2RiLnppcA0Kc3VkbyBkb2NrZXIgcnVuIC12IC90bXA6L2RhdGEgLS1uYW1lIEdEQUwgLS1ybSBvc2dlby9nZGFsOmFscGluZS1zbWFsbC1sYXRlc3Qgb2dyMm9nciAtZiBHZW9KU09OIC1sY28gU0lHTklGSUNBTlRfRklHVVJFUz02IC10X3NycyBjcnM6ODQgL2RhdGEvbmFkX3I3Lmdlb2pzb24gL3ZzaXppcC9kYXRhL25hZF9yNy5nZGIuemlwIE5BRA0KDQojIENvbXByZXNzIGFuZCB1cGxvYWQgZmlsZSB0byBTMw0KZ3ppcCAtYyBuYWRfcjcuZ2VvanNvbiA+IG5hZF9yNy5nZW9qc29uLmd6DQphd3MgczMgY3AgbmFkX3I3Lmdlb2pzb24uZ3ogczM6Ly9nZW9wbGF0Zm9ybS1jZG4tdGVtcC90aXBwZWNhbm9lL25hZF9yNy5nZW9qc29uLmd6DQoNCnN1ZG8gc2h1dGRvd24gbm93DQo="
+   "UserData":  "{{base64_data_here}}"
 }
 ```
 
@@ -395,10 +395,12 @@ Go to `http://localhost:8080` to explore the tiles.
 
 # References
 
+- [Navigator Public Lands](https://navigator.blm.gov/home)
+- [FGDC Cadastral Subcommittee Outreach Web Site
+Faciliating standardized](https://nationalcad.org/)
+- [Data Sources - pdf](https://nationalcad.org/download/PLSS-CadNSDI-Data-Set-Availability.pdf)
 - [TippeCanoe User Guide](https://github.com/mapbox/tippecanoe)
 - [Ogr2Ogr User Guide](https://gdal.org/programs/ogr2ogr.html)
 - [Current Spot Pricing](https://aws.amazon.com/ec2/spot/pricing/)
 - [How to view Spot history](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
 - [TileServerGL User Guide](https://github.com/maptiler/tileserver-gl)
-- [Data Sources - pdf](https://nationalcad.org/download/PLSS-CadNSDI-Data-Set-Availability.pdf)
-
