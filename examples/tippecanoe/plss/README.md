@@ -87,7 +87,7 @@ aws ec2 request-spot-instances --spot-price "0.1" --instance-count 1 --type "one
 
 For each specification.json document created will have an associated userdata as well. These are the commands that the EC2 server will execute on bootup. It is important to have the final `sudo shutdown now` command followed by a new line to ensure that the server is terminated at the end of the process otherwise unwanted charges could occur if not properly shutdown.
 
-The below is a sample of working commands that will install tippecanoe, download the file to process and when finished upload the generated output to S3 and then shut itself down. For NAD this whole execution takes around 2 to 4 hours to complete depending on the flags provided. When working with this file or any other source you will need to edit Line 18 (the source file and local name), Line 21 (the tippecanoe command to be executed), and Line 24 (where the file needs to be saved). It is recommend to create a userdata0x.txt file for each scenario to be executed before moving to the next step.
+The below is a sample of working commands that will install tippecanoe, download the file to process and when finished upload the generated output to S3 and then shut itself down. 
 
 ```bash
 #!/bin/bash
@@ -208,7 +208,6 @@ docker run --rm -it -v ${PWD}:/data -p 8080:80 klokantech/tileserver-gl --mbtile
 Go to `http://localhost:8080` to explore the tiles.
 
 # References
-TODO: add resources
 
 - [TippeCanoe User Guide](https://github.com/mapbox/tippecanoe)
 - [Ogr2Ogr User Guide](https://gdal.org/programs/ogr2ogr.html)
