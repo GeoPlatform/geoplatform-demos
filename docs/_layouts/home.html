@@ -3,9 +3,6 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
 
   {{ content }}
 
@@ -27,7 +24,7 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
+          <a class="post-link" href="{{ post.post_url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>

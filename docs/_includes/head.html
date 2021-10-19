@@ -1,0 +1,27 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- <script src="https://kit.fontawesome.com/29d955169e.js" crossorigin="anonymous"></script> -->
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" type="text/css" href="/geoplatform-demos/assets/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/geoplatform-demos/assets/css/code-styler.css" />
+<link rel="stylesheet" type="text/css" href="/geoplatform-demos/assets/css/gh-pages-overrides.css" />
+<link
+  href="https://sit.geoplatform.info/assets/css/gp-external.min.css"
+  rel="stylesheet"
+/>
+
+<link rel="icon" type="image/x-icon" href="https://sit.geoplatform.info/assets/images/web-icons/favicon.ico" />
+
+{%- if page.url == "/" -%}
+<title>GeoPlatform Demos</title>
+{%- elsif page.title -%}
+<title>{{ page.title }} | GeoPlatform Demos</title>
+{%- else -%}
+<title>GeoPlatform Demos</title>
+{%- endif -%}

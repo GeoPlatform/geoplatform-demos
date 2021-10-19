@@ -1,0 +1,47 @@
+/* 
+ * Overrides for GH Pages integrated objects
+ */
+
+a {
+    color: #2079c5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+p,
+li {
+    word-break: break-word;
+    line-height: 1.4em;
+}
+
+.post {
+    width: 100%
+}
+
+
+/* 
+ * Post List component
+ */
+
+.post-list li {
+    list-style: none;
+    margin-bottom: 28px;
+    padding: 1px;
+    /* prevents collapsing margins */
+}
+
+.post-list .post-meta {
+    font-size: 14px;
+    color: #828282;
+}
+
+.post-list h3 {
+    margin: 4px 0 12px;
+}
