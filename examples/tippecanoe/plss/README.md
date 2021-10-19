@@ -208,10 +208,12 @@ docker run --rm -it -v ${PWD}:/data -p 8080:80 klokantech/tileserver-gl --mbtile
 Go to `http://localhost:8080` to explore the tiles.
 
 # References
+TODO: add resources
 
 - [TippeCanoe User Guide](https://github.com/mapbox/tippecanoe)
 - [Ogr2Ogr User Guide](https://gdal.org/programs/ogr2ogr.html)
 - [Current Spot Pricing](https://aws.amazon.com/ec2/spot/pricing/)
 - [How to view Spot history](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
 - [TileServerGL User Guide](https://github.com/maptiler/tileserver-gl)
+- [Data Sources - pdf](https://nationalcad.org/download/PLSS-CadNSDI-Data-Set-Availability.pdf)
 
