@@ -1,0 +1,56 @@
+{
+    "version": 8,
+    "name": "PLSS Demo",
+    "metadata": {
+      "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
+      "maputnik:renderer": "mbgljs",
+      "openmaptiles:version": "3.x"
+    },
+    "sources": {
+      "plssTownships": {
+        "type": "vector",
+        "tiles": [
+          "https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt"
+        ],
+        "minZoom": 0,
+        "maxZoom": 14
+      }
+    },
+    "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
+    "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+    "layers": [
+      {
+        "id": "township-fill",
+        "type": "fill",
+        "source": "plssTownships",
+        "source-layer": "township",
+        "paint": {"fill-color": "rgba(11, 83, 0, 0.49)"}
+      },
+      {
+        "id": "township-lines",
+        "type": "line",
+        "source": "plssTownships",
+        "source-layer": "township",
+        "layout": {"visibility": "none"},
+        "paint": {"line-color": "rgba(23, 118, 0, 1)"}
+      },
+      {
+        "id": "township-labels",
+        "type": "symbol",
+        "source": "plssTownships",
+        "source-layer": "township",
+        "minzoom": 8,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": ["get", "RANGENO"],
+          "text-size": 18,
+          "visibility": "visible"
+        },
+        "paint": {
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-width": 0.5
+        }
+      }
+    ],
+    "id": "plss"
+  }

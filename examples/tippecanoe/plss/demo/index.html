@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GeoPlatform - PLSS Demo</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://github.com/lukasmartinelli/mapbox-gl-inspect/releases/download/v1.3.1/mapbox-gl-inspect.js"></script>
+    <link
+      href="https://github.com/lukasmartinelli/mapbox-gl-inspect/releases/download/v1.3.1/mapbox-gl-inspect.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .mapbox-gl-inspect_layer {
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+      }
+      .mapbox-gl-inspect_property {
+        width: 400px;
+      }
+      .mapbox-gl-inspect_property {
+        display: flex;
+      }
+      .mapbox-gl-inspect_property-name {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      mapboxgl.accessToken = '{your_api_here}';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'plss.json',
+        zoom: 3.33,
+        center: [-111.6, 53.45]
+      })
+
+      var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        maxWidth: 600
+      })
+
+      map.addControl(new mapboxgl.NavigationControl())
+
+      var inspect = new MapboxInspect({
+        showInspectMap: true,
+        showInspectButton: false
+      })
+      map.addControl(inspect)
+    </script>
+  </body>
+</html>
