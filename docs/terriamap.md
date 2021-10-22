@@ -1,4 +1,4 @@
-# Terriamap Example
+# Terriamap Demo
 
 ## Background
 [Terriamap](https://github.com/TerriaJS/TerriaMap/) is a map application used to display geographic services of GeoPlatform NGDAs. Utilizing [terria.js](https://github.com/TerriaJS/terriajs), Terriamap enables users to search, view and explore catalogs of geographic tiles and services. URL encoded parameters can be used by GeoPlatform Terriamap to extend and augment the behavior of the map and resources on load. Used in conjunction with GeoPlatform API, specific datasets, types of dataset or service types can be configured as Terriamap loads. This document will give a general overview of the Terriamap UI and offer examples of using URL parameters in GeoPlatform Terriamap to dynamically load resources.  
