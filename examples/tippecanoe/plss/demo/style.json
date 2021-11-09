@@ -1,0 +1,94 @@
+{
+  "version": 8,
+  "name": "PLSS Demo",
+  "metadata": {
+    "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
+    "maputnik:renderer": "mbgljs",
+    "openmaptiles:version": "3.x"
+  },
+  "sources": {
+    "plss": {
+      "type": "vector",
+      "tiles": [
+        "https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14,
+      "maxzoom": 14
+    }
+  },
+  "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "layers": [
+    {
+      "id": "first-division",
+      "type": "line",
+      "source": "plss",
+      "source-layer": "PLSSFirstDivision",
+      "minzoom": 5,
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(255, 0, 0, 1)",
+        "line-width": 0.5,
+        "line-opacity": 0.5
+      }
+    },
+    {
+      "id": "second-division",
+      "type": "line",
+      "source": "plss",
+      "source-layer": "PLSSSecondDivision",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(10, 0, 187, 1)",
+        "line-width": 0.5,
+        "line-opacity": 0.5
+      }
+    },
+    {
+      "id": "point",
+      "type": "circle",
+      "source": "plss",
+      "source-layer": "PLSSPoint",
+      "minzoom": 4,
+      "maxzoom": 14,
+      "paint": {"circle-radius": 3, "circle-color": "rgba(0, 0, 0, 1)"}
+    },
+    {
+      "id": "special-survey",
+      "type": "line",
+      "source": "plss",
+      "source-layer": "PLSSSpecialSurvey",
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(0, 120, 146, 1)"}
+    },
+    {
+      "id": "township",
+      "type": "line",
+      "source": "plss",
+      "source-layer": "PLSSTownship",
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(18, 90, 0, 1)"}
+    },
+    {
+      "id": "point-label",
+      "type": "symbol",
+      "source": "plss",
+      "source-layer": "PLSSPoint",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "layout": {"text-field": ["get", "POINTLAB"], "text-size": 16},
+      "paint": {
+        "text-halo-color": "rgba(206, 200, 0, 1)",
+        "text-halo-width": 0.75,
+        "text-color": "rgba(0, 0, 0, 1)"
+      }
+    }
+  ],
+  "id": "plss-demo"
+}
