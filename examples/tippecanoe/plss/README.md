@@ -19,6 +19,8 @@ When wanting to change the User Data for different sources and steps it needs to
 In order for TippeCanoe to work it requires the source file to be in a GeoJSON or .gz compressed version. Here you will find an example of how you can use EC2 to perform those actions leveraging Docker, ogr2ogr, gzip and S3 to store the output. When ogr2ogr runs it only uses one CPU and very little memory so the ideal machine at this time is the `c5.large` which is 2 vCPU and 4GB of memory which should be sufficient for most conversions.
 
 **Specification Document**
+
+If you encounter `instance-terminated-no-capacity` errors running a spot instance, use [Instance Advisor](https://aws.amazon.com/ec2/spot/instance-advisor/). Select an Instance Type with a low Frequency of Interuption. 
 ```json
 {
     "ImageId": "ami-087c17d1fe0178315",
