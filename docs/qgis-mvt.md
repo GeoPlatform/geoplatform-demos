@@ -12,12 +12,13 @@ This demo uses services listed on the Geoplatform [BLM National Public Land Surv
 
 * MBTile download: https://gp-sit-us-east-1-geoplatform-archive.s3.amazonaws.com/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa.mbtiles
 
-If you are new to QGIS see: [Documentation for QGIS](https://docs.qgis.org/latest/en/docs/).
 
 ## Tools
 
 ## [QGIS](https://qgis.org/en/site/about/index.html)
 QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
+
+If you are new to QGIS see: [Documentation for QGIS](https://docs.qgis.org/latest/en/docs/).
 
 [Download QGIS for your platform](https://qgis.org/en/site/forusers/download.html)
 QGIS is available on Windows, macOS, Linux and Android.
@@ -31,17 +32,8 @@ QGIS is available on Windows, macOS, Linux and Android.
 4. Final result.![result](assets/images/xyz-result.PNG)
 
 
-### Example Using a downloaded MBTiles file
+### Example Using a MBTiles file
 1. Download the Mbtile file from the desired data source.
 2. Open QGIS and select `Layer` -> `Add Layer` -> `Add Vector Layer`.![addLayer](assets/images/qgis-add-vector-layer-mbtiles.PNG)
 3. Choose `File` as source type and browse to your mbtile file using the `...` button. Once configured, click `Add`.![addConnection](assets/images/qgis-data-manager-mbtiles.PNG)
-4. Enter in a friendly `Name` for your layer, then add the XYZ `URL`.
- *Optionally* specify a style URL. After the settings are configured, press `OK`. From the previous screen, you can select your new layer and `Add` to the map. 
-![connectionDetails](assets/images/qgis-vector-connection-details.PNG)   
-5. Final result.![result](assets/images/mbtiles-result.PNG)
-
-
-
-
-
-
+4. Final result.![result](assets/images/mbtiles-result.PNG)
