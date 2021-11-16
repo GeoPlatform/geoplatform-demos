@@ -1,11 +1,10 @@
 #!/bin/bash
-# set -e 
 
 AWS_PROFILE=""
 BASE_URL=s3://geoplatform-cdn-temp/tippecanoe
 TILESERVER_URL=s3://gp-sit-tileservice-tile-cache/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa
 NATIONAL_MBTILE_URL=s3://gp-sit-us-east-1-geoplatform-archive/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa.mbtiles
-TIPPE_PARAMS="--force --drop-densest-as-needed --drop-fraction-as-needed --drop-smallest-as-needed --coalesce-densest-as-needed --coalesce-smallest-as-needed -z10"
+TIPPE_PARAMS="--force --drop-densest-as-needed --drop-fraction-as-needed --drop-smallest-as-needed --coalesce-densest-as-needed --coalesce-smallest-as-needed -z12"
 declare -a STATES_AR=("al" "ak" "ar" "ca" "co" "ia" "il" "in" "ks" "la" "mi" "mn" "mo" "ms" "mt" "nd" "nm" "ne" "nv" "oh" "or_wa" "sd" "wy")
 
 sudo yum update -y
@@ -51,7 +50,7 @@ do
     # copy geojson gzip to local 
     aws s3 cp $BASE_URL/$state_layer_name.geojson.gz $state_layer_name.geojson.gz $AWS_PROFILE
     #make mbtiles
-    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z10 -l ${layer} ./${state_layer_name}.geojson.gz
+    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z11 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
     mbtile_join_str+="./${state_layer_name}.mbtiles "
@@ -72,7 +71,7 @@ do
     # copy geojson gzip to local 
     aws s3 cp $BASE_URL/$state_layer_name.geojson.gz $state_layer_name.geojson.gz $AWS_PROFILE
     #make mbtiles
-    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z6 -l ${layer} ./${state_layer_name}.geojson.gz
+    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z4 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
     mbtile_join_str+="./${state_layer_name}.mbtiles "
@@ -93,7 +92,7 @@ do
     # copy geojson gzip to local 
     aws s3 cp $BASE_URL/$state_layer_name.geojson.gz $state_layer_name.geojson.gz $AWS_PROFILE
     #make mbtiles
-    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z8 -l ${layer} ./${state_layer_name}.geojson.gz
+    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z5 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
     mbtile_join_str+="./${state_layer_name}.mbtiles "
@@ -114,7 +113,7 @@ do
     # copy geojson gzip to local 
     aws s3 cp $BASE_URL/$state_layer_name.geojson.gz $state_layer_name.geojson.gz $AWS_PROFILE
     #make mbtiles 
-    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z6 -l ${layer} ./${state_layer_name}.geojson.gz
+    tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z11 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
     mbtile_join_str+="./${state_layer_name}.mbtiles "
