@@ -24,16 +24,22 @@ If you are new to QGIS see: [Documentation for QGIS](https://docs.qgis.org/lates
 QGIS is available on Windows, macOS, Linux and Android.
 
 ### Example Using the Vector Tile Service (XYZ) endpoint
-1. Open QGIS and select `Layer` -> `Add Layer` -> `Add Vector Tile Layer`.![addLayer](assets/images/qgis-add-vector-layer.PNG)
-2. Choose `New` -> `New Generic Connection`.![addConnection](assets/images/mvt-xyz-connection.PNG)
-3. Enter in a friendly `Name` for your layer, then add the XYZ `URL`.
+1. In the Geoplatform Search results, user a data source with a *Vector Tile Service* pill button. Click the button to open the tile viewer. 
+![addLayer](assets/images/geoplatform-search-result-cached.PNG)
+1. Copy the URL from the **URL Template Map Server URL**:
+![addLayer](assets/images/geoplatform-tile-cache-viewer.PNG)
+2. Open QGIS and select `Layer` -> `Add Layer` -> `Add Vector Tile Layer`.![addLayer](assets/images/qgis-add-vector-layer.PNG)
+3. Choose `New` -> `New Generic Connection`.![addConnection](assets/images/mvt-xyz-connection.PNG)
+4. Enter in a friendly `Name` for your layer, then add the XYZ `URL`.
  *Optionally* specify a style URL. After the settings are configured, press `OK`. From the previous screen, you can select your new layer and `Add` to the map. 
 ![connectionDetails](assets/images/qgis-vector-connection-details.PNG)   
-4. Final result.![result](assets/images/xyz-result.PNG)
+5. Final result.![result](assets/images/xyz-result.PNG)
 
 
 ### Example Using a MBTiles file
-1. Download the Mbtile file from the desired data source.
-2. Open QGIS and select `Layer` -> `Add Layer` -> `Add Vector Layer`.![addLayer](assets/images/qgis-add-vector-layer-mbtiles.PNG)
-3. Choose `File` as source type and browse to your mbtile file using the `...` button. Once configured, click `Add`.![addConnection](assets/images/qgis-data-manager-mbtiles.PNG)
-4. Final result.![result](assets/images/mbtiles-result.PNG)
+1. In the Geoplatform Search results, use a data source with a *Geoplatform Cache MBTiles* pill button. Click the button to download the file.  
+![addLayer](assets/images/geoplatform-search-result-mbtiles.PNG)
+2. Download the Mbtile file from the desired data source.
+3. Open QGIS and select `Layer` -> `Add Layer` -> `Add Vector Layer`.![addLayer](assets/images/qgis-add-vector-layer-mbtiles.PNG)
+4. Choose `File` as source type and browse to your mbtile file using the `...` button. Once configured, click `Add`.![addConnection](assets/images/qgis-data-manager-mbtiles.PNG)
+5. Final result.![result](assets/images/mbtiles-result.PNG)
