@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "PLSS Demo",
+  "name": "OSM Liberty",
   "metadata": {
     "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
     "maputnik:renderer": "mbgljs",
@@ -15,23 +15,62 @@
       "minZoom": 0,
       "maxZoom": 14,
       "maxzoom": 14
+    },
+    "plss2": {
+      "type": "vector",
+      "url": "https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/metadata.json"
     }
   },
   "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
-  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
+    {
+      "id": "township-fill",
+      "type": "fill",
+      "source": "plss",
+      "source-layer": "PLSSTownship",
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(121, 159, 112, 1)",
+        "fill-outline-color": "transparent"
+      }
+    },
+    {
+      "id": "special-survey-fill",
+      "type": "fill",
+      "source": "plss",
+      "source-layer": "PLSSSpecialSurvey",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(165, 158, 228, 1)",
+        "fill-outline-color": "rgba(0, 0, 0, 1)"
+      }
+    },
+    {
+      "id": "township",
+      "type": "line",
+      "source": "plss",
+      "source-layer": "PLSSTownship",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(18, 90, 0, 1)", "line-width": 3}
+    },
     {
       "id": "first-division",
       "type": "line",
       "source": "plss",
       "source-layer": "PLSSFirstDivision",
-      "minzoom": 5,
+      "minzoom": 9,
       "maxzoom": 14,
       "layout": {"visibility": "visible"},
       "paint": {
-        "line-color": "rgba(255, 0, 0, 1)",
-        "line-width": 0.5,
-        "line-opacity": 0.5
+        "line-color": "rgba(129, 68, 42, 1)",
+        "line-width": 1,
+        "line-opacity": 1
       }
     },
     {
@@ -39,12 +78,12 @@
       "type": "line",
       "source": "plss",
       "source-layer": "PLSSSecondDivision",
-      "minzoom": 6,
+      "minzoom": 11,
       "maxzoom": 14,
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(10, 0, 187, 1)",
-        "line-width": 0.5,
+        "line-width": 1,
         "line-opacity": 0.5
       }
     },
@@ -53,37 +92,25 @@
       "type": "circle",
       "source": "plss",
       "source-layer": "PLSSPoint",
-      "minzoom": 4,
+      "minzoom": 11,
       "maxzoom": 14,
       "layout": {"visibility": "visible"},
       "paint": {"circle-radius": 3, "circle-color": "rgba(0, 0, 0, 1)"}
-    },
-    {
-      "id": "special-survey",
-      "type": "line",
-      "source": "plss",
-      "source-layer": "PLSSSpecialSurvey",
-      "maxzoom": 14,
-      "layout": {"visibility": "visible"},
-      "paint": {"line-color": "rgba(0, 120, 146, 1)"}
-    },
-    {
-      "id": "township",
-      "type": "line",
-      "source": "plss",
-      "source-layer": "PLSSTownship",
-      "maxzoom": 14,
-      "layout": {"visibility": "visible"},
-      "paint": {"line-color": "rgba(18, 90, 0, 1)"}
     },
     {
       "id": "point-label",
       "type": "symbol",
       "source": "plss",
       "source-layer": "PLSSPoint",
-      "minzoom": 8,
+      "minzoom": 12,
       "maxzoom": 14,
-      "layout": {"visibility": "visible", "text-field": ["get", "POINTLAB"], "text-size": 16},
+      "layout": {
+        "text-field": ["get", "POINTLAB"],
+        "text-size": 16,
+        "visibility": "visible",
+        "text-anchor": "left",
+        "text-offset": [0.5, 0.5]
+      },
       "paint": {
         "text-halo-color": "rgba(206, 200, 0, 1)",
         "text-halo-width": 0.75,
@@ -91,5 +118,5 @@
       }
     }
   ],
-  "id": "plss-all-layers"
+  "id": "osm-liberty"
 }
