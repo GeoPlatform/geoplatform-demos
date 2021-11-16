@@ -14,27 +14,20 @@
       ],
       "minZoom": 0,
       "maxZoom": 14,
-      "maxzoom": 14
-    },
-    "plss2": {
-      "type": "vector",
-      "url": "https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/metadata.json"
+      "maxzoom": 22
     }
   },
-  "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "township-fill",
       "type": "fill",
       "source": "plss",
       "source-layer": "PLSSTownship",
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(121, 159, 112, 1)",
-        "fill-outline-color": "transparent"
-      }
+      "paint": {"fill-color": "rgba(121, 159, 112, 1)"}
     },
     {
       "id": "special-survey-fill",
@@ -42,11 +35,12 @@
       "source": "plss",
       "source-layer": "PLSSSpecialSurvey",
       "minzoom": 6,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "rgba(165, 158, 228, 1)",
-        "fill-outline-color": "rgba(0, 0, 0, 1)"
+        "fill-outline-color": "rgba(101, 100, 138, 1)",
+        "fill-opacity": 1
       }
     },
     {
@@ -55,7 +49,7 @@
       "source": "plss",
       "source-layer": "PLSSTownship",
       "minzoom": 8,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {"line-color": "rgba(18, 90, 0, 1)", "line-width": 3}
     },
@@ -65,7 +59,7 @@
       "source": "plss",
       "source-layer": "PLSSFirstDivision",
       "minzoom": 9,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(129, 68, 42, 1)",
@@ -79,7 +73,7 @@
       "source": "plss",
       "source-layer": "PLSSSecondDivision",
       "minzoom": 11,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(10, 0, 187, 1)",
@@ -93,9 +87,9 @@
       "source": "plss",
       "source-layer": "PLSSPoint",
       "minzoom": 11,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"circle-radius": 3, "circle-color": "rgba(0, 0, 0, 1)"}
+      "paint": {"circle-radius": 3, "circle-color": "rgba(239, 53, 53, 1)"}
     },
     {
       "id": "point-label",
@@ -103,18 +97,50 @@
       "source": "plss",
       "source-layer": "PLSSPoint",
       "minzoom": 12,
-      "maxzoom": 14,
+      "maxzoom": 24,
       "layout": {
         "text-field": ["get", "POINTLAB"],
-        "text-size": 16,
+        "text-size": 14,
         "visibility": "visible",
-        "text-anchor": "left",
-        "text-offset": [0.5, 0.5]
+        "text-anchor": "bottom-left",
+        "text-font": ["Open Sans Regular"],
+        "text-offset": [1, -0.5],
+        "text-keep-upright": false,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-padding": 0.5,
+        "text-justify": "left"
       },
       "paint": {
         "text-halo-color": "rgba(206, 200, 0, 1)",
         "text-halo-width": 0.75,
         "text-color": "rgba(0, 0, 0, 1)"
+      }
+    },
+    {
+      "id": "point-marker",
+      "type": "symbol",
+      "source": "plss",
+      "source-layer": "PLSSPoint",
+      "minzoom": 12,
+      "layout": {
+        "icon-image": "marker",
+        "text-offset": [160, 160],
+        "icon-offset": [0, -8]
+      }
+    },
+    {
+      "id": "township-label",
+      "type": "symbol",
+      "source": "plss",
+      "source-layer": "PLSSTownship",
+      "minzoom": 10,
+      "layout": {
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["get", "PLSSID"],
+        "symbol-placement": "point",
+        "symbol-avoid-edges": true,
+        "visibility": "none"
       }
     }
   ],
