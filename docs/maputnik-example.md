@@ -21,7 +21,7 @@ Once added, you should see your new data source at the top of this dialog box.
 4. Add Layers from your data source to the map.
 You may need to get the underlying data `Source Layer` name which can be done by inspecting the tilejson endpoint. For example, in this case:
 https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/metadata.json. 
-In the `"json"` property, there is a `vector_layers` array with a list of Sources. We will add the `PLSSTownship` layer.
+In the `"json"` property, there is a `vector_layers` array with a list of Sources. We will add the `PLSSTownship` layer:
     ```json
     json: "{"vector_layers": [ { "id": "PLSSTownship", "description": "", "minzoom": 6, "maxzoom": 10, "fields": {}..."
     ```
@@ -30,9 +30,10 @@ In the `"json"` property, there is a `vector_layers` array with a list of Source
 
     Give your layer a unique and representative name in the `ID` field. Use the `Source` id as defined in step 3 then click *Add Layer*. Since this is a Polygon type geometry, we will select *Fill* as the `Type`. 
 
-5. Style your layer. Select the newly created later in the *Layers* list on the left side. From here you can style your layer in many different ways, including filters and expressions. Check out the Mapbox [Layers](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/) documentation for more. 
+5. Style your layer. Select the newly created later in the *Layers* list on the left side. From here you can style your layer in many different ways, including using filters and expressions. Check out the Mapbox [Layers](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/) documentation for more. 
 ![maputnik-style-layer](assets/images/maputnik-style-layer.PNG)
 
+6. Export your style. When finished editing your map style, select **Export** from the top menu bar. You can now download and use your style json outside of Maputnik. 
 
 
 ## Tools
