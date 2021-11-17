@@ -27,7 +27,7 @@
       "source-layer": "PLSSTownship",
       "maxzoom": 24,
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(121, 159, 112, .75)"}
+      "paint": {"fill-color": "rgba(121, 159, 112, .5)"}
     },
     {
       "id": "special-survey-fill",
