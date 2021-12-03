@@ -69,3 +69,75 @@ Encoded URL parameters may be used to change the configuration of Terriamap as i
 - share=...	Load a map view previously saved using the "Share" function with URL shortening.
 - start=...	Load a map view previously saved without URL shortening. The argument is a URL-encoded JSON structure defined using an internal format described below.
 
+
+## Terriamap API Calls via API Gateway
+Terriamap can be used in conjunction with an API that uses an AWS lambda to load specific configurations, service types or layers. The API accepts URL parameters which are used by the lambda to create a custom Terriamap configuration.  
+
+### API Gateway URL Parameters
+- __type__ - The __type__ parameter is used to designate the filetype of the returned by the Terriamap lambda which is called by the API Gateway
+    - this value will always be .json (e.g. type=.json)
+    - the __type__ parameter must be used in every call to the API gateway. 
+- __developer__ - The __developer__ parameter is a flag parameter that is not set to any value. The developer parameter is used by the Terriamap lambda to load developer configuration, which contains all service types (Raster, MVT, WMS & WFS).
+- __themes__ -  The __themes__ parameter is used to load a configuration into Terriamap that includes only the layers of a specific theme or group of themes. 
+- __ids__ - The __ids__ parameter is used to load a configuration with a subset of layers based on a list of ids. The ids that are expected are geonetwork ids as they exist in GeoPlatform (e.g. https://geoplatform.gov/metadata/0d7bf767-21f8-5d38-a492-ddafa2849bcf)
+- __datasets__ - The __datasets__ parameter is also used to load a configuration with a subset of layers based on a list of dataset names. 
+- __serviceTypes__ - the __serviceTypes__ parameter is used in conjunction with either the developer, themes, ids or datasets parameters to specify which service types to include in the Terriamap catalog. 
+    - valid parameter values for serviceTypes are 
+
+### API Gateway URL Parameter Examples
+- __type__ - Example showing the __type__ parameter being used in conjunction with the __developer__ parameter:
+    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json)
+- __developer__ - Example showing how to load the developer configuration: 
+    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json)
+- __themes__ = Example showing how to load a subset of themes:
+    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DCadastre%2CBiodiversity+and+Ecosystems%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DCadastre%2CBiodiversity+and+Ecosystems%26type%3D.json)
+- __ids__ - Example showing how to load a subset of GeoPlatform ids:
+    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D15745455-5fd5-5bdc-9aee-d6adc9e61e7f%2C46d93f7d-ef54-5409-9fd0-7226173c6dbd%2C46d2a894-9f6a-52cf-b0fe-0a459e077695%2C947240db-1742-578a-88b1-489c05dc5841%2C46ecac09-0932-5091-bce3-e64b645e1e7f%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D15745455-5fd5-5bdc-9aee-d6adc9e61e7f%2C46d93f7d-ef54-5409-9fd0-7226173c6dbd%2C46d2a894-9f6a-52cf-b0fe-0a459e077695%2C947240db-1742-578a-88b1-489c05dc5841%2C46ecac09-0932-5091-bce3-e64b645e1e7f%26type%3D.json)
+- __datasets__ - Example showing how to load a subset of datasets:
+    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DOuter+Continetal+Shelf+Block+Aliquots+-+Atlantic+Region+NAD83%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DOuter+Continetal+Shelf+Block+Aliquots+-+Atlantic+Region+NAD83%26type%3D.json)
+- __serviceTypes__ - Examples showing how to load service types for themes, ids and datasets and a developer configuration. 
+    - __themes__ being used in conjunction with __serviceTypes__ to show WMF and WFS services for the Utilities theme
+        - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DUtilities%26serviceTypes%3DWMS%2CWFS%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DUtilities%26serviceTypes%3DWMS%2CWFS%26type%3D.json)
+    - __ids__ being used in conjunction with __serviceTypes__ to show raster and WMS services for ids 15745455-5fd5-5bdc-9aee-d6adc9e61e7f,46d93f7d-ef54-5409-9fd0-7226173c6dbd,46d2a894-9f6a-52cf-b0fe-0a459e077695,947240db-1742-578a-88b1-489c05dc5841,46ecac09-0932-5091-bce3-e64b645e1e7f
+        - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D15745455-5fd5-5bdc-9aee-d6adc9e61e7f%2C46d93f7d-ef54-5409-9fd0-7226173c6dbd%2C46d2a894-9f6a-52cf-b0fe-0a459e077695%2C947240db-1742-578a-88b1-489c05dc5841%2C46ecac09-0932-5091-bce3-e64b645e1e7f%26serviceTypes%3DRASTER%2CWMS%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D15745455-5fd5-5bdc-9aee-d6adc9e61e7f%2C46d93f7d-ef54-5409-9fd0-7226173c6dbd%2C46d2a894-9f6a-52cf-b0fe-0a459e077695%2C947240db-1742-578a-88b1-489c05dc5841%2C46ecac09-0932-5091-bce3-e64b645e1e7f%26serviceTypes%3DRASTER%2CWMS%26type%3D.json)
+    - __datasets__ being used in conjunction with the __serviceTypes__ to load MVT tile service for Bailey's Ecoregions and Subregions Dataset.
+        - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DBailey%27s+Ecoregions+and+Subregions+Dataset%26serviceTypes%3DMVT%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DBailey%27s+Ecoregions+and+Subregions+Dataset%26serviceTypes%3DMVT%26type%3D.json)
+
+
+### URL Parameter Use Cases
+1. Load MVT tile services for FS National Forests Dataset (US Forest Service Proclaimed Forests)
+    - [https://www.url-encode-decode.com/](https://www.url-encode-decode.com/) is used to encode and decode url parameters and makes it easy to manage the encoding of parameters that need to be sent to the API gateway. Using a url encoding service will make it easier to modify the url encoded parameters. We will use url-encode-decode.com to manage the encoding of parameters used in this use case.  
+    - Go to [https://www.url-encode-decode.com/](https://www.url-encode-decode.com/) and enter "__https<nolink>://api.geoplatform.gov/v2/generate-terriamap-config?datasets=FS National Forests Dataset (US Forest Service Proclaimed Forests)&serviceTypes=MVT&type=.json__" into the prominant box on the left hand side and click the __--> Encode url__ button to produce the encoded value on the right hand side
+        - ![url-encode-mvt-example](assets/images/url-encode-mvt-example.png)
+    - Open a browser and enter __https<nolink>://terriamap.geoplatform.gov/#clean&__ into the address bar.
+    - Copy the URL encoded value that was generated by url-encode-decode.com (e.g. __https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DFS+National+Forests+Dataset+%28US+Forest+Service+Proclaimed+Forests%29%26serviceTypes%3DMVT%26type%3D.json__) into the browser's address bar after the __"&"__ character.
+    - Verify that the address in your browser's address bar is [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DFS+National+Forests+Dataset+%28US+Forest+Service+Proclaimed+Forests%29%26serviceTypes%3DMVT%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DFS+National+Forests+Dataset+%28US+Forest+Service+Proclaimed+Forests%29%26serviceTypes%3DMVT%26type%3D.json)
+    - Click enter to navigate to the address.
+    - Once Terriamap fully loads, click the __Add Data__ button to open the data catalog. 
+        - ![terriamap-add-data](assets/images/terriamap-add-data.png) 
+    - In the data catalog click on Cadastre --> FS National Forests Dataset (US Forest Service Proclaimed Forests) to ensure that vector tiles have been loaded into Terriamap
+        - ![fs-national-forests-example](assets/images/fs-national-forests-example.png)
+2. Load an NGDA two different ways
+    - Load Outer Continental Shelf Oil and Natural Gas Pipelines - Gulf of Mexico Region NAD 27 by dataset name. 
+        - Go to [https://www.url-encode-decode.com/](https://www.url-encode-decode.com/) and enter "__https<nolink>://api.geoplatform.gov/v2/generate-terriamap-config?datasets=Outer Continental Shelf Oil and Natural Gas Pipelines - Gulf of Mexico Region NAD 27&type=.json__" into the prominant box on the left hand side and click the __--> Encode url__ button to produce the encoded value on the right hand side
+            - ![url-encode-pipelines-example](assets/images/url-encode-pipelines-example.png)
+        - Open a browser and enter __https<nolink>://terriamap.geoplatform.gov/#clean&__ into the address bar.
+        - Copy the URL encoded value that was generated by url-encode-decode.com (e.g. __https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DOuter+Continental+Shelf+Oil+and+Natural+Gas+Pipelines+-+Gulf+of+Mexico+Region+NAD+27%26type%3D.json__) into the browser's address bar after the __"&"__ character.  
+        - Verify that the address in your browser's address bar is [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DOuter+Continental+Shelf+Oil+and+Natural+Gas+Pipelines+-+Gulf+of+Mexico+Region+NAD+27%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdatasets%3DOuter+Continental+Shelf+Oil+and+Natural+Gas+Pipelines+-+Gulf+of+Mexico+Region+NAD+27%26type%3D.json)  
+        - Click enter to navigate to the address.
+        - Once Terriamap fully loads, click the __Add Data__ button to open the data catalog. 
+            - ![terriamap-add-data](assets/images/terriamap-add-data.png) 
+        - In the data catalog click on Utilities --> Outer Continental Shelf Oil and Natural Gas Pipelines - Gulf of Mexico Region NAD 27 to ensure that vector tiles have been loaded into Terriamap
+            - ![pipelines-example](assets/images/pipelines-example.png)  
+    - Load Outer Continental Shelf Oil and Natural Gas Pipelines - Gulf of Mexico Region NAD 27 by dataset id. 
+        - Go to [https://www.url-encode-decode.com/](https://www.url-encode-decode.com/) and enter "__https<nolink>://api.geoplatform.gov/v2/generate-terriamap-config?ids=4bfd37f2-cba8-5b2a-962b-41816a6b1a64&type=.json__" into the prominant box on the left hand side and click the __--> Encode url__ button to produce the encoded value on the right hand side
+            - ![url-encode-pipelines-ids-example](assets/images/url-encode-pipelines-ids-example.png)
+        - Open a browser and enter __https<nolink>://terriamap.geoplatform.gov/#clean&__ into the browser address bar.  
+        - Copy the URL encoded value that was generated by url-encode-decode.com (e.g. __https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D4bfd37f2-cba8-5b2a-962b-41816a6b1a64%26type%3D.json]__) into the browser's address bar after the __"&"__ character.
+        - Verify that the address in your browser's address bar is [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D4bfd37f2-cba8-5b2a-962b-41816a6b1a64%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fids%3D4bfd37f2-cba8-5b2a-962b-41816a6b1a64%26type%3D.json)  
+        - Click enter to navigate to the address.
+        - Once Terriamap fully loads, click the __Add Data__ button to open the data catalog. 
+            - ![terriamap-add-data](assets/images/terriamap-add-data.png) 
+        - In the data catalog click on Cadastre --> FS National Forests Dataset (US Forest Service Proclaimed Forests) to ensure that vector tiles have been loaded into Terriamap
+            - ![pipelines-example](assets/images/pipelines-example.png)  
+
