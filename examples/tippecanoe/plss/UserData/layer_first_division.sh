@@ -26,9 +26,11 @@ aws s3 cp $BASE_URL/ND_CadNSDI_V2_06252018.gdb.zip ND_CadNSDI_V2_06252018.gdb.zi
 aws s3 cp $BASE_URL/NM_CadNSDI2_07262019.gdb.zip NM_CadNSDI2_07262019.gdb.zip 
 aws s3 cp $BASE_URL/NE_CadNSDI_V2.gdb.zip NE_CadNSDI_V2.gdb.zip 
 aws s3 cp $BASE_URL/BLM_NV_PLSS.gdb.zip BLM_NV_PLSS.gdb.zip 
+aws s3 cp $BASE_URL/BLM_NM_REGION_OK_CadNSDI_gdb.zip BLM_NM_REGION_OK_CadNSDI_gdb.zip # oklahoma
 aws s3 cp $BASE_URL/OH_CADNSDI_V2.gdb.zip OH_CADNSDI_V2.gdb.zip 
 aws s3 cp $BASE_URL/CadNSDI_PLSS_web.gdb.zip CadNSDI_PLSS_web.gdb.zip 
 aws s3 cp $BASE_URL/SD_CadNSDI_V2.gdb.zip SD_CadNSDI_V2.gdb.zip 
+aws s3 cp $BASE_URL/WI_CadNSDI_V2.gdb.zip WI_CadNSDI_V2.gdb.zip
 aws s3 cp $BASE_URL/WY_PLSS_CadNSDI_20190925.gdb.zip WY_PLSS_CadNSDI_20190925.gdb.zip 
 
 
@@ -55,9 +57,11 @@ sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest 
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/nm_$LAYER.geojson /data/NM_CadNSDI2_07262019.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ne_$LAYER.geojson /data/NE_CadNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/nv_$LAYER.geojson /data/BLM_NV_PLSS.gdb.zip $LAYER
+sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ok_$LAYER.geojson /data/BLM_NM_REGION_OK_CadNSDI_gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/oh_$LAYER.geojson /data/OH_CADNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/or_wa_$LAYER.geojson /data/CadNSDI_PLSS_web.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/sd_$LAYER.geojson /data/SD_CadNSDI_V2.gdb.zip $LAYER
+sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/wi_$LAYER.geojson /data/WI_CadNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/wy_$LAYER.geojson /data/WY_PLSS_CadNSDI_20190925.gdb.zip $LAYER
 
 #geojson to compressed
@@ -81,8 +85,10 @@ gzip -c nm_$LAYER.geojson > nm_$LAYER.geojson.gz
 gzip -c ne_$LAYER.geojson > ne_$LAYER.geojson.gz
 gzip -c nv_$LAYER.geojson > nv_$LAYER.geojson.gz
 gzip -c oh_$LAYER.geojson > oh_$LAYER.geojson.gz
+gzip -c ok_$LAYER.geojson > ok_$LAYER.geojson.gz
 gzip -c or_wa_$LAYER.geojson > or_wa_$LAYER.geojson.gz
 gzip -c sd_$LAYER.geojson > sd_$LAYER.geojson.gz
+gzip -c wi_$LAYER.geojson > wi_$LAYER.geojson.gz
 gzip -c wy_$LAYER.geojson > wy_$LAYER.geojson.gz
 
 #compressed to s3
@@ -106,8 +112,10 @@ aws s3 cp nm_$LAYER.geojson.gz $BASE_URL/nm_$LAYER.geojson.gz
 aws s3 cp ne_$LAYER.geojson.gz $BASE_URL/ne_$LAYER.geojson.gz
 aws s3 cp nv_$LAYER.geojson.gz $BASE_URL/nv_$LAYER.geojson.gz
 aws s3 cp oh_$LAYER.geojson.gz $BASE_URL/oh_$LAYER.geojson.gz
+aws s3 cp ok_$LAYER.geojson.gz $BASE_URL/ok_$LAYER.geojson.gz
 aws s3 cp or_wa_$LAYER.geojson.gz $BASE_URL/or_wa_$LAYER.geojson.gz
 aws s3 cp sd_$LAYER.geojson.gz $BASE_URL/sd_$LAYER.geojson.gz
+aws s3 cp wi_$LAYER.geojson.gz $BASE_URL/wi_$LAYER.geojson.gz
 aws s3 cp wy_$LAYER.geojson.gz $BASE_URL/wy_$LAYER.geojson.gz
 
 
