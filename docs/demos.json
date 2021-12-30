@@ -171,7 +171,7 @@
     "tags": ["Geospatial", "JSFiddle", "MapboxGL"]
 }, {
     "date": "2021-12-16",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-backdrop-full-logo.jpg",
+    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/qgis-mvt.html",
     "name": "QGIS MVT Example",
     "type": "Demo Example",
@@ -181,7 +181,7 @@
     "tags": ["Geospatial", "QGIS", "MVT"]
 }, {
     "date": "2021-12-16",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-backdrop-full-logo.jpg",
+    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/maputnik-example.html",
     "name": "Maputnik Example",
     "type": "Demo Example",
