@@ -92,7 +92,7 @@ do
 {
   echo "$i"
   aws s3 cp ${BASE_URL}/${NHDFlowline_LAYER}/${i} ./gzipped/${i} $AWS_PROFILE
-  tippecanoe -o ./mbtiles/${i%.*}.mbtiles --generate-ids -Z4 -z10 -l ${NHDFlowline_LAYER} ./gzipped/"${i}"
+  tippecanoe -o ./mbtiles/${i%.*}.mbtiles --generate-ids -Z11 -z12 -l ${NHDFlowline_LAYER} ./gzipped/"${i}"
   mbtile_join_str+="./mbtiles/${i%.*}.mbtiles "
 }
 done
