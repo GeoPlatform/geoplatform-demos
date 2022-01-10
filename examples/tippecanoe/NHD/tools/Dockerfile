@@ -7,12 +7,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* 
 
-# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY ./requirements.txt ./requirements.txt
-
-RUN pip install -r requirements.txt
+RUN pip install GDAL==3.3.3 boto3==1.20.26 tqdm==4.62.3
 
 WORKDIR /code
