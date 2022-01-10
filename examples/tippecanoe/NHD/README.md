@@ -42,7 +42,7 @@ When wanting to change the User Data for different sources and steps it needs to
 > openssl base64 -A -in ./userdata.sh -out ./userdata.txt
 
 # Windows example
-"C:\Program Files\Git\usr\bin\openssl.exe" base64 -A -in .\userdata.sh -out .\userdata01.txt
+"C:\Program Files\Git\usr\bin\openssl.exe" base64 -A -in .\userdata.sh -out .\userdata.txt
 ```
 
 ## Execute the Script
@@ -50,7 +50,7 @@ When wanting to change the User Data for different sources and steps it needs to
 To run the task it will utilize a EC2 Spot instance and execute based on the specificication document created. The `--spot-price` will need to be adjusted if the server is adjusted.
 
 ```bash
-aws ec2 request-spot-instances --spot-price "0.4" --instance-count 1 --type "one-time" --launch-specification file://UserData/mbtiles_spec.json --profile sit
+aws ec2 request-spot-instances --spot-price "0.4" --instance-count 1 --type "one-time" --launch-specification file://spec.json --profile sit
 ```
 
 Once the EC2 Spot Instance is executed successfully, you can optionally log into the console, connect to the instance and monitor the execution of the *UserData* startup script with:
