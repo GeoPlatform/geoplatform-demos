@@ -1,19 +1,19 @@
 # Introduction
 
-In order to create MVT tiles via TippeCanoe https://github.com/mapbox/tippecanoe it requires a GeoJSON file, high compute and memory servers, and the ability to create multiple variations of the tiles to determine which zoom ranges are best for each dataset. These steps make use of EC2 Spot intances to process the data. For demonstration the NHD dataset will be used to walk through the process. 
+In order to create MVT tiles via TippeCanoe https://github.com/mapbox/tippecanoe it requires a GeoJSON file, high compute and memory servers, and the ability to create multiple variations of the tiles to determine which zoom ranges are best for each dataset. These steps make use of EC2 Spot instances to process the data. For demonstration the NHD dataset will be used to walk through the process. 
 
 In order for TippeCanoe to work it requires the source file to be in a GeoJSON or .gz compressed version. Here you will find an example of how you can use EC2 to perform those actions leveraging Docker, ogr2ogr, gzip, Python and S3 to store the output.  
 
 ## Specification Document
 
-This process is CPU and RAM intensive, requiring a minimum of 48gb of RAM to convert the the NHDFlowline dataset. Choosing an EC2 instance that has a high CPU count will improve the execution speed of the script.  For best results, it's recommended to consult the [Instance Advisor](https://aws.amazon.com/ec2/spot/instance-advisor/) prior to requesting the EC2 spot instance. By selecting an Instance Type with a low Frequency of Interuption, there is a low chance of encountering any `instance-terminated-no-capacity` errors. The *spec.json* is a working example which contains the parameters for requesting the spot instance. 
+This process is CPU and RAM intensive, requiring a minimum of 48gb of RAM to convert the the NHDFlowline dataset. Choosing an EC2 instance that has a high CPU count will improve the execution speed of the script.  For best results, it's recommended to consult the [Instance Advisor](https://aws.amazon.com/ec2/spot/instance-advisor/) prior to requesting the EC2 spot instance. By selecting an Instance Type with a low Frequency of Interruption, there is a low chance of encountering any `instance-terminated-no-capacity` errors. The *spec.json* is a working example which contains the parameters for requesting the spot instance. 
 
-> Note: that the size of the EBS storage should be at least 200gb. The size of the *NHD_H_National_GDB.gdb* is ~86gb decompressed and intermediate geojson files will be 40gb+. Decompression of the Geodatabase is important for performance reasons. Also note that `SIGNIFICANT_FIGURES=6` is included to round to 6 decimal places. This may not always be apporaite for polyline and polygon geometry.
+> Note: that the size of the EBS storage should be at least 200gb. The size of the *NHD_H_National_GDB.gdb* is ~86gb decompressed and intermediate geojson files will be 40gb+. Decompression of the Geodatabase is important for performance reasons. Also note that `SIGNIFICANT_FIGURES=6` is included to round to 6 decimal places. This may not always be appropriate for polyline and polygon geometry.
 
 
 **Copying Source GDB**
 
-A one-time task of copying the source GDB to our S3 bucket was ran to reduce bandwidth cost to the provider and speed up re-occuring downloads of the geodabase to the Spot Instance where the user data scripts will be ran. Run this just once from an EC2 in the us-east-1 region:
+A one-time task of copying the source GDB to our S3 bucket was ran to reduce bandwidth cost to the provider and speed up re-occurring downloads of the geodabase to the Spot Instance where the user data scripts will be ran. Run this just once from an EC2 in the us-east-1 region:
 
 ```bash
 aws s3 cp s3://prd-tnm/StagedProducts/Hydrography/NHD/National/HighResolution/GDB/NHD_H_National_GDB.zip s3://geoplatform-cdn-temp/tippecanoe/NHD/NHD_H_National_GDB.zip
@@ -21,7 +21,7 @@ aws s3 cp s3://prd-tnm/StagedProducts/Hydrography/NHD/National/HighResolution/GD
 
 ## User Data
 
-The `UserData` property within the *spec.json* contains base64 encoded data which gives the ec2 instance instructions on bootup. These instructions are scripted out in *userdata.sh*. The script contains working commands that install Tippecanoem, Docker, copy the source GDB and run each target feature class through a series of commands to convert them to a MBTiles format. Once all feature classes have been converted to a MBTiles format, they are joined together using the `tile-join` command, expanded to a tile directory and copied/synced to s3.  It is important to have the final `sudo shutdown now` command followed by a new line to ensure that the server is terminated at the end of the process otherwise unwanted charges could occur if not properly shutdown.
+The `UserData` property within the *spec.json* contains base64 encoded data which gives the ec2 instance instructions on bootup. These instructions are scripted out in *userdata.sh*. The script contains working commands that install Tippecanoe, Docker, copy the source GDB and run each target feature class through a series of commands to convert them to a MBTiles format. Once all feature classes have been converted to a MBTiles format, they are joined together using the `tile-join` command, expanded to a tile directory and copied/synced to s3.  It is important to have the final `sudo shutdown now` command followed by a new line to ensure that the server is terminated at the end of the process otherwise unwanted charges could occur if not properly shutdown.
 
 
 **Bootloading the Processing Script**
@@ -47,7 +47,7 @@ When wanting to change the User Data for different sources and steps it needs to
 
 ## Execute the Script
 
-To run the task it will utilize a EC2 Spot instance and execute based on the specificication document created. The `--spot-price` will need to be adjusted if the server is adjusted.
+To run the task it will utilize a EC2 Spot instance and execute based on the specification document created. The `--spot-price` will need to be adjusted if the server is adjusted.
 
 ```bash
 aws ec2 request-spot-instances --spot-price "0.4" --instance-count 1 --type "one-time" --launch-specification file://spec.json --profile sit
