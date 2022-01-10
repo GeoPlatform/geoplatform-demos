@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 AWS_PROFILE="" # --profile sit
 TILESERVER_URL=s3://gp-sit-tileservice-tile-cache/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc
