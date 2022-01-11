@@ -97,7 +97,7 @@ tile-join -pk -f -n NHD -o mbtiles/NHD.mbtiles ${PWD}/mbtiles/NHDArea.mbtiles ${
 aws s3 cp ${PWD}/mbtiles/NHD.mbtiles ${MBTILE_URL} ${AWS_PROFILE}
 
 # expand to tile directory
-tile-join --force -pk -n NHD -e ./tiles ./mbtiles/NHD.mbtiles
+tile-join --force -pk -pC -n NHD -e ./tiles ./mbtiles/NHD.mbtiles
 
 # rename tile extensions to mvt
 sudo find ./tiles -name '*.pbf' -exec rename .pbf .mvt {} +
