@@ -20,12 +20,8 @@ make -j
 sudo make install
 
 cd /home/ec2-user
-sudo mkdir -p tmp
-sudo mkdir -p mbtiles
-sudo mkdir -p tiles
-sudo chown ec2-user:ec2-user ./tmp
-sudo chown ec2-user:ec2-user ./mbtiles
-sudo chown ec2-user:ec2-user ./tiles
+sudo mkdir -p tmp mbtiles tiles
+sudo chown ec2-user:ec2-user ./tmp ./mbtiles ./tiles
 
 # copy and decompress Geodatabase
 aws s3 cp ${BASE_PATH}/NHD/NHD_H_National_GDB.zip NHD_H_National_GDB.zip
@@ -42,7 +38,7 @@ LAYER=NHDPointEventFC
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 sudo gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -Z10 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -Z9 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
@@ -51,7 +47,7 @@ LAYER=NHDPoint
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -Z10 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -Z9 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
@@ -60,7 +56,7 @@ LAYER=NHDLine
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -Z8 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -zg -l ${LAYER} --coalesce-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
@@ -69,7 +65,7 @@ LAYER=NHDArea
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -Z8 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -zg -l ${LAYER} --coalesce-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
@@ -78,7 +74,7 @@ LAYER=NHDWaterbody
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -zg -l ${LAYER} --coalesce-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
@@ -87,7 +83,7 @@ LAYER=NHDFlowline
 sudo docker run --rm -v ${PWD}:/code/ ishiland/gdal-python python gdb_to_geojsonseq.py NHD_H_National_GDB.gdb ${LAYER} tmp
 gzip -c ${PWD}/tmp/${LAYER}.geojsonseq > ${PWD}/tmp/${LAYER}.geojsonseq.gz
 aws s3 cp ${PWD}/tmp/${LAYER}.geojsonseq.gz ${BASE_PATH}/NHD/gzipped/${LAYER}.geojson.gz ${AWS_PROFILE}
-tippecanoe -f -P --generate-ids -Z12 -zg -l ${LAYER} --drop-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
+tippecanoe -f -P --maximum-tile-bytes=250000 --generate-ids -Z11 -zg -l ${LAYER} --coalesce-densest-as-needed --extend-zooms-if-still-dropping -o ${PWD}/mbtiles/${LAYER}.mbtiles ${PWD}/tmp/${LAYER}.geojsonseq
 aws s3 cp ${PWD}/mbtiles/${LAYER}.mbtiles ${BASE_PATH}/NHD/mbtiles/${LAYER}.mbtile ${AWS_PROFILE}
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq
 sudo rm ${PWD}/tmp/${LAYER}.geojsonseq.gz
