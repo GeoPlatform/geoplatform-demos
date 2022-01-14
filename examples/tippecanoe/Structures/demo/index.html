@@ -2,24 +2,145 @@
 <html>
   <head>
     <title>Structures MVT Cached Data</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
-    <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
     <style>
-        body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .map-info {
+        background: rgba(255, 255, 255, 0.7);
+        margin: 10px;
+        padding: 5px;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        z-index: 2;
+        font-weight: bolder;
+      }
+
+      .popup-container {
+        width: 100%;
+      }
+
+      .attribute-name {
+        padding: 5px;
+        font-weight: bold;
+        font-size: smaller;
+      }
+
+      .attribute-value {
+        padding: 5px;
+        margin-left: 10px;
+        font-size: smaller;
+      }
+
+      .attribute-row {
+        display: list-item;
+        list-style: none;
+      }
     </style>
   </head>
+
   <body>
+    <div class="map-info">
+      <div>Zoom:<span id="zoom"></span></div>
+      <div id="loading-div">Loading Tiles...</div>
+    </div>
     <div id="map"></div>
+
     <script>
-    var map = new maplibregl.Map({
-    container: 'map',
-    style: 'style.json',
-    zoom: 3.33,
-    center: [-111.6, 53.45]
-    });
+      let map = new maplibregl.Map({
+        container: 'map',
+        style:
+          'https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/GS-1517_Buildings_Cached_Dataset/examples/tippecanoe/Structures/demo/style.json',
+        zoom: 9,
+        center: [-122.75687, 45.39998]
+      })
+
+      // Create a popup, but don't add it to the map yet.
+      let popup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false
+      })
+
+      const updateMapInfo = () => {
+        const center = map.getCenter()
+        const zoom = map.getZoom()
+        document.getElementById('zoom').innerHTML = `${parseFloat(zoom).toFixed(
+          2
+        )}`
+      }
+
+      const toggleLoadingState = on => {
+        let elem = document.getElementById('loading-div')
+        if (on) {
+          elem.style.display = 'block'
+        } else {
+          elem.style.display = 'none'
+        }
+      }
+
+      map.on('mouseenter', 'structures', function (e) {
+        map.getCanvas().style.cursor = 'pointer'
+        const { properties } = e.features[0]
+        /*  BUILD_ID, OCC_CLS, PRIM_OCC, SEC_OCC, PROP_ADDR, PROP_CITY, PROP_ST, PROP_ZIP,
+        OUTBLDG, HEIGHT, SQMETERS, SQFEET, H_ADJ_ELEV, VAL_METHOD, FIPS, CENSUSCODE, 
+        PROD_DATE,SOURCE, USNG, LONGITUDE, LATITUDE, IMAGE_NAME, IMAGE_DATE, 
+        VAL_METHOD, REMARKS, GDB_SOURCE, SHAPE_Length, SHAPE_Area */
+        let attributes = "<div class='popup-container'>"
+        for (let key in properties) {
+          attributes += `<div class='attribute-row'>
+                        <span class='attribute-name'>${key}</span>
+                        <span class='attribute-value'>${properties[key]}</span>
+                        </div>`
+        }
+        attributes += '</div>'
+        popup
+          .setLngLat(e.lngLat)
+          .setHTML(attributes)
+          .addTo(map)
+      })
+      map.on('mouseleave', 'structures', function () {
+        map.getCanvas().style.cursor = ''
+        popup.remove()
+      })
+
+      map.on('load', () => {
+        updateMapInfo()
+      })
+
+      map.on('idle', ev => {
+        toggleLoadingState()
+      })
+      map.on('drag', function () {
+        toggleLoadingState(true)
+      })
+      map.on('zoom', function () {
+        toggleLoadingState(true)
+      })
+      map.on('moveend', function (e) {
+        updateMapInfo()
+      })
+      map.on('zoomend', function (e) {
+        updateMapInfo()
+      })
     </script>
-     
-    </body>
-    </html>
+  </body>
+</html>
