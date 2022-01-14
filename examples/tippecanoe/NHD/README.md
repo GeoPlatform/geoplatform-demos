@@ -13,7 +13,7 @@ This process is CPU and RAM intensive, requiring a minimum of 48gb of RAM to con
 
 **Copying Source GDB**
 
-A one-time task of copying the source GDB to our S3 bucket was ran to reduce bandwidth cost to the provider and speed up re-occurring downloads of the geodabase to the Spot Instance where the user data scripts will be ran. Run this just once from an EC2 in the us-east-1 region:
+A one-time task of copying the [source GDB](https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Hydrography/NHD/National/HighResolution/GDB/) to our S3 bucket was ran to reduce bandwidth cost to the provider and speed up re-occurring downloads of the geodabase to the Spot Instance where the user data scripts will be ran. Run this just once from an EC2 in the us-east-1 region:
 
 ```bash
 aws s3 cp s3://prd-tnm/StagedProducts/Hydrography/NHD/National/HighResolution/GDB/NHD_H_National_GDB.zip s3://geoplatform-cdn-temp/tippecanoe/NHD/NHD_H_National_GDB.zip
@@ -28,7 +28,7 @@ The `UserData` property within the *spec.json* contains base64 encoded data whic
 
 Because of the size of the NHD data, using a regular ogr2ogr command is not practical so a python script is used to iterate features providing a more optimized result. For specifics on how the the feature classes are read and converted to a GeoJSONSeq file, take a look at *tools/gdb_to_geojsonseq.py*.
 
-The Geojson Sequence format was chosen for its ability to be read in parrellel using Tippecanoe. This format follows specification [rfc8142](https://datatracker.ietf.org/doc/html/rfc8142#section-2). 
+The Geojson Sequence format was chosen for its ability to be read in parallel using Tippecanoe. This format follows specification [rfc8142](https://datatracker.ietf.org/doc/html/rfc8142#section-2). 
 
 
 > Note: Depending on if multiple tippe runs need to be done in parallel or on the same machine the User Data could run many tippecanoe commands on the same computer one after another. One benefit is that it does not need to download the file each time (which may be a cost to provider) so if the source is big and not within GeoPlatform S3 this could reduce some bandwidth charges in exchange for a longer runtime of a single instance. Just make sure to upload your mbtile then remove locally before starting the next variation otherwise the drive will quickly run out of space.
@@ -61,7 +61,7 @@ sudo tail -f /var/log/cloud-init-output.log
 
 ## Previewing Output
 
-Once the .mbtiles file(s) have been generated and stored on S3 those files are normally a few GB. To explore theme locally follow these steps.
+Once the .mbtiles file(s) have been generated and stored on S3 those files are normally a few GB. To explore them locally follow these steps.
 
 **Step 1**
 
