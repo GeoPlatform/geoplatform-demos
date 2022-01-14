@@ -23,6 +23,7 @@ The commands for this step are located in the *geojson.sh* file.
 
 
 **Creating the Vector Tiles**
+
 A second task of copying the compressed geojson files from the s3 location and running each of them through a `tippecanoe` command was performed next. Once all Geojsons have been converted to a MBtile file, they are joined together using the `tile-join` command. This merged MBtile file is then expanded into a tile directory and then synced to an s3 location. All other individual MBtile files are also copied to s3. 
 
 The commands for this step are located in the *mbtiles.sh* file. 
