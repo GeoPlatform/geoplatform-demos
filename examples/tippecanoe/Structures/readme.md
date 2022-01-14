@@ -17,7 +17,7 @@ The `UserData` property within the *geojson_spec.json* and *mbtiles_spec.json* c
 
 **Creating the Geojson**
 
-A one-time task of copying the source GDB's from the source location and converting the underlying feature classes to geojson was performed. These Geojson files were compressed and copied to our s3 bucket.  the original data sources for the GDBs can be found (here)[https://disasters.geoplatform.gov/publicdata/Partners/ORNL/Occupancy_Type/]. 
+A one-time task of copying the source GDB's from the source location and converting the underlying feature classes to geojson was performed. These Geojson files were compressed and copied to our s3 bucket.  the original data sources for the GDBs can be found [here](https://disasters.geoplatform.gov/publicdata/Partners/ORNL/Occupancy_Type/). 
 
 The commands for this step are located in the *geojson.sh* file. 
 
