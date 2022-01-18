@@ -17,7 +17,7 @@ straight from a repository on GitHub, optionally runs the files through a build 
 to leverage community-maintained templates and styles to customize your site’s presentation. Jekyll 
 themes specify plugins and package up assets, layouts, includes, and stylesheets in a way that 
 can be overridden by your site’s content.
-
+ 
 **Notes on installation for building the site locally**
 * For an understanding of GitHub Pages and Jekyll see 
 [Creating a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
