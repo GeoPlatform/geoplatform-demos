@@ -4,7 +4,7 @@ In order to create MVT tiles via TippeCanoe https://github.com/mapbox/tippecanoe
 
 ## Encoding User Data
 
-When wanting to change the User Date for different sources and steps it needs to be saved in base64. Generating base64 can be done from online websites or can be done locally using OpenSSL command. For Mac machines this should be available from the terminal. For Window users this does not come preloaded but is included with Git. Below is an example of how to reference a source file. The output will be written to a .txt file as a single line. Copy and paste this into the `UserData` property of the Specification Document defined below. 
+When wanting to change the User Data for different sources and steps it needs to be saved in base64. Generating base64 can be done from online websites or can be done locally using OpenSSL command. For Mac machines this should be available from the terminal. For Window users this does not come preloaded but is included with Git. Below is an example of how to reference a source file. The output will be written to a .txt file as a single line. Copy and paste this into the `UserData` property of the Specification Document defined below. 
 
 ```bash
 # Mac Example
@@ -46,6 +46,7 @@ In order for TippeCanoe to work it requires the source file to be in a GeoJSON o
 ```
 
 **User Data**
+For each specification.json document created will have an associated userdata as well. These are the commands that the EC2 server will execute on bootup. It is important to have the final `sudo shutdown now` command followed by a new line to ensure that the server is terminated at the end of the process otherwise unwanted charges could occur if not properly shutdown.
 
 ```bash
 #!/bin/bash
@@ -75,12 +76,14 @@ To run the task it will utilize a EC2 Spot instance and execute based on the spe
 aws ec2 request-spot-instances --spot-price "0.2" --instance-count 1 --type "one-time" --launch-specification file://geojson_spec.json --profile sit
 ```
 
+Once the EC2 Spot Instance is executed successfully, you can optionally log into the console, connect to the instance and monitor the execution of the *UserData* startup script with:
 
-## Create the User Data
+```bash
+sudo tail -f /var/log/cloud-init-output.log
+```
 
-For each specification.json document created will have an associated userdata as well. These are the commands that the EC2 server will execute on bootup. It is important to have the final `sudo shutdown now` command followed by a new line to ensure that the server is terminated at the end of the process otherwise unwanted charges could occur if not properly shutdown.
-
-The below is a sample of working commands that will install tippecanoe, download the file to process and when finished upload the generated output to S3 and then shut itself down. For NAD this whole execution takes around 2 to 4 hours to complete depending on the flags provided. When working with this file or any other source you will need to edit Line 18 (the source file and local name), Line 21 (the tippecanoe command to be executed), and Line 24 (where the file needs to be saved). It is recommend to create a userdata0x.txt file for each scenario to be executed before moving to the next step.
+## Generating the MBTiles & Vector Tile Directory
+After running the `geojson_spec.json`, you will want to do a similiar process for generating the vector tiles. The below is a sample of working commands that will install tippecanoe, download the file to process and when finished upload the generated output to S3 and then shut itself down. For NAD this whole execution takes around 2 to 4 hours to complete depending on the flags provided. When working with this file or any other source you will need to edit Line 18 (the source file and local name), Line 21 (the tippecanoe command to be executed), and Line 24 (where the file needs to be saved). It is recommend to create a userdata0x.txt file for each scenario to be executed before moving to the next step.
 
 ```bash
 #!/bin/bash
@@ -153,7 +156,7 @@ aws ec2 request-spot-instances --spot-price "0.4" --instance-count 1 --type "one
 
 
 ## Cloudront 
-After the tippecanoe tile generation and s3 sync, tiles will not be immediatly updated in the tile viewer. To do this, you will have to create an invalidation in cloudfront. This can be achieved with the following command:
+After the tippecanoe tile generation and s3 sync, tiles will not be immediately updated in the tile viewer. To do this, you will have to create an invalidation in cloudfront. This can be achieved with the following command:
     
 ```sh
 aws cloudfront create-invalidation  --distribution-id=E15U8PK5JMXWTD --paths "/*" --profile sit
@@ -204,4 +207,5 @@ Go to `http://localhost:8080` to explore the tiles.
 # Other Cookbooks
 - [NHD](https://github.com/GeoPlatform/geoplatform-demos/tree/main/examples/tippecanoe/NHD)
 - [PLSS](https://github.com/GeoPlatform/geoplatform-demos/tree/main/examples/tippecanoe/plss)
+- [ORNL Structures](https://github.com/GeoPlatform/geoplatform-demos/tree/main/examples/tippecanoe/Structures)
 
