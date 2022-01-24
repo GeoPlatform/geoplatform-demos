@@ -156,14 +156,12 @@ aws ec2 request-spot-instances --spot-price "0.4" --instance-count 1 --type "one
 
 
 ## Cloudront 
-After the tippecanoe tile generation and s3 sync, tiles will not be immediately updated in the tile viewer. To do this, you will have to create an invalidation in cloudfront. This can be achieved with the following command:
+After the tippecanoe tile generation and s3 sync, the new tiles will not be immediately updated in the tile viewer. To avoid waiting the 24hr TTL, you have to create a Cloud Front invalidation:
     
 ```sh
 aws cloudfront create-invalidation  --distribution-id=E15U8PK5JMXWTD --paths "/*" --profile sit
 ```
 After waiting a few minutes, the tiles should reflect what is currently in the s3 location. 
-
-If you don't run the above command, new tiles should be visible in 24hrs unless this default TTL gets changed at some point. 
 
 **Note:**
 > The first 1,000 invalidation paths that you submit per month are free; you pay for each invalidation path over 1,000 in a month. An invalidation path can be for a single file (such as /images/logo.jpg) or for multiple files (such as /images/*). A path that includes the * wildcard counts as one path even if it causes CloudFront to invalidate thousands of files.
@@ -178,7 +176,7 @@ Download the S3 file using something similar to this.
 
 ```bash
 cd /my_data_folder
-aws s3 cp s3://geoplatform-cdn-temp/tippecanoe/nad_r6_01.mbtiles tiles.mbtiles
+aws s3 cp s3://geoplatform-cdn-temp/tippecanoe/NAD/nad_r8.mbtiles tiles.mbtiles
 ```
 
 **Step 2**
