@@ -22,4 +22,14 @@ tippecanoe -o ./tiles.mbtiles --drop-densest-as-needed --extend-zooms-if-still-d
 
 # Store the created mbtiles file back to S3. This S3 file will need to change as needed for the variations generated
 aws s3 cp tiles.mbtiles s3://geoplatform-cdn-temp/tippecanoe/NAD/nad_r8.mbtiles
+
+# expand to tile directory
+tile-join --force -pk -pC -n NAD -e ./tiles tiles.mbtiles 
+
+# rename tile extensions to mvt
+sudo find ./tiles -name '*.pbf' -exec rename .pbf .mvt {} +
+
+# sync directory to s3
+aws s3 sync ./tiles s3://geoplatform-cdn-temp/tippecanoe/NAD/tiles --no-progress --only-show-errors
+
 sudo shutdown now
