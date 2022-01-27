@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 BASE_URL=s3://geoplatform-cdn-temp/tippecanoe/padus
 
@@ -34,61 +34,61 @@ aws s3 cp ${BASE_URL}/PAD_US2_1_GDB.zip PAD_US2_1_GDB.zip
 
 # PADUS2_1Combined_Fee_Designation (Multi Polygon)
 OUT_LAYER=combined_fee_designation
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Designation
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Designation
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Combined_Fee_Designation_Easement (Multi Polygon)
 OUT_LAYER=combined_fee_designation_easement
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Designation_Easement
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Designation_Easement
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Combined_Fee_Easement (Multi Polygon)
 OUT_LAYER=combined_fee_easement
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Easement
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Combined_Fee_Easement
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Combined_Marine_Fee_Designation_Easement (Multi Polygon)
 OUT_LAYER=combined_marine_fee_designation_easement
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Combined_Marine_Fee_Designation_Easement
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Combined_Marine_Fee_Designation_Easement
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Combined_Proclamation_Marine_Fee_Designation_Easement (Multi Polygon)
 OUT_LAYER=combined_proclamation_marine_fee_designation_easement
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Combined_Proclamation_Marine_Fee_Designation_Easement
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Combined_Proclamation_Marine_Fee_Designation_Easement
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Designation (Multi Polygon)
 OUT_LAYER=designation
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Designation
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Designation
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Easement (Multi Polygon)
 OUT_LAYER=easement
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Easement
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Easement
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/padus/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Fee (Multi Polygon)
 OUT_LAYER=fee
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Fee
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Fee
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/padus/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Marine (Multi Polygon)
 OUT_LAYER=marine
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Marine
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Marine
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/padus/geojson/${OUT_LAYER}.geojsonseq.gz
 
 # PADUS2_1Proclamation (Multi Polygon)
 OUT_LAYER=proclamation
-sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq PAD_US2_1_GDB.zip PADUS2_1Proclamation
+sudo docker run -v /tmp:/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -f GeoJSONSeq -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 /data/${OUT_LAYER}.geojsonseq /data/PAD_US2_1_GDB.zip PADUS2_1Proclamation
 gzip -c ${OUT_LAYER}.geojsonseq > ${OUT_LAYER}.geojsonseq.gz
 aws s3 cp ${OUT_LAYER}.geojsonseq.gz ${BASE_URL}/padus/geojson/${OUT_LAYER}.geojsonseq.gz
 

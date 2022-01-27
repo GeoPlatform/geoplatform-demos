@@ -1,10 +1,7 @@
 #!/bin/bash
 
-AWS_PROFILE="" 
-# TILESERVER_URL=s3://gp-sit-tileservice-tile-cache/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc
-TILESERVER_URL=s3://geoplatform-cdn-temp/tippecanoe/padus/tiles
-# MBTILE_URL=s3://gp-sit-us-east-1-geoplatform-archive/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc.mbtiles
-MBTILE_URL=s3://geoplatform-cdn-temp/tippecanoe/padus/PADUS.mbtiles
+TILESERVER_URL=s3://gp-sit-tileservice-tile-cache/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137
+MBTILE_URL=s3://gp-sit-us-east-1-geoplatform-archive/a7562280_01d9_55bd_aa44_c7cc88f3b137.mbtiles
 BASE_PATH=s3://geoplatform-cdn-temp/tippecanoe/padus
 TIPPE_PARAMS="-f -P --coalesce-densest-as-needed --extend-zooms-if-still-dropping --generate-ids -zg --maximum-tile-bytes=250000"
 
