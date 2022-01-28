@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NAD MVT Cached Data</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .map-info {
+        background: rgba(255, 255, 255, 0.7);
+        margin: 10px;
+        padding: 5px;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        z-index: 2;
+        font-weight: bolder;
+      }
+
+      .popup-container {
+        width: 100%;
+      }
+
+      .attribute-name {
+        padding: 5px;
+        font-weight: bold;
+        font-size: smaller;
+      }
+
+      .attribute-value {
+        padding: 5px;
+        margin-left: 10px;
+        font-size: smaller;
+      }
+
+      .attribute-row {
+        display: list-item;
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="map-info">
+      <div>Zoom:<span id="zoom"></span></div>
+      <div id="loading-div">Loading Tiles...</div>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      const style = {
+        version: 8,
+        name: 'Structures Cached Data Demo',
+        sources: {
+          'raster-tiles': {
+            type: 'raster',
+            tiles: [
+              'https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg'
+            ],
+            minzoom: 0,
+            maxzoom: 14
+          },
+          nad: {
+            type: 'vector',
+            tiles: [
+              'https://geoplatform-cdn-temp.s3.amazonaws.com/tippecanoe/NAD/tiles/{z}/{x}/{y}.mvt'
+            ],
+            minZoom: 0,
+            maxZoom: 14
+          }
+        },
+        sprite:
+          'https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform',
+        glyphs:
+          'https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf',
+        layers: [
+          { id: 'atlas-tiles', type: 'raster', source: 'raster-tiles' },
+          {
+            id: 'nad',
+            type: 'circle',
+            source: 'nad',
+            'source-layer': 'nad',
+            paint: {
+              'circle-color': 'rgba(9, 0, 255, 1)',
+              'circle-radius': {
+                base: 1.75,
+                stops: [
+                  [12, 2],
+                  [22, 180]
+                ]
+              }
+            }
+          }
+        ],
+        id: 'nad-demo'
+      }
+      let map = new maplibregl.Map({
+        container: 'map',
+        style,
+        zoom: 3.6,
+        center: [-99.29, 40.02]
+      })
+
+      // Create a popup, but don't add it to the map yet.
+      let popup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false
+      })
+
+      const updateMapInfo = () => {
+        const center = map.getCenter()
+        const zoom = map.getZoom()
+        document.getElementById('zoom').innerHTML = `${parseFloat(zoom).toFixed(
+          2
+        )}`
+      }
+
+      const toggleLoadingState = on => {
+        let elem = document.getElementById('loading-div')
+        if (on) {
+          elem.style.display = 'block'
+        } else {
+          elem.style.display = 'none'
+        }
+      }
+
+      map.on('mouseenter', 'nad', function (e) {
+        map.getCanvas().style.cursor = 'pointer'
+        const { properties } = e.features[0]
+        let attributes = "<div class='popup-container'>"
+        for (let key in properties) {
+          attributes += `<div class='attribute-row'>
+                        <span class='attribute-name'>${key}</span>
+                        <span class='attribute-value'>${properties[key]}</span>
+                        </div>`
+        }
+        attributes += '</div>'
+        popup
+          .setLngLat(e.lngLat)
+          .setHTML(attributes)
+          .addTo(map)
+      })
+      map.on('mouseleave', 'nad', function () {
+        map.getCanvas().style.cursor = ''
+        popup.remove()
+      })
+
+      map.on('load', () => {
+        updateMapInfo()
+      })
+
+      map.on('idle', ev => {
+        toggleLoadingState()
+      })
+      map.on('drag', function () {
+        toggleLoadingState(true)
+      })
+      map.on('zoom', function () {
+        toggleLoadingState(true)
+      })
+      map.on('moveend', function (e) {
+        updateMapInfo()
+      })
+      map.on('zoomend', function (e) {
+        updateMapInfo()
+      })
+    </script>
+  </body>
+</html>
