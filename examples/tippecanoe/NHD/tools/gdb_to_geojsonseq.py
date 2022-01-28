@@ -34,7 +34,10 @@ data_source = driver.Open(gdb_path, 0)
 layer = data_source.GetLayerByName(fc_name)
 
 
-def write_feature_to_file(index):
+def get_feature_json(index):
+    """
+    get json by feature ID
+    """
     ref_feature = layer.GetFeature(index)
     if ref_feature:
         try:
@@ -46,6 +49,18 @@ def write_feature_to_file(index):
             pass
     return None
 
+def get_fids(lyr):
+    """
+    return list of all feature IDs
+    """
+    print("Getting Features IDs..")
+    feature = lyr.GetNextFeature()
+    f_ids = []
+    while feature:
+        f_ids.append(feature.GetFID())
+        feature = lyr.GetNextFeature()
+    return f_ids
+
 
 def multiprocess_ogr2ogr():
     # empty target file contents
@@ -53,9 +68,9 @@ def multiprocess_ogr2ogr():
 
     # initiate multiprocessing
     pool = Pool()
-    fc = layer.GetFeatureCount()
+    ids = get_fids(layer)
     with pool as p:
-        results = list(tqdm(p.imap(write_feature_to_file, range(fc), chunksize=1000), total=fc))
+        results = list(tqdm(p.imap_unordered(get_feature_json, ids, chunksize=1000), total=len(ids)))
 
     print('writing results to file...')
     with open(out_path, 'a', encoding='utf-8') as file:
