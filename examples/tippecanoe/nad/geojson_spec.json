@@ -1,0 +1,23 @@
+{
+    "ImageId": "ami-087c17d1fe0178315",
+    "KeyName": "geoplatform",
+    "SecurityGroupIds": [ "sg-098a0214e40b42e6a" ],
+    "InstanceType": "c6i.large",
+    "Placement": {
+        "AvailabilityZone": "us-east-1a"
+    },
+    "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::998343784597:instance-profile/TippeCanoe"
+    },
+    "BlockDeviceMappings": [{
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+            "DeleteOnTermination": true,
+            "SnapshotId": "snap-0699a041095ac5492",
+            "VolumeSize": 100,
+            "VolumeType": "gp3",
+            "Encrypted": false
+        }
+    }],
+   "UserData":  "IyEvYmluL2Jhc2gKc3VkbyB5dW0gdXBkYXRlIC15CnN1ZG8geXVtIGluc3RhbGwgLXkgZG9ja2VyCnN1ZG8gc3lzdGVtY3RsIHN0YXJ0IGRvY2tlcgoKIyBEb3dubG9hZCBzb3VyY2UgYW5kIGNvbnZlcnQgdG8gR2VvSlNPTgpjZCAvdG1wCmF3cyBzMyBjcCBzMzovL25hdGlvbmFsYWRkcmVzc2RhdGEvTkFEX3I4LnppcCBuYWRfcjguemlwCm12IG5hZF9yOC56aXAgbmFkX3I4LmdkYi56aXAKc3VkbyBkb2NrZXIgcnVuIC12IC90bXA6L2RhdGEgLS1uYW1lIEdEQUwgLS1ybSBvc2dlby9nZGFsOmFscGluZS1zbWFsbC1sYXRlc3Qgb2dyMm9nciAtZiBHZW9KU09OIC1sY28gU0lHTklGSUNBTlRfRklHVVJFUz02IC10X3NycyBjcnM6ODQgL2RhdGEvbmFkX3I4Lmdlb2pzb24gL3ZzaXppcC9kYXRhL25hZF9yOC5nZGIuemlwIE5BRAoKIyBDb21wcmVzcyBhbmQgdXBsb2FkIGZpbGUgdG8gUzMKZ3ppcCAtYyBuYWRfcjguZ2VvanNvbiA+IG5hZF9yOC5nZW9qc29uLmd6CmF3cyBzMyBjcCBuYWRfcjguZ2VvanNvbi5neiBzMzovL2dlb3BsYXRmb3JtLWNkbi10ZW1wL3RpcHBlY2Fub2UvTkFEL25hZF9yOC5nZW9qc29uLmd6CgpzdWRvIHNodXRkb3duIG5vdw=="
+}
