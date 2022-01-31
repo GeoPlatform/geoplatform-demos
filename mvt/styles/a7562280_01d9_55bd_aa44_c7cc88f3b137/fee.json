@@ -1,0 +1,77 @@
+{
+  "version": 8,
+  "name": "PADUS Fee Managers",
+  "metadata": {},
+  "sources": {
+    "raster-tiles": {
+      "type": "raster",
+      "tiles": [
+        "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
+      ],
+      "minzoom": 0,
+      "maxzoom": 14
+    },
+    "padus": {
+      "type": "vector",
+      "tiles": [
+        "https://sit-tileservice.geoplatform.info/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137/{z}/{x}/{y}.mvt"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14
+    }
+  },
+  "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "atlas-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "layout": {"visibility": "visible"}
+    },
+    {
+      "id": "fee-fill",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "fee",
+      "paint": {
+        "fill-color": [
+          "match",
+          ["string", ["get", "Mang_Name"]],
+          "BLM",
+          "rgb(242, 220, 145)",
+          "CITY",
+          "rgb(187, 196, 88)",
+          "CNTY",
+          "rgb(184, 217, 87)",
+          "DOD",
+          "rgb(128, 62, 57)",
+          "FWS",
+          "rgb(173, 87, 100)",
+          "JNT",
+          "rgb(227, 176, 175)",
+          "NGO",
+          "rgb(230, 71, 71)",
+          "NPS",
+          "rgb(242, 220, 145)",
+          "OTHF",
+          "rgb(134, 198, 108)",
+          "OTHS",
+          "rgb(171, 153, 191)",
+          "REG",
+          "rgb(184, 217, 87)",
+          "SDC",
+          "rgb(171, 153, 191)",
+          "SDNR",
+          "rgb(191, 124, 153)",
+          "SFW",
+          "rgb(163, 146, 222)",
+          "SPR",
+          "rgb(155, 170, 222)",
+          "rgb(227, 176, 175)"
+        ]
+      }
+    }
+  ],
+  "id": "fee-managers"
+}
