@@ -1,0 +1,57 @@
+{
+  "version": 8,
+  "name": "PADUS Protection Status by GAP Status Code",
+  "metadata": {},
+  "sources": {
+    "raster-tiles": {
+      "type": "raster",
+      "tiles": [
+        "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
+      ],
+      "minzoom": 0,
+      "maxzoom": 14
+    },
+    "padus": {
+      "type": "vector",
+      "tiles": [
+        "https://sit-tileservice.geoplatform.info/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137/{z}/{x}/{y}.mvt"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14
+    }
+  },
+  "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "atlas-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "fee-fill",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "fee",
+      "paint": {
+        "fill-color": [
+          "match",
+          ["string", ["get", "GAP_Sts"]],
+          "1",
+          "rgba(38,99,61,255)",
+          "2",
+          "rgba(135,150,71,255)",
+          "3",
+          "rgba(187,187,187,255)",
+          "4",
+          "rgba(0,0,0,0)",
+          "rgb(227, 176, 175)"
+        ]
+      }
+    }
+  ],
+  "id": "protection-status-by-gap-status-code"
+}

@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "PADUS Protection Mechanism Category",
+  "metadata": {},
+  "sources": {
+      "raster-tiles": {
+          "type": "raster",
+          "tiles": [
+              "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
+          ],
+          "minzoom": 0,
+          "maxzoom": 14
+      },
+      "padus": {
+          "type": "vector",
+          "tiles": [
+              "https://sit-tileservice.geoplatform.info/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137/{z}/{x}/{y}.mvt"
+          ],
+          "minZoom": 0,
+          "maxZoom": 14
+      }
+  },
+  "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "atlas-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "layout": {"visibility": "visible"}
+    },
+    {
+      "id": "fee-fill",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "fee",
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgb(56, 168, 0)"}
+    },
+    {
+      "id": "designation",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "designation",
+      "paint": {"fill-color": "rgb(128, 197, 53)"}
+    },
+    {
+      "id": "easement",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "easement",
+      "paint": {"fill-color": "rgb(255, 153, 0)"}
+    },
+    {
+      "id": "marine",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "marine",
+      "paint": {"fill-color": "rgb(0, 153, 153)"}
+    }
+  ],
+  "id": "protection-mechanism-category"
+}

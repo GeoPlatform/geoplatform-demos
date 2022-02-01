@@ -1,0 +1,121 @@
+{
+  "version": 8,
+  "name": "PADUS Manager Name",
+  "metadata": {},
+  "sources": {
+    "raster-tiles": {
+      "type": "raster",
+      "tiles": [
+        "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
+      ],
+      "minzoom": 0,
+      "maxzoom": 14
+    },
+    "padus": {
+      "type": "vector",
+      "tiles": [
+        "https://sit-tileservice.geoplatform.info/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137/{z}/{x}/{y}.mvt"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14
+    }
+  },
+  "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+  "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "atlas-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "fee-fill",
+      "type": "fill",
+      "source": "padus",
+      "source-layer": "fee",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "string",
+            [
+              "get",
+              "Mang_Name"
+            ]
+          ],
+          "DOD",
+          "rgba(128,62,57,255)",
+          "TRIB",
+          "rgba(212,201,181,255)",
+          "BLM",
+          "rgba(242,220,145,255)",
+          "NPS",
+          "rgba(112,161,112,255)",
+          "USFS",
+          "rgba(137,189,42,255)",
+          "USACE",
+          "rgba(99,221,255,255)",
+          "USBR",
+          "rgba(0,92,230,255)",
+          "FWS",
+          "rgba(173,87,100,255)",
+          "BOEM",
+          "rgba(63, 191, 123,.5)",
+          "NOAA",
+          "rgba(0, 45, 142, 0.5)",
+          "NRCS",
+          "rgba(255,66,8,255)",
+          "BPA",
+          "rgba(134,198,108,255)",
+          "ARS",
+          "rgba(134,198,108,255)",
+          "DOE",
+          "rgba(134,198,108,255)",
+          "OTHF",
+          "rgba(134,198,108,255)",
+          "TVA",
+          "rgba(134,198,108,255)",
+          "NGO",
+          "rgba(230,71,71,255)",
+          "SDOL",
+          "rgba(191,124,153,255)",
+          "SDNR",
+          "rgba(191,124,153,255)",
+          "SLB",
+          "rgba(191,124,153,255)",
+          "OTHS",
+          "rgba(171,153,191,255)",
+          "SDC",
+          "rgba(171,153,191,255)",
+          "SFW",
+          "rgba(163,146,222,255)",
+          "SPR",
+          "rgba(155,170,222,255)",
+          "CNTY",
+          "rgba(184,217,87,255)",
+          "REG",
+          "rgba(184,217,87,255)",
+          "RWD",
+          "rgba(184,217,87,255)",
+          "CITY",
+          "rgba(187,196,88,255)",
+          "PVT",
+          "rgba(230,141,69,255)",
+          "JNT",
+          "rgba(227,176,175,255)",
+          "OTHR",
+          "rgba(227,176,175,255)",
+          "UNKL",
+          "rgba(227,176,175,255)",
+          "UNK",
+          "rgba(227,176,175,255)",
+          "rgb(227, 176, 175)"
+        ]
+      }
+    }
+  ],
+  "id": "manager-name"
+}

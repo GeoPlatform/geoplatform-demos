@@ -1,6 +1,26 @@
 [{
     "title": "Fee Managers",
-    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/fee.json",
-    "description": "Fee Managers of PADUS"
+    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/fee-manager.json",
+    "description": "Fee Managers from PADUS"
+  },{
+    "title": "Manager Name",
+    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/manager-name.json",
+    "description": "Manager Name from PADUS"
+  },
+  {
+    "title": "Manager Type",
+    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/manager-type.json",
+    "description": "Manager Type from PADUS"
+  },
+  {
+    "title": "Protection Mechanism Category",
+    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/protection-mechanism-category.json",
+    "description": "Protection Mechanism Category from PADUS"
+  },
+  {
+    "title": "Protection Status by GAP Status Code",
+    "URL": "https://raw.githubusercontent.com/GeoPlatform/geoplatform-demos/develop/mvt/styles/a7562280_01d9_55bd_aa44_c7cc88f3b137/protection-status-by-gap-status-code.json",
+    "description": "Protection Status by GAP Status Codes from PADUS"
   }
+
 ]
