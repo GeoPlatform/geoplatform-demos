@@ -1,0 +1,75 @@
+{
+    "version": 8,
+    "name": "PADUS Manager Type",
+    "metadata": {},
+    "sources": {
+        "raster-tiles": {
+            "type": "raster",
+            "tiles": [
+                "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
+            ],
+            "minzoom": 0,
+            "maxzoom": 14
+        },
+        "padus": {
+            "type": "vector",
+            "tiles": [
+                "https://sit-tileservice.geoplatform.info/vector/a7562280_01d9_55bd_aa44_c7cc88f3b137/{z}/{x}/{y}.mvt"
+            ],
+            "minZoom": 0,
+            "maxZoom": 14
+        }
+    },
+    "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+    "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "atlas-tiles",
+            "type": "raster",
+            "source": "raster-tiles",
+            "layout": {
+                "visibility": "visible"
+            }
+        },
+        {
+            "id": "fee-fill",
+            "type": "fill",
+            "source": "padus",
+            "source-layer": "fee",
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "string",
+                        [
+                            "get",
+                            "Mang_Type"
+                        ]
+                    ],
+                    "FED",
+                    "rgba(51,153,51,255)",
+                    "TRIB",
+                    "rgba(212,201,181,255)",
+                    "STAT",
+                    "rgba(158,181,23,255)",
+                    "LOC",
+                    "rgba(47,85,151,255)",
+                    "DIST",
+                    "rgba(143,115,119,255)",
+                    "NGO",
+                    "rgba(230,105,20,255)",
+                    "PVT",
+                    "rgba(132,60,12,255)",
+                    "JNT",
+                    "rgba(227,176,175,255)",
+                    "TERR",
+                    "rgba(190,180,156,255)",
+                    "UNK",
+                    "rgba(166,166,166,255)",
+                    "rgb(227, 176, 175)"
+                ]
+            }
+        }
+    ],
+    "id": "manager-type"
+}
