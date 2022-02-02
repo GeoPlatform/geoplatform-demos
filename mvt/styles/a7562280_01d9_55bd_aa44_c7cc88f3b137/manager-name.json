@@ -3,14 +3,6 @@
   "name": "PADUS Manager Name",
   "metadata": {},
   "sources": {
-    "raster-tiles": {
-      "type": "raster",
-      "tiles": [
-        "https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg"
-      ],
-      "minzoom": 0,
-      "maxzoom": 14
-    },
     "padus": {
       "type": "vector",
       "tiles": [
@@ -23,14 +15,6 @@
   "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
   "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
-    {
-      "id": "atlas-tiles",
-      "type": "raster",
-      "source": "raster-tiles",
-      "layout": {
-        "visibility": "visible"
-      }
-    },
     {
       "id": "fee-fill",
       "type": "fill",
