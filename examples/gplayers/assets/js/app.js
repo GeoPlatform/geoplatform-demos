@@ -125,8 +125,8 @@
                 tiles: [
                   'https://geoplatform-cdn-temp.s3.amazonaws.com/tippecanoe/NAD/tiles/{z}/{x}/{y}.mvt'
                 ],
-                minzoom: 0,
-                maxzoom: 12
+                minzoom: 7,
+                maxzoom: 15
               },
               'source-layer': 'nad',
               layout: {
@@ -138,11 +138,11 @@
                   type: 'exponential',
                   property: 'point_count',
                   stops: [
-                    [96, 1],
+                    [96, 5],
                     [18333, 15]
                   ]
                 },
-                'circle-opacity': 0.2
+                'circle-opacity': 0.5
               }
             },
             {
@@ -155,7 +155,7 @@
                   'https://sit-tileservice.geoplatform.info/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc/{z}/{x}/{y}.mvt'
                 ],
                 minzoom: 1,
-                maxzoom: 13
+                maxzoom: 15
               },
               'source-layer': 'NHDWaterbody',
               layout: {
@@ -215,7 +215,7 @@
                   'https://sit-tileservice.geoplatform.info/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc/{z}/{x}/{y}.mvt'
                 ],
                 minzoom: 1,
-                maxzoom: 14
+                maxzoom: 15
               },
               'source-layer': 'NHDFlowline',
               layout: {
