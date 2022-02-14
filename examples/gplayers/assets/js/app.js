@@ -51,11 +51,9 @@
         var gBoundingPolygon = {}
         var gBBox = {}
         var gFeatureName = ''
-        mapboxgl.accessToken =
-          'pk.eyJ1IjoidXNhY2UiLCJhIjoiY2o1MDZscms4MDI4MjMycG1wa3puc212MCJ9.CW7edZMtlx5vFLNF5P-zTA'
-        var map = new mapboxgl.Map({
+        var map = new maplibregl.Map({
           container: 'map',
-          style: 'mapbox://styles/mapbox/dark-v9',
+          style: 'assets/style.json',
           zoom: 3.5,
           center: [-95.9, 38.65],
           hash: true,
@@ -135,14 +133,12 @@
               paint: {
                 'circle-color': '#FF6E40',
                 'circle-radius': {
-                  type: 'exponential',
-                  property: 'point_count',
                   stops: [
-                    [96, 5],
-                    [18333, 15]
+                    [7, 1],
+                    [15, 6]
                   ]
                 },
-                'circle-opacity': 0.5
+                'circle-opacity': 0.75
               }
             },
             {
@@ -367,7 +363,7 @@
           layers.forEach(layer => {
             if (layer.id === 'terrain') {
               //place terrain below waterway-river-canal layer
-              map.addLayer(layer, 'waterway-river-canal')
+              map.addLayer(layer, 'landcover')
             } else {
               map.addLayer(layer, firstSymbolId)
             }
@@ -393,6 +389,10 @@
           function createLegendItem (layer) {
             var item = document.createElement('div')
             var key = document.createElement('span')
+            var zoomLevelDisplay = document.createElement('span')
+            zoomLevelDisplay.classList.add('zoom-range')
+            getZoomLevelRestrictions(zoomLevelDisplay, layer.source)
+
             key.className = 'legend-key'
             key.id = 'lk-' + layer.id
             if (layer.id === 'terrain') {
@@ -421,7 +421,21 @@
             }
             item.appendChild(key)
             item.appendChild(legendBtn)
+            item.appendChild(zoomLevelDisplay)
             legend.appendChild(item)
+          }
+
+          // display min to max zoom levels in legend if available
+          async function getZoomLevelRestrictions (node, sourceInfo) {
+            const { minzoom, maxzoom } = sourceInfo
+            if (minzoom && maxzoom) {
+              node.innerHTML = `z${minzoom}-${maxzoom}`
+
+              var zoomLevelTooltip = document.createElement('span')
+              zoomLevelTooltip.innerHTML = `Tiles are available for zoom range ${minzoom}-${maxzoom}`
+              zoomLevelTooltip.classList.add('zoom-range-tooltip')
+              node.appendChild(zoomLevelTooltip)
+            }
           }
 
           //add image to a single legend line item
@@ -593,8 +607,8 @@
         function getPolygonsWithinBBox (bbox, layerName) {
           return map.queryRenderedFeatures(
             [
-              map.project(new mapboxgl.LngLat(bbox[0], bbox[1])),
-              map.project(new mapboxgl.LngLat(bbox[2], bbox[3]))
+              map.project(new maplibregl.LngLat(bbox[0], bbox[1])),
+              map.project(new maplibregl.LngLat(bbox[2], bbox[3]))
             ],
             {
               layers: [layerName]
@@ -688,7 +702,44 @@
           }
         }
 
-        map.addControl(new mapboxgl.NavigationControl())
+        map.addControl(new maplibregl.NavigationControl())
+
+        map.on('load', () => {
+          updateMapInfo()
+        })
+
+        function updateMapInfo () {
+          const center = map.getCenter()
+          const zoom = map.getZoom()
+          document.getElementById('zoom').innerHTML = `Zoom: ${parseFloat(
+            zoom
+          ).toFixed(2)}`
+        }
+
+        function toggleLoadingState (on) {
+          let elem = document.getElementById('map-loading')
+          if (on) {
+            elem.style.display = 'block'
+          } else {
+            elem.style.display = 'none'
+          }
+        }
+
+        map.on('idle', ev => {
+          toggleLoadingState()
+        })
+        map.on('drag', function () {
+          toggleLoadingState(true)
+        })
+        map.on('zoom', function () {
+          toggleLoadingState(true)
+        })
+        map.on('moveend', function (e) {
+          updateMapInfo()
+        })
+        map.on('zoomend', function (e) {
+          updateMapInfo()
+        })
       },
       {}
     ]

@@ -5,18 +5,24 @@
     <meta charset='utf-8' />
     <title>Geoplatform Vector Tiles</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src="https://unpkg.com/maplibre-gl@2.1.1/dist/maplibre-gl.js"></script>
     <script src='assets/js/outTurf.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/app.css">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://unpkg.com/maplibre-gl@2.1.1/dist/maplibre-gl.css" rel="stylesheet" />
 </head>
 
 <body>
     <a href="https://www.geoplatform.gov/"><img title="Visit GeoPlatform.gov Website" alt="GeoPlatform.gov Logo"
             src="assets/img/gp_logo.svg" class="logo"></a>
-    <div class="gp-disclaimer">Disclaimer: These layers are proof of concept. <a href="#" class='learn-more-link'>Learn
+    <div class="gp-disclaimer">Disclaimer: These layers are proof of concept. <a
+            href="https://www.geoplatform.gov/about" target="_blank" class='learn-more-link'>Learn
             More</a></div>
+    <div class="map-info">
+        <div id='zoom'></div>
+        <div id="map-loading"><i class="fas fa-solid fa-spinner fa-spin"></i></div>
+    </div>
     <div id='map'></div>
     <div class='map-overlay' id='legend' style="visibility:hidden;">
         <i type="button" class="fas fa-angle-down legend-control" id="lmin-btn"></i>
