@@ -17,7 +17,7 @@ This section covers how to view GeoPlatform collections.
 ![BaileysEcoregion](https://user-images.githubusercontent.com/61807178/154977759-4b6d255a-d9d6-49fb-a020-24ff40eaca34.png)
 
 ## Browse a Collection's Features
-This section covers exploring the individual items in a collection. The items are grouped in 10 item groups that can be paged through using the __Prev__ and __Next__ buttons below the map. The default limit of otems to load per page may be set using the __Limit__ menu below the map.  
+This section covers exploring the individual items in a collection. The items are grouped in 10 item groups that can be paged through using the __Prev__ and __Next__ buttons below the map. The default limit of items to load per page may be set using the __Limit__ menu below the map.
 1. With a collection open (e.g. [__Bailey's Ecoregions and Subregions Dataset__](https://geoapi.geoplatform.gov/collections/f5bfb616_0e64_4b2c_a2d7_268c01d8d28f)) Click on the __Browse through the items of "Bailey's Ecoregions and Subregions Dataset"__ </br>
 ![BrowsBaileys](https://user-images.githubusercontent.com/61807178/154979948-1f4a3ab7-a269-468a-b2f3-4844d27554a3.png)
 2. Clicking the browse link opens a page with a map showing a subset of items' features with a table of items' attributes. </br>
@@ -26,7 +26,7 @@ This section covers exploring the individual items in a collection. The items ar
 Individual collection items can be inspected and viewed on a map. Individual items may be loaded from the via map or via table. 
 1. Click one of the items in the map to open the map information popup.  A numerical link to the item's id is shown. Click the link to open the item detail page. 
 ![itemLink_map](https://user-images.githubusercontent.com/61807178/154993771-46dd8c1e-23b8-4042-9acd-540a6230ec72.png)
-2. Click one of the items's id length in the items table. </br>
+2. Click one of the items' id length in the items table. </br>
 ![itemLink_table](https://user-images.githubusercontent.com/61807178/155006216-103da5a3-7d9f-4774-b10a-49d2e93ddada.png) 
 
 
