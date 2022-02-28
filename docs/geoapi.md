@@ -1,4 +1,4 @@
-# Terriamap Demo
+# GeoAPI Demo
 
 ## Background
 [pygeoapi](https://github.com/geopython/pygeoapi), an is used to publish OGC Open API services on the web. In addition to publishing services, pygeoapi also provides easy to use ApenAPI Swagger documents and supports JSON, GeoJSON, HTML and CSV output. GeoPlatform uses pygeoapi to provide and API with Sweagger documentation for NGDAs. 
