@@ -5,7 +5,7 @@
 
 ## Opening Terriamap
 This section covers opening Terriamap from GeoPlatform's main page. 
-1. Open [GeoPlatform](https://beta.geoplatform.gov) in a browser.
+1. Open [GeoPlatform](https://geoplatform.gov) in a browser.
 2. Click __NGDA Themes__ option in the menu items at the top of the page to open the NGDA Themes page. <br />
 ![NGDA_THEMES_LINK](https://user-images.githubusercontent.com/61807178/120216939-a7286700-c205-11eb-899e-38468488d86d.png)
 3. Click on the __Explore Now__ button in the __Discover Federal Geospatial Data__ panel at the right of the page to open Terriamap
