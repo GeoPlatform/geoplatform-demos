@@ -118,6 +118,8 @@
               id: 'counties',
               desc: 'TIGER/Line Counties',
               type: 'line',
+              minzoom: 6,
+              maxzoom: 14,
               source: {
                 tiles: [
                   'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
@@ -139,8 +141,9 @@
                   type: 'exponential',
                   base: 2,
                   stops: [
-                    [0, 0.25 * Math.pow(2, 0 - 6)],
-                    [24, 0.25 * Math.pow(2, 24 - 6)]
+                    [6, 0.5],
+                    [10, 7],
+                    [14, 14]
                   ]
                 }
               }
@@ -149,6 +152,8 @@
               id: 'zipCodes',
               desc: 'TIGER/Line ZCTA5',
               type: 'line',
+              minzoom: 9,
+              maxzoom: 14,
               source: {
                 tiles: [
                   'https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt'
@@ -166,7 +171,14 @@
               paint: {
                 'line-opacity': 0.75,
                 'line-color': 'orange',
-                'line-width': 0.5
+                'line-width': {
+                  type: 'exponential',
+                  base: 2,
+                  stops: [
+                    [9, 0.5],
+                    [14, 5.5]
+                  ]
+                }
               }
             },
             {
@@ -190,7 +202,7 @@
                 'circle-radius': {
                   stops: [
                     [7, 1],
-                    [15, 6]
+                    [15, 4]
                   ]
                 },
                 'circle-opacity': 0.75
@@ -391,7 +403,7 @@
             // },
             {
               id: 'plss',
-              desc: 'Public Land Survey System (PLSS) - Townships',
+              desc: 'PLSS Townships',
               type: 'line',
               source: {
                 tiles: [
@@ -399,7 +411,7 @@
                 ],
                 type: 'vector',
                 minzoom: 6,
-                maxzoom: 12
+                maxzoom: 14
               },
               'source-layer': 'PLSSTownship',
               layout: {
@@ -435,7 +447,7 @@
                   9,
                   10,
                   14,
-                  26
+                  22
                 ]
               },
               paint: {
@@ -448,7 +460,7 @@
               id: 'counties-label', // append 'label' to an already existing id for legend toggling to work
               type: 'symbol',
               minzoom: 7,
-              maxzoom: 10,
+              maxzoom: 12,
               source: {
                 tiles: [
                   'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
@@ -479,7 +491,7 @@
           var i = 0
           layers.forEach(layer => {
             if (layer.id === 'terrain') {
-              //place terrain below waterway-river-canal layer
+              //place terrain at bottom
               map.addLayer(layer, 'landcover')
             } else if (layer.type !== 'symbol') {
               map.addLayer(layer, firstSymbolId)
@@ -535,10 +547,6 @@
             if (layer.layout.visibility === 'none') {
               key.style.visibility = 'hidden'
               legendBtn.classList.toggle('inactive')
-            }
-            if (layer.id == 'plss') {
-              legendBtn.style.width = '210px'
-              legendBtn.style.textAlign = 'left'
             }
             item.appendChild(key)
             item.appendChild(legendBtn)
