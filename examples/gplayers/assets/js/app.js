@@ -115,6 +115,61 @@
           }
           var layers = [
             {
+              id: 'counties',
+              desc: 'TIGER/Line Counties',
+              type: 'line',
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector',
+                minzoom: 6,
+                maxzoom: 14
+              },
+              'source-layer': 'tl_2019_us_county',
+              layout: {
+                visibility: 'visible',
+                'line-cap': 'round',
+                'line-join': 'round'
+              },
+              paint: {
+                'line-opacity': 0.25,
+                'line-color': 'yellow',
+                'line-width': {
+                  type: 'exponential',
+                  base: 2,
+                  stops: [
+                    [0, 0.25 * Math.pow(2, 0 - 6)],
+                    [24, 0.25 * Math.pow(2, 24 - 6)]
+                  ]
+                }
+              }
+            },
+            {
+              id: 'zipCodes',
+              desc: 'TIGER/Line ZCTA5',
+              type: 'line',
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector',
+                minzoom: 9,
+                maxzoom: 14
+              },
+              'source-layer': 'tl_2019_us_zcta510',
+              layout: {
+                visibility: 'visible',
+                'line-cap': 'round',
+                'line-join': 'round'
+              },
+              paint: {
+                'line-opacity': 0.75,
+                'line-color': 'orange',
+                'line-width': 0.5
+              }
+            },
+            {
               id: 'nad_r8',
               desc: 'National Address Data',
               type: 'circle',
@@ -357,6 +412,68 @@
                 'line-color': 'rgb(1, 81, 131)',
                 'line-width': 0.5
               }
+            },
+            {
+              id: 'zipCodes-label', // append 'label' to an already existing id for legend toggling to work
+              type: 'symbol',
+              minzoom: 10,
+              maxzoom: 14,
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector'
+              },
+              'source-layer': 'tl_2019_us_zcta510',
+              layout: {
+                visibility: 'visible',
+                'text-field': ['get', 'zcta5ce10'],
+                'text-size': [
+                  'interpolate',
+                  ['linear'],
+                  ['zoom'],
+                  9,
+                  10,
+                  14,
+                  26
+                ]
+              },
+              paint: {
+                'text-color': 'white',
+                'text-halo-color': 'black',
+                'text-halo-width': 0.5
+              }
+            },
+            {
+              id: 'counties-label', // append 'label' to an already existing id for legend toggling to work
+              type: 'symbol',
+              minzoom: 7,
+              maxzoom: 10,
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector'
+              },
+              'source-layer': 'tl_2019_us_county',
+              layout: {
+                visibility: 'visible',
+                'text-field': ['get', 'namelsad'],
+                'text-size': [
+                  'interpolate',
+                  ['linear'],
+                  ['zoom'],
+                  7,
+                  10,
+                  14,
+                  32
+                ]
+              },
+              paint: {
+                'text-color': 'white',
+                'text-halo-color': 'black',
+                'text-halo-width': 0.5
+              }
             }
           ]
           var i = 0
@@ -364,14 +481,18 @@
             if (layer.id === 'terrain') {
               //place terrain below waterway-river-canal layer
               map.addLayer(layer, 'landcover')
-            } else {
+            } else if (layer.type !== 'symbol') {
               map.addLayer(layer, firstSymbolId)
+            } else {
+              map.addLayer(layer)
             }
             if (
               layer.id !== 'californiaHighlights' &&
               layer.id !== 'laHighlights'
             ) {
-              createLegendItem(layer)
+              if (layer.type !== 'symbol') {
+                createLegendItem(layer)
+              }
             }
             i++
           })
@@ -402,7 +523,7 @@
                 key.style.backgroundColor = layer.paint['line-color']
               } else if (layer.type == 'circle') {
                 key.style.backgroundColor = layer.paint['circle-color']
-              } else {
+              } else if (layer.type == 'fill') {
                 key.style.backgroundColor = layer.paint['fill-color']
               }
             }
@@ -464,6 +585,21 @@
               map.setLayoutProperty(target.layerId, 'visibility', 'visible')
               document.getElementById('lk-' + target.layerId).style.visibility =
                 'visible'
+            }
+
+            // toggle label layer if exists
+            const labelLayerId = `${target.layerId}-label`
+            const labelLayer = map.getLayer(labelLayerId)
+            if (labelLayer !== undefined) {
+              const labelLayerVisibility = map.getLayoutProperty(
+                labelLayerId,
+                'visibility'
+              )
+              if (labelLayerVisibility === 'visible') {
+                map.setLayoutProperty(labelLayerId, 'visibility', 'none')
+              } else {
+                map.setLayoutProperty(labelLayerId, 'visibility', 'visible')
+              }
             }
           }
         })
