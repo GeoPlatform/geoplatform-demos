@@ -488,25 +488,11 @@
               }
             }
           ]
-          var i = 0
           layers.forEach(layer => {
-            if (layer.id === 'terrain') {
-              //place terrain at bottom
-              map.addLayer(layer, 'landcover')
-            } else if (layer.type !== 'symbol') {
-              map.addLayer(layer, firstSymbolId)
-            } else {
-              map.addLayer(layer)
+            map.addLayer(layer)
+            if (layer.type !== 'symbol') {
+              createLegendItem(layer)
             }
-            if (
-              layer.id !== 'californiaHighlights' &&
-              layer.id !== 'laHighlights'
-            ) {
-              if (layer.type !== 'symbol') {
-                createLegendItem(layer)
-              }
-            }
-            i++
           })
 
           //minimize legend if mobile device
