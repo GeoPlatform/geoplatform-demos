@@ -102,8 +102,8 @@
 }, {
     "date": "2021-08-25",
     "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
-    "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/sLh2qu0a/200/",
-    "name": "GeoPlatform - Leaflet - NTAD Examples - MVT",
+    "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/sLh2qu0a/",
+    "name": "GeoPlatform - Leaflet - Tiger/Line Examples - MVT",
     "type": "Demo Example",
     "popularity": 10,
     "supportLevel": "GP Example",
