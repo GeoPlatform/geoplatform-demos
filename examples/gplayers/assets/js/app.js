@@ -358,25 +358,25 @@
                 'fill-outline-color': 'rgb(53, 175, 109)'
               }
             },
-            {
-              id: 'californiaHighlights',
-              desc: 'California Building Highlights',
-              type: 'fill',
-              source: {
-                type: 'geojson',
-                data: {
-                  type: 'FeatureCollection',
-                  features: highlightFeatures['california']
-                }
-              },
-              layout: {
-                visibility: 'visible'
-              },
-              paint: {
-                'fill-color': '#FFFF00',
-                'fill-outline-color': '#FFFF00'
-              }
-            },
+            // {
+            //   id: 'californiaHighlights',
+            //   desc: 'California Building Highlights',
+            //   type: 'fill',
+            //   source: {
+            //     type: 'geojson',
+            //     data: {
+            //       type: 'FeatureCollection',
+            //       features: highlightFeatures['california']
+            //     }
+            //   },
+            //   layout: {
+            //     visibility: 'visible'
+            //   },
+            //   paint: {
+            //     'fill-color': '#FFFF00',
+            //     'fill-outline-color': '#FFFF00'
+            //   }
+            // },
             // {
             //   id: 'nhwy',
             //   desc: 'National Highway',
