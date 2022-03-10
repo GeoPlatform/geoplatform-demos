@@ -117,6 +117,8 @@
             {
               id: 'counties',
               desc: 'TIGER/Line Counties',
+              metaUrl:
+                'https://www.geoplatform.gov/metadata/836230cf-d6e7-5794-b10a-a8bef4be936e',
               type: 'line',
               minzoom: 6,
               maxzoom: 14,
@@ -151,6 +153,8 @@
             {
               id: 'zipCodes',
               desc: 'TIGER/Line ZCTA5',
+              metaUrl:
+                'https://www.geoplatform.gov/metadata/05f9ea87-9242-5710-8730-1c3431dc0c7f',
               type: 'line',
               minzoom: 9,
               maxzoom: 14,
@@ -184,6 +188,7 @@
             {
               id: 'nad_r8',
               desc: 'National Address Data',
+              metaUrl: null,
               type: 'circle',
               source: {
                 type: 'vector',
@@ -211,6 +216,8 @@
             {
               id: 'nhd_waterbody',
               desc: 'NHD Waterbodies',
+              metaUrl:
+                'https://sit.geoplatform.info/metadata/9e1b0d82-6095-5b94-ae66-9afeb1eacdfc',
               type: 'fill',
               source: {
                 type: 'vector',
@@ -228,49 +235,11 @@
                 'fill-color': '#03A9F4'
               }
             },
-            // {
-            //   id: 'nld_leveed_areas',
-            //   desc: 'NLD Leveed Areas',
-            //   type: 'fill',
-            //   source: {
-            //     type: 'vector',
-            //     tiles: [
-            //       'https://s3.amazonaws.com/usace-maptiles-tests/nld-leveed-areas-fgz/{z}/{x}/{y}.pbf'
-            //     ],
-            //     minzoom: 1,
-            //     maxzoom: 14
-            //   },
-            //   'source-layer': 'nld_national_april_2018_leveed_areas',
-            //   layout: {
-            //     visibility: 'visible'
-            //   },
-            //   paint: {
-            //     'fill-color': '#B39DDB',
-            //     'fill-opacity': 0.3
-            //   }
-            // },
-            {
-              id: 'laHighlights',
-              desc: 'Leveed Area Highlights',
-              type: 'fill',
-              source: {
-                type: 'geojson',
-                data: {
-                  type: 'FeatureCollection',
-                  features: highlightFeatures['laHighlights']
-                }
-              },
-              layout: {
-                visibility: 'visible'
-              },
-              paint: {
-                'fill-color': '#FF3D00',
-                'fill-opacity': 0.4
-              }
-            },
             {
               id: 'nhd_flowlines',
               desc: 'NHD Flow Lines',
+              metaUrl:
+                'https://sit.geoplatform.info/metadata/9e1b0d82-6095-5b94-ae66-9afeb1eacdfc',
               type: 'line',
               source: {
                 type: 'vector',
@@ -291,52 +260,6 @@
                 'line-width': 1
               }
             },
-            // {
-            //   id: 'nld_centerlines',
-            //   desc: 'NLD Center Lines',
-            //   type: 'line',
-            //   source: {
-            //     type: 'vector',
-            //     tiles: [
-            //       'https://s3.amazonaws.com/usace-maptiles-tests/nld-centerlines-gz/{z}/{x}/{y}.pbf'
-            //     ],
-            //     minzoom: 1,
-            //     maxzoom: 14
-            //   },
-            //   'source-layer': 'nld_national_april_2018_levee_centerlines',
-            //   layout: {
-            //     'line-join': 'round',
-            //     'line-cap': 'round',
-            //     visibility: 'visible'
-            //   },
-            //   paint: {
-            //     'line-color': '#673AB7',
-            //     'line-width': 1
-            //   }
-            // },
-            // {
-            //   id: 'terrain',
-            //   desc: 'Terrain',
-            //   type: 'hillshade',
-            //   source: {
-            //     type: 'raster-dem',
-            //     tiles: [
-            //       'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
-            //     ],
-            //     tileSize: 256,
-            //     minzoom: 0,
-            //     maxzoom: 15
-            //   },
-            //   layout: {
-            //     visibility: 'visible'
-            //   },
-            //   paint: {
-            //     'hillshade-exaggeration': 0.8,
-            //     'hillshade-shadow-color': '#0a0a0a',
-            //     'hillshade-highlight-color': '#404040',
-            //     'hillshade-accent-color': '#080808'
-            //   }
-            // },
             {
               id: 'structures',
               desc: 'Building Footprints',
@@ -358,49 +281,6 @@
                 'fill-outline-color': 'rgb(53, 175, 109)'
               }
             },
-            // {
-            //   id: 'californiaHighlights',
-            //   desc: 'California Building Highlights',
-            //   type: 'fill',
-            //   source: {
-            //     type: 'geojson',
-            //     data: {
-            //       type: 'FeatureCollection',
-            //       features: highlightFeatures['california']
-            //     }
-            //   },
-            //   layout: {
-            //     visibility: 'visible'
-            //   },
-            //   paint: {
-            //     'fill-color': '#FFFF00',
-            //     'fill-outline-color': '#FFFF00'
-            //   }
-            // },
-            // {
-            //   id: 'nhwy',
-            //   desc: 'National Highway',
-            //   type: 'line',
-            //   source: {
-            //     tiles: [
-            //       'https://sit-tileservice.geoplatform.info/vector/ngda_nhpn/{z}/{x}/{y}.mvt'
-            //     ],
-            //     type: 'vector',
-            //     minzoom: 6,
-            //     maxzoom: 14
-            //   },
-            //   'source-layer': 'national_highway',
-            //   layout: {
-            //     visibility: 'visible',
-            //     'line-cap': 'round',
-            //     'line-join': 'round'
-            //   },
-            //   paint: {
-            //     'line-opacity': 1,
-            //     'line-color': 'rgb(255, 175, 109)',
-            //     'line-width': 2
-            //   }
-            // },
             {
               id: 'plss',
               desc: 'PLSS Townships',
@@ -509,9 +389,22 @@
             var item = document.createElement('div')
             var key = document.createElement('span')
             var zoomLevelDisplay = document.createElement('span')
+            var metaLink = document.createElement('a')
             zoomLevelDisplay.classList.add('zoom-range')
             getZoomLevelRestrictions(zoomLevelDisplay, layer.source)
-
+            metaLink.className = 'meta-link'
+            metaLink.id = 'meta-link-' + layer.id
+            metaLink.innerHTML = '<i class="fas fa-solid fa-info-circle"></i>'
+            if (layer.metaUrl) {
+              metaLink.href = layer.metaUrl
+              metaLink.target = '_blank'
+              var metaLinkTooltip = document.createElement('span')
+              metaLinkTooltip.innerHTML = `Click to view full metadata record on Geoplatform.gov`
+              metaLinkTooltip.classList.add('tooltip')
+              metaLink.appendChild(metaLinkTooltip)
+            } else {
+              metaLink.style.visibility = 'hidden'
+            }
             key.className = 'legend-key'
             key.id = 'lk-' + layer.id
             if (layer.id === 'terrain') {
@@ -534,6 +427,7 @@
               key.style.visibility = 'hidden'
               legendBtn.classList.toggle('inactive')
             }
+            item.appendChild(metaLink)
             item.appendChild(key)
             item.appendChild(legendBtn)
             item.appendChild(zoomLevelDisplay)
@@ -548,7 +442,7 @@
 
               var zoomLevelTooltip = document.createElement('span')
               zoomLevelTooltip.innerHTML = `Tiles are available for zoom range ${minzoom}-${maxzoom}`
-              zoomLevelTooltip.classList.add('zoom-range-tooltip')
+              zoomLevelTooltip.classList.add('tooltip')
               node.appendChild(zoomLevelTooltip)
             }
           }
