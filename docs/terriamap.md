@@ -99,18 +99,18 @@ Terriamap can be used in conjunction with an API that uses an AWS lambda to load
 - __type__ - The __type__ parameter is used to designate the filetype of the returned by the Terriamap lambda which is called by the API Gateway
     - this value will always be .json (e.g. type=.json)
     - the __type__ parameter must be used in every call to the API gateway. 
-- __developer__ - The __developer__ parameter is a flag parameter that is not set to any value. The developer parameter is used by the Terriamap lambda to load developer configuration, which contains all service types (Raster, MVT, WMS & WFS).
+- __developer__ - The __developer__ parameter is a boolean parameter that is not used with any other parameter. The developer parameter is used by the Terriamap lambda to load developer configuration, which contains all service types (Raster, MVT, WMS & WFS).
 - __themes__ -  The __themes__ parameter is used to load a configuration into Terriamap that includes only the layers of a specific theme or group of themes. 
 - __ids__ - The __ids__ parameter is used to load a configuration with a subset of layers based on a list of ids. The ids that are expected are geonetwork ids as they exist in GeoPlatform (e.g. https://geoplatform.gov/metadata/0d7bf767-21f8-5d38-a492-ddafa2849bcf)
 - __datasets__ - The __datasets__ parameter is also used to load a configuration with a subset of layers based on a list of dataset names. 
-- __serviceTypes__ - the __serviceTypes__ parameter is used in conjunction with either the developer, themes, ids or datasets parameters to specify which service types to include in the Terriamap catalog. 
+- __serviceTypes__ - the __serviceTypes__ parameter is used in conjunction with either the themes, ids or datasets parameters to specify which service types to include in the Terriamap catalog. 
     - valid parameter values for serviceTypes are 
 
 ### API Gateway URL Parameter Examples
 - __type__ - Example showing the __type__ parameter being used in conjunction with the __developer__ parameter:
-    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json)
+    - [https://sit-terriamap.geoplatform.info/#clean&https%3A%2F%2Fsit-api.geoplatform.info%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%3Dtrue%26type%3D.json](https://sit-terriamap.geoplatform.info/#clean&https%3A%2F%2Fsit-api.geoplatform.info%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%3Dtrue%26type%3D.json)
 - __developer__ - Example showing how to load the developer configuration: 
-    - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%26type%3D.json)
+    - [https://sit-terriamap.geoplatform.info/#clean&https%3A%2F%2Fsit-api.geoplatform.info%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%3Dtrue%26type%3D.json](https://sit-terriamap.geoplatform.info/#clean&https%3A%2F%2Fsit-api.geoplatform.info%2Fv2%2Fgenerate-terriamap-config%3Fdeveloper%3Dtrue%26type%3D.json)
 - __themes__ = Example showing how to load a subset of themes:
     - [https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DCadastre%2CBiodiversity+and+Ecosystems%26type%3D.json](https://terriamap.geoplatform.gov/#clean&https%3A%2F%2Fapi.geoplatform.gov%2Fv2%2Fgenerate-terriamap-config%3Fthemes%3DCadastre%2CBiodiversity+and+Ecosystems%26type%3D.json)
 - __ids__ - Example showing how to load a subset of GeoPlatform ids:
