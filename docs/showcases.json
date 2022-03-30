@@ -1,0 +1,93 @@
+
+  [
+    {
+      "id": "fair_insights",
+      "title": "Apply FAIR standards to Geoplatform",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/apply_fair_insights.webp",
+      "imageAltText": "Geoplatform FAIR Insights FAQ",
+      "link": "https://geoplatform.atlassian.net/wiki/spaces/GC/pages/1083834396/FAQ+-+GeoPlatform+FAIR+Insights"
+    },{
+      "id": "discover-fed-data",
+      "title": "Discover Federal Geospatial Data",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/usa-map.webp",
+      "imageAltText": "Discover Federal GeoSpatial Data",
+      "link": "https://terriamap.geoplatform.gov/#https://gp-prd-us-east-1-terriamap-catalog.s3.amazonaws.com/additional_layers_v8.json"
+    },
+    {
+      "id": "national_levee_db",
+      "title": "National Levee Database",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/national_levee_carousel.webp",
+      "imageAltText": "USACE National Levee Database",
+      "link": "https://levees.sec.usace.army.mil/"
+    },
+    {
+      "id": "justice40",
+      "title": "Justice40 Initiative",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/justice40-pic.webp",
+      "imageAltText": "A collection of images different people interspersed with environmental imagery",
+      "link": "https://www.thejustice40.com/"
+    },
+    {
+      "id": "gp_stac",
+      "title": "GeoPlatform STAC",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/stac_browser.webp",
+      "imageAltText": "",
+      "link": "https://stac.geoplatform.gov/"
+    },
+    {
+      "id": "gp_geoapi",
+      "title": "GeoPlatform GeoAPI",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/geoapi.webp",
+      "imageAltText": "",
+      "link": "https://geoapi.geoplatform.gov/"
+    },
+    {
+      "id": "nifc-open-data",
+      "title": "National Interagency Fire Center – Wildland Fire Open Data",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/nifc-open-data.webp",
+      "imageAltText": "",
+      "link": "https://data-nifc.opendata.arcgis.com/"
+    },
+    {
+      "id": "usgs-national-map",
+      "title": "USGS National Geospatial Program",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/usgs-national-map.webp",
+      "imageAltText": "Map of the Continental US",
+      "link": "https://www.usgs.gov/core-science-systems/national-geospatial-program/national-map"
+    },
+    {
+      "id": "fs-climate-tools",
+      "title": "US Forest Service – Climate Tools and Data",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/fs-climate-tools.webp",
+      "imageAltText": "Image of Evergreen forest",
+      "link": "https://www.fs.usda.gov/managing-land/sc/data-dashboard"
+    },
+    {
+      "id": "epa-gateway",
+      "title": "EPA Environmental Dataset Gateway",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/epa-gateway.webp",
+      "imageAltText": "Image of a mountainous forest",
+      "link": "https://edg.epa.gov/metadata/catalog/main/home.page"
+    },
+    {
+      "id": "ncei",
+      "title": "NOAA National Center for Environmental Information",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/ncei.webp",
+      "imageAltText": "NCEI map viewer",
+      "link": "https://gis.ncdc.noaa.gov/maps/ncei"
+    },
+    {
+      "id": "nasa-gibs",
+      "title": "Global Imagery Browse Services (GIBS)",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/nasa-gibs.webp",
+      "imageAltText": "Image of crater from high altitude",
+      "link": "https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/gibs"
+    },
+    {
+      "id": "bsee-dashboard",
+      "title": "BSEE OCS Facility Infrastructure Dashboard",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/bsee-dashboard.webp",
+      "imageAltText": "Image of BSEE OCS Facility Infrastructure Dashboard",
+      "link": "https://bobson.maps.arcgis.com/apps/opsdashboard/index.html#/400bba386d3d4ec58396dbaa559c422c"
+    }
+  ]
