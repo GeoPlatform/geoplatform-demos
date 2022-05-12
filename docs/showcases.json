@@ -63,13 +63,6 @@
       "link": "https://www.fs.usda.gov/managing-land/sc/data-dashboard"
     },
     {
-      "id": "epa-gateway",
-      "title": "EPA Environmental Dataset Gateway",
-      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/epa-gateway.webp",
-      "imageAltText": "Image of a mountainous forest",
-      "link": "https://edg.epa.gov/metadata/catalog/main/home.page"
-    },
-    {
       "id": "ncei",
       "title": "NOAA National Center for Environmental Information",
       "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/ncei.webp",
@@ -84,10 +77,10 @@
       "link": "https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/gibs"
     },
     {
-      "id": "bsee-dashboard",
-      "title": "BSEE OCS Facility Infrastructure Dashboard",
-      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/bsee-dashboard.webp",
-      "imageAltText": "Image of BSEE OCS Facility Infrastructure Dashboard",
-      "link": "https://bobson.maps.arcgis.com/apps/opsdashboard/index.html#/400bba386d3d4ec58396dbaa559c422c"
+      "id": "kbase",
+      "title": "GeoPlatform Knowledge Base",
+      "image": "https://kb.geoplatform.gov/_images/marketplace-banner.png",
+      "imageAltText": "Image with text reading GeoPlatform Knowledge Base",
+      "link": "https://kb.geoplatform.gov/"
     }
   ]
