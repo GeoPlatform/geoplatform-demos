@@ -21,11 +21,11 @@
       "link": "https://levees.sec.usace.army.mil/"
     },
     {
-      "id": "justice40",
-      "title": "Justice40 Initiative",
-      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/justice40-pic.webp",
-      "imageAltText": "A collection of images different people interspersed with environmental imagery",
-      "link": "https://www.thejustice40.com/"
+      "id": "climate_economic_justice_screening_tool",
+      "title": "Climate and Economic Justice Screening Tool",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/screening_tool.png",
+      "imageAltText": "Heat Map of USA to help identify marginalized communities and communities affected by environmental pollution",
+      "link": "https://screeningtool.geoplatform.gov/"
     },
     {
       "id": "gp_stac",
