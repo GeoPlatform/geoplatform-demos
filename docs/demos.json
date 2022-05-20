@@ -1,6 +1,6 @@
 [{
     "date": "2021-05-09",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/jsfiddle-example-logo.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/jsfiddle-example-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/jsfiddle-example-steps.html",
     "name": "Web Page JSFiddle Example",
     "type": "Demo Example",
@@ -10,7 +10,7 @@
     "tags": ["Geospatial", "JSFiddle"]
 }, {
     "date": "2021-05-10",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/qgis-example-logo.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/gp-demos/images/qgis-example-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/qgis-example.html",
     "name": "QGIS Example",
     "type": "Demo Example",
@@ -20,7 +20,7 @@
     "tags": ["Geospatial", "QGIS", "WMS"]
 }, {
     "date": "2021-06-01",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/terriamap.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/terriamap.html",
     "name": "Terriamap Example",
     "type": "Demo Example",
@@ -30,7 +30,7 @@
     "tags": ["Geospatial", "Terriamap"]
 }, {
     "date": "2021-06-01",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/arcgis-pro.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-pro.html",
     "name": "ArcGIS Pro Example",
     "type": "Demo Example",
@@ -40,7 +40,7 @@
     "tags": ["Geospatial", "ArcGIS", "WMS"]
 }, {
     "date": "2021-06-01",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/agol.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/arcgis-online.html",
     "name": "ArcGIS Online Example",
     "type": "Demo Example",
@@ -50,7 +50,7 @@
     "tags": ["Geospatial", "ArcGIS", "WMS"]
 }, {
     "date": "2021-06-01",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/harvest-pipeline.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/magic-pipeline.html",
     "name": "GeoPlatform Harvest Pipeline Example",
     "type": "Demo Example",
@@ -61,7 +61,7 @@
 
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/mvt-open-layers.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/gaq68j9t/3/",
     "name": "GeoPlatform - MapboxGL - NAD v4 Example - MVT",
     "type": "Demo Example",
@@ -71,7 +71,7 @@
     "tags": ["Geospatial", "JSFiddle", "MapboxGL"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/nad-v4.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/n8pmbaos/7/",
     "name": "GeoPlatform - Leaflet - NAD v4 Example - Raster PNG",
     "type": "Demo Example",
@@ -81,7 +81,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/ntad.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/68t75c3g/",
     "name": "GeoPlatform - Leaflet - NTAD Examples - MVT",
     "type": "Demo Example",
@@ -91,7 +91,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/tiger-oscla.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/zekcv3bd/",
     "name": "GeoPlatform - Leaflet - TIGER Line/OCSLA Examples - Raster PNG",
     "type": "Demo Example",
@@ -101,7 +101,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/tiger-lines.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/sLh2qu0a/",
     "name": "GeoPlatform - Leaflet - Tiger/Line Examples - MVT",
     "type": "Demo Example",
@@ -111,9 +111,9 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/mvt-add-layers.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/dtL1aufb/28/",
-    "name": "GeoPlatform - OpenLayers -Add an MVT Layer",
+    "name": "GeoPlatform - OpenLayers - Add an MVT Layer",
     "type": "Demo Example",
     "popularity": 10,
     "supportLevel": "GP Example",
@@ -121,7 +121,7 @@
     "tags": ["Geospatial", "JSFiddle", "OpenLayers"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/mvt-add-a-layer.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/hnbacpqz/",
     "name": "GeoPlatform - MapBoxGL - Add an MVT Layer",
     "type": "Demo Example",
@@ -131,9 +131,9 @@
     "tags": ["Geospatial", "JSFiddle", "MapboxGL"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/mvt-examples.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/Lep1xo6n/28/",
-    "name": "GeoPlatform - Leaflet- Add an MVT Example",
+    "name": "GeoPlatform - Leaflet - Add an MVT Example",
     "type": "Demo Example",
     "popularity": 10,
     "supportLevel": "GP Example",
@@ -141,7 +141,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/openlayers.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/45jbfv9a/",
     "name": "GeoPlatform - OpenLayers - Layers MVT Example",
     "type": "Demo Example",
@@ -151,7 +151,7 @@
     "tags": ["Geospatial", "JSFiddle", "OpenLayers"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/openlayers.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/eyow1j69/",
     "name": "GeoPlatform - Leaflet- Layers MVT Example",
     "type": "Demo Example",
@@ -161,7 +161,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/mvt-mapbox.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/gz3c27w1/33/",
     "name": "GeoPlatform - MapBoxGL- Layers MVT Example",
     "type": "Demo Example",
@@ -171,7 +171,7 @@
     "tags": ["Geospatial", "JSFiddle", "MapboxGL"]
 }, {
     "date": "2021-12-16",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/qgis-mvt.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/qgis-mvt.html",
     "name": "QGIS MVT Example",
     "type": "Demo Example",
@@ -181,7 +181,7 @@
     "tags": ["Geospatial", "QGIS", "MVT"]
 }, {
     "date": "2021-12-16",
-    "img": "https://sit.geoplatform.info/assets/images/theme/gp-backdrop-full-logo.jpg",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/maputnik.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/maputnik-example.html",
     "name": "Maputnik Example",
     "type": "Demo Example",
