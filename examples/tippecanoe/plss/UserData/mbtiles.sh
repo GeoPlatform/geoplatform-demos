@@ -1,10 +1,10 @@
 #!/bin/bash
-
+LOG_FILE="mbtiles-$(date +%F).txt"
 AWS_PROFILE=""
-BASE_URL=s3://geoplatform-cdn-temp/tippecanoe
+BASE_URL=s3://geoplatform-cdn-temp/tippecanoe/PLSS
 TILESERVER_URL=s3://gp-sit-tileservice-tile-cache/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa
 NATIONAL_MBTILE_URL=s3://gp-sit-us-east-1-geoplatform-archive/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa.mbtiles
-TIPPE_PARAMS="--force --drop-densest-as-needed --drop-fraction-as-needed --drop-smallest-as-needed --coalesce-densest-as-needed --coalesce-smallest-as-needed -z12 --generate-ids"
+TIPPE_PARAMS="--force --drop-densest-as-needed --drop-fraction-as-needed --drop-smallest-as-needed -z12 --generate-ids"
 declare -a STATES_AR=("al" "ak" "ar" "ca" "co" "ia" "il" "in" "ks" "la" "mi" "mn" "mo" "ms" "mt" "nd" "nm" "ne" "nv" "oh" "ok" "or_wa" "sd" "wi" "wy")
 
 sudo yum update -y
@@ -74,7 +74,7 @@ do
     tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z4 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
-    mbtile_join_str+="./${state_layer_name}.mbtiles "
+    mbtile_join_str+="./${state_layer_name}.mbtiles " 
 done
 # create a national $layer
 tile-join --force -pk -pC -n $layer -o ./${layer}.mbtiles ${mbtile_join_str}
@@ -143,4 +143,8 @@ echo "syncing to s3 $TILESERVER_URL"
 aws s3 sync ./tiles $TILESERVER_URL --no-progress --only-show-errors
 
 echo "Process complete, shutting down."
+
+# copy log file
+aws s3 cp $LOG_FILE $BASE_URL/log/$LOG_FILE $AWS_PROFILE
+
 sudo shutdown now
