@@ -74,7 +74,7 @@ do
     tippecanoe -o ./${state_layer_name}.mbtiles ${fields_to_keep} ${TIPPE_PARAMS} -Z4 -l ${layer} ./${state_layer_name}.geojson.gz
     #copy mbtiles to s3
     aws s3 cp ${state_layer_name}.mbtiles $BASE_URL/$state_layer_name.mbtiles ${AWS_PROFILE}
-    mbtile_join_str+="./${state_layer_name}.mbtiles " 
+    mbtile_join_str+="./${state_layer_name}.mbtiles "
 done
 # create a national $layer
 tile-join --force -pk -pC -n $layer -o ./${layer}.mbtiles ${mbtile_join_str}
@@ -143,8 +143,4 @@ echo "syncing to s3 $TILESERVER_URL"
 aws s3 sync ./tiles $TILESERVER_URL --no-progress --only-show-errors
 
 echo "Process complete, shutting down."
-
-# copy log file
-aws s3 cp $LOG_FILE $BASE_URL/log/$LOG_FILE $AWS_PROFILE
-
 sudo shutdown now
