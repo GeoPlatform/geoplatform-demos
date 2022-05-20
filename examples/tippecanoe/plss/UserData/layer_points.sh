@@ -1,6 +1,7 @@
 #!/bin/bash
+set -e 
 
-BASE_URL=s3://geoplatform-cdn-temp/tippecanoe
+BASE_URL=s3://geoplatform-cdn-temp/tippecanoe/PLSS
 sudo yum update -y
 sudo yum install -y docker
 sudo systemctl start docker
@@ -38,10 +39,10 @@ aws s3 cp $BASE_URL/WY_PLSS_CadNSDI_20190925.gdb.zip WY_PLSS_CadNSDI_20190925.gd
 LAYER=PLSSPoint
 # convert $LAYER to geojson
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/al_$LAYER.geojson /data/AL_CadNSDI_V2.gdb.zip $LAYER
-sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ak_$LAYER.geojson /data/AK_CadNSDI.gdb.zip CADNSDI_PLSSFIRSTDIVISION
+sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ak_$LAYER.geojson /data/AK_CadNSDI.gdb.zip cadnsdi_plsspoint
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ar_$LAYER.geojson /data/AR_CadNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ca_$LAYER.geojson /data/CadRef_v10.gdb.zip $LAYER
-sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/co_$LAYER.geojson /data/BLM_CO_PLSS_20210823.gdb.zip BLM_CO_PLSS_FirstDivision
+sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/co_$LAYER.geojson /data/BLM_CO_PLSS_20210823.gdb.zip BLM_CO_PLSS_Point
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/ia_$LAYER.geojson /data/IA_CadNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/il_$LAYER.geojson /data/IL_CadNSDI_V2.gdb.zip $LAYER
 sudo docker run -v $(pwd):/data --name GDAL --rm osgeo/gdal:alpine-small-latest ogr2ogr -overwrite -skipfailures -progress --config OGR_ORGANIZE_POLYGONS SKIP -lco SIGNIFICANT_FIGURES=6 -t_srs crs:84 -f GeoJSON /data/in_$LAYER.geojson /data/IN_CadNSDI_V2.gdb.zip $LAYER
