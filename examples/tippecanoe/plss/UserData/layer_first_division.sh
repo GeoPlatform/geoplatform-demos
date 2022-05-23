@@ -1,6 +1,7 @@
 #!/bin/bash
+set -e
 
-BASE_URL=s3://geoplatform-cdn-temp/tippecanoe
+BASE_URL=s3://geoplatform-cdn-temp/tippecanoe/PLSS
 sudo yum update -y
 sudo yum install -y docker
 sudo systemctl start docker
