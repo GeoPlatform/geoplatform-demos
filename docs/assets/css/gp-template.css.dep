@@ -127,12 +127,10 @@
 
 .root .main-content {
     position: relative;
-    flex-direction: column;
     padding: 40px;
     flex-grow: 1;
     display: flex;
     align-self: center;
-    max-width: 960px;
     width: 100%;
 }
 

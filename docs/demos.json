@@ -10,7 +10,7 @@
     "tags": ["Geospatial", "JSFiddle"]
 }, {
     "date": "2021-05-10",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/gp-demos/images/qgis-example-logo.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/qgis-example-logo.png",
     "itemUrl": "https://geoplatform.github.io/geoplatform-demos/qgis-example.html",
     "name": "QGIS Example",
     "type": "Demo Example",
@@ -91,7 +91,7 @@
     "tags": ["Geospatial", "JSFiddle", "Leaflet"]
 }, {
     "date": "2021-08-25",
-    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/tiger-oscla.png",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demos/tiger-ocsla.png",
     "itemUrl": "https://jsfiddle.net/fgdc_gp_demos/zekcv3bd/",
     "name": "GeoPlatform - Leaflet - TIGER Line/OCSLA Examples - Raster PNG",
     "type": "Demo Example",
