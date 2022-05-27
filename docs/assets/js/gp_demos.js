@@ -1,3 +1,5 @@
+/* based on https://github.com/GeoPlatform/geoplatform_portal/blob/develop/src/app/pages/demos-page/demos-page.component.ts */
+
 (function ($) {
   $(document).ready(function () {
     gp_demos.init({
