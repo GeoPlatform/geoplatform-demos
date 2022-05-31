@@ -1,0 +1,359 @@
+/* based on https://www.geoplatform.gov/assets/demos-widget/css/gp_demos.css */
+
+
+.gp-demos .container {
+  width: 100%;
+  height: 100%;
+}
+
+.gp-demos:before,
+.gp-demos:after {
+  content: '';
+  display: table;
+}
+
+.gp-demos:after {
+  clear: both;
+}
+
+.gp-demos .collection {
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Database Sources  *********************/
+.gp-demos .container .item-container {
+
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ced3dc;
+  text-align: center;
+  display: inline-table;
+  min-height: 6rem;
+  max-height: 6rem;
+  min-width: 31%;
+  max-width: 31%;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.gp-demos .container .item-container-item {
+  background: white;
+  display: inline-block;
+  margin: 5px 35px 5px 35px;
+  text-align: center;
+  min-height: 7rem;
+  max-height: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
+  background-size: cover;
+}
+
+.gp-demos .container .integration-item {
+  background: white;
+  display: inline-block;
+  margin: 40px 32px 5px 40px;
+  text-align: center;
+  min-height: 7rem;
+  max-height: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gp-demos .container .item-container:hover.x-item-selected {
+  background-color: rgb(163, 217, 253);
+  color: #000;
+}
+
+.gp-demos .container .item-container:hover {
+  border: 1px solid #ced3dc;
+}
+
+.gp-demos .item-container.x-item-selected {
+  background-color: #007acc;
+  color: white;
+}
+
+.gp-demos .options-container {
+  padding: 10px 5px 10px 10px;
+  width: 100%;
+}
+.gp-demos .list-container {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: normal;
+}
+
+.gp-demos .list-container h5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 110%;
+  margin: 0.82rem 0 0.656rem 0;
+}
+
+.gp-demos .bottom-banner {
+  bottom: -1px;
+  width: 100%;
+  font-size: 10px;
+  transition: max-height 0.25s ease, margin-top 0.25s ease;
+}
+
+.gp-demos .type {
+  display: inline-block;
+  width: 50%;
+  padding: 5px 0;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.gp-demos .support-status {
+  display: inline-block;
+  width: 50%;
+  background: #b3b3b3;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+.gp-demos .database-item .title {
+  height: 48px;
+  width: 241.56px;
+}
+
+.gp-demos .details {
+  visibility: hidden;
+  color: #0277bd;
+  background-color: rgb(163, 217, 253);
+  border-radius: 0.25rem;
+}
+
+.gp-demos .contact {
+  color: #1ba5db;
+}
+
+.gp-demos .database-item:hover .details {
+  visibility: visible;
+}
+
+.gp-demos .demo {
+  background: #339933;
+}
+
+.gp-demos .client {
+  background: orange;
+}
+
+.gp-demos .our {
+  background: #007acc;
+}
+
+.gp-demos .development {
+  background: #800080;
+}
+
+.gp-demos .no-star {
+  margin: 10px 10px 0px 0px;
+  padding: 14px 14px 11px 14px;
+}
+
+.gp-demos .star {
+  margin: 10px 10px 0px 0px;
+  padding: 14px 14px 11px 14px;
+  float: right;
+  background-size: cover;
+  background-image: url(../img/star-regular.svg);
+}
+
+.gp-demos .database-item:hover .star {
+  background-image: url(../img/star-solid.svg);
+}
+
+.gp-demos .standard {
+  background: #ffcc00;
+}
+
+.gp-demos .enterprise {
+  background: #cc3399;
+}
+
+.gp-demos .integration {
+  margin-bottom: 15px;
+  background-size: cover;
+}
+
+.gp-demos .collection .database-item {
+  line-height: 1.5rem;
+  background-image: url('/geoplatform-demos/assets/images/terrain.svg');
+  background-repeat: no-repeat;
+  margin: 5px;
+}
+
+.gp-demos .database-item:hover {
+  box-shadow: 1px 1px 6px 1px lightblue;
+}
+
+.gp-demos .database-item:hover .title {
+  box-shadow: none;
+}
+
+.gp-demos .database-item:hover .details {
+  box-shadow: none;
+}
+
+.gp-demos .database-item {
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.gp-demos .database-item a {
+  color: inherit;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gp-demos div.database-item.no-apps-found.item-container {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ced3dc;
+  display: inline-table;
+  margin: auto;
+  padding: 140px 45px 25px 45px;
+  min-height: 2rem;
+  max-height: 2rem;
+  min-width: 7rem;
+  max-width: 7rem;
+  overflow: hidden;
+}
+
+/* Sort and Filter By */
+
+.gp-demos .filter-container {
+  min-width: 100%;
+}
+
+.gp-demos .collection .collection-item {
+  background-color: #fff;
+  line-height: 1.5rem;
+  padding: 5px 15px !important;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gp-demos .collection .collection-item.active {
+  background-color: #0277bd;
+  color: #fff;
+}
+
+.gp-demos .collection-item {
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.gp-demos .collection-item a {
+  color: inherit;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Search Bar */
+
+.gp-demos .search-box {
+  box-sizing: border-box;
+  background-image: url('/assets/demos-widget/img/searchicon.png');
+  background-position: 14px 12px;
+  float: left;
+  padding-left: 45px !important;
+  background-repeat: no-repeat;
+  width: calc(100% - 45px - 100px) !important;
+}
+
+.gp-demos .search-box:focus {
+  border-bottom: 1px solid #1ba5db;
+}
+
+.gp-demos .clearBtn {
+  background-color: #0277bd;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: white;
+  float: right;
+  text-align: center;
+  width: 100px;
+  line-height: 2;
+  margin-top: 10px;
+}
+
+.gp-demos input[type='text'] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  outline: none;
+  height: 3rem;
+  width: 90%;
+  font-size: 1rem;
+  margin: 0 0 15px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.gp-demos .clear-text {
+  visibility: hidden;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.gp-demo-content {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.gp-demos .no-apps-found {
+  display: none;
+}
+
+.gp-demos .clear {
+  clear: both;
+}
+
+.gp-demos .floatleft {
+  float: left;
+}
+
+.gp-demos .floatright {
+  float: right;
+}
+
+.gp-demos ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.gp-demos li {
+  padding: 0 !important;
+}
