@@ -5,9 +5,9 @@ This example goes through the steps to create a new map in QGIS using Mapbox Vec
  - downloading and opening .mbtile file locally
  - using the {z}/{x}/{y} service endpoint
 
-This demo uses services listed on the Geoplatform [BLM National Public Land Survey System Polygons](https://sit.geoplatform.info/metadata/9b59f427-c0ad-5f8b-ac22-2dbdac882dfa) metadata page.
+This demo uses services listed on the Geoplatform [BLM National Public Land Survey System Polygons](https://geoplatform.gov/metadata/9b59f427-c0ad-5f8b-ac22-2dbdac882dfa) metadata page.
 
-* Geoplatform Vector Tile Service: https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt
+* Geoplatform Vector Tile Service: https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt
 
 
 * MBTile download: https://gp-sit-us-east-1-geoplatform-archive.s3.amazonaws.com/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa.mbtiles
