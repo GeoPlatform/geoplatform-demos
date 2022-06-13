@@ -46,7 +46,7 @@
         }
         var highlightFeatures = {
           california: [],
-          laHighlights: []
+          // laHighlights: []
         }
         var gBoundingPolygon = {}
         var gBBox = {}
@@ -287,7 +287,7 @@
               type: 'line',
               source: {
                 tiles: [
-                  'https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
+                  'https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
                 ],
                 type: 'vector',
                 minzoom: 6,
@@ -499,16 +499,16 @@
 
         map.on('zoomend', function (e) {
           //check if highlighted boundary polygons are on-screen
-          if (
-            map.queryRenderedFeatures({ layers: ['laHighlights'] }).length > 0
-          ) {
-            //update highlighted inner polygons
-            if (
-              map.getLayoutProperty('california', 'visibility') === 'visible'
-            ) {
-              awaitMapUpdate()
-            }
-          }
+          // if (
+          //   map.queryRenderedFeatures({ layers: ['laHighlights'] }).length > 0
+          // ) {
+          //   //update highlighted inner polygons
+          //   if (
+          //     map.getLayoutProperty('california', 'visibility') === 'visible'
+          //   ) {
+          //     awaitMapUpdate()
+          //   }
+          // }
         })
 
         function awaitMapUpdate () {
@@ -527,7 +527,7 @@
               'FEATURE_NA',
               gFeatureName
             )
-            highlightPolygon('laHighlights', gBoundingPolygon)
+            // highlightPolygon('laHighlights', gBoundingPolygon)
             //get polygons within the bbox (quick filter)
             gBBox = turf.bbox(gBoundingPolygon)
             currentlySelectedFeatures['california'] = getPolygonsWithinBBox(
@@ -652,10 +652,10 @@
               properties: {}
             })
           }
-          map.getSource(name).setData({
-            type: 'FeatureCollection',
-            features: highlightFeatures['laHighlights']
-          })
+          // map.getSource(name).setData({
+          //   type: 'FeatureCollection',
+          //   features: highlightFeatures['laHighlights']
+          // })
           map.resize()
         }
 
