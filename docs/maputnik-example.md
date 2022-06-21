@@ -3,9 +3,9 @@
 ## Maputnik example using Public Land Survey System (PLSS) data
 This example goes through the steps to create a custom  Style using Maputnik and a Mapbox Vector Tile (MVT) source.
 
-This example will be using the Vector Tile Service listed on the SIT Geoplatform [PLSS](https://sit.geoplatform.info/metadata/9b59f427-c0ad-5f8b-ac22-2dbdac882dfa) metadata page
+This example will be using the Vector Tile Service listed on the SIT Geoplatform [PLSS](https://geoplatform.gov/metadata/9b59f427-c0ad-5f8b-ac22-2dbdac882dfa) metadata page
 
-* Vector Tile Service:  https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt
+* Vector Tile Service:  https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt
 
 ### Example Steps
 
@@ -20,7 +20,7 @@ Once added, you should see your new data source at the top of this dialog box.
 ![maputnik-data-source-result](assets/images/maputnik-data-source-result.PNG)
 4. Add Layers from your data source to the map.
 You may need to get the underlying data `Source Layer` name which can be done by inspecting the tilejson endpoint. For example, in this case:
-https://sit-tileservice.geoplatform.info/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/metadata.json. 
+https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/metadata.json. 
 In the `"json"` property, there is a `vector_layers` array with a list of Sources. We will add the `PLSSTownship` layer:
     ```json
     json: "{"vector_layers": [ { "id": "PLSSTownship", "description": "", "minzoom": 6, "maxzoom": 10, "fields": {}..."
