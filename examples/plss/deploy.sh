@@ -1,0 +1,1 @@
+aws s3 cp . s3://geoplatform-cdn-temp/plss/ --recursive --exclude deploy.sh --profile sit

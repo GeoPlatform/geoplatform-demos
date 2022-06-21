@@ -46,7 +46,7 @@
         }
         var highlightFeatures = {
           california: [],
-          // laHighlights: []
+          laHighlights: []
         }
         var gBoundingPolygon = {}
         var gBBox = {}
@@ -115,173 +115,6 @@
           }
           var layers = [
             {
-              id: 'counties',
-              desc: 'TIGER/Line Counties',
-              metaUrl:
-                'https://www.geoplatform.gov/metadata/836230cf-d6e7-5794-b10a-a8bef4be936e',
-              type: 'line',
-              minzoom: 6,
-              maxzoom: 14,
-              source: {
-                tiles: [
-                  'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
-                ],
-                type: 'vector',
-                minzoom: 6,
-                maxzoom: 14
-              },
-              'source-layer': 'tl_2019_us_county',
-              layout: {
-                visibility: 'visible',
-                'line-cap': 'round',
-                'line-join': 'round'
-              },
-              paint: {
-                'line-opacity': 0.25,
-                'line-color': 'yellow',
-                'line-width': {
-                  type: 'exponential',
-                  base: 2,
-                  stops: [
-                    [6, 0.5],
-                    [10, 7],
-                    [14, 14]
-                  ]
-                }
-              }
-            },
-            {
-              id: 'zipCodes',
-              desc: 'TIGER/Line ZCTA5',
-              metaUrl:
-                'https://www.geoplatform.gov/metadata/05f9ea87-9242-5710-8730-1c3431dc0c7f',
-              type: 'line',
-              minzoom: 9,
-              maxzoom: 14,
-              source: {
-                tiles: [
-                  'https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt'
-                ],
-                type: 'vector',
-                minzoom: 9,
-                maxzoom: 14
-              },
-              'source-layer': 'tl_2019_us_zcta510',
-              layout: {
-                visibility: 'visible',
-                'line-cap': 'round',
-                'line-join': 'round'
-              },
-              paint: {
-                'line-opacity': 0.75,
-                'line-color': 'orange',
-                'line-width': {
-                  type: 'exponential',
-                  base: 2,
-                  stops: [
-                    [9, 0.5],
-                    [14, 5.5]
-                  ]
-                }
-              }
-            },
-            {
-              id: 'nad_r8',
-              desc: 'National Address Data',
-              metaUrl: null,
-              type: 'circle',
-              source: {
-                type: 'vector',
-                tiles: [
-                  'https://geoplatform-cdn-temp.s3.amazonaws.com/tippecanoe/NAD/tiles/{z}/{x}/{y}.mvt'
-                ],
-                minzoom: 7,
-                maxzoom: 15
-              },
-              'source-layer': 'nad',
-              layout: {
-                visibility: 'visible'
-              },
-              paint: {
-                'circle-color': '#FF6E40',
-                'circle-radius': {
-                  stops: [
-                    [7, 1],
-                    [15, 4]
-                  ]
-                },
-                'circle-opacity': 0.75
-              }
-            },
-            {
-              id: 'nhd_waterbody',
-              desc: 'NHD Waterbodies',
-              metaUrl:
-                'https://sit.geoplatform.info/metadata/9e1b0d82-6095-5b94-ae66-9afeb1eacdfc',
-              type: 'fill',
-              source: {
-                type: 'vector',
-                tiles: [
-                  'https://sit-tileservice.geoplatform.info/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc/{z}/{x}/{y}.mvt'
-                ],
-                minzoom: 1,
-                maxzoom: 15
-              },
-              'source-layer': 'NHDWaterbody',
-              layout: {
-                visibility: 'visible'
-              },
-              paint: {
-                'fill-color': '#03A9F4'
-              }
-            },
-            {
-              id: 'nhd_flowlines',
-              desc: 'NHD Flow Lines',
-              metaUrl:
-                'https://sit.geoplatform.info/metadata/9e1b0d82-6095-5b94-ae66-9afeb1eacdfc',
-              type: 'line',
-              source: {
-                type: 'vector',
-                tiles: [
-                  'https://sit-tileservice.geoplatform.info/vector/9e1b0d82_6095_5b94_ae66_9afeb1eacdfc/{z}/{x}/{y}.mvt'
-                ],
-                minzoom: 1,
-                maxzoom: 15
-              },
-              'source-layer': 'NHDFlowline',
-              layout: {
-                'line-join': 'round',
-                'line-cap': 'round',
-                visibility: 'visible'
-              },
-              paint: {
-                'line-color': '#0277BD',
-                'line-width': 1
-              }
-            },
-            {
-              id: 'structures',
-              desc: 'Building Footprints',
-              type: 'fill',
-              source: {
-                type: 'vector',
-                tiles: [
-                  'https://geoplatform-cdn-temp.s3.amazonaws.com/tippecanoe/structures/tiles/{z}/{x}/{y}.mvt'
-                ],
-                minzoom: 1,
-                maxzoom: 15
-              },
-              'source-layer': 'structures',
-              layout: {
-                visibility: 'visible'
-              },
-              paint: {
-                'fill-color': 'rgb(53, 175, 109)',
-                'fill-outline-color': 'rgb(53, 175, 109)'
-              }
-            },
-            {
               id: 'plss',
               desc: 'PLSS Townships',
               type: 'line',
@@ -306,67 +139,77 @@
               }
             },
             {
-              id: 'zipCodes-label', // append 'label' to an already existing id for legend toggling to work
-              type: 'symbol',
-              minzoom: 10,
-              maxzoom: 14,
+              id: 'plss-special-survey',
+              desc: 'PLSS Special Survey',
+              type: 'line',
               source: {
                 tiles: [
-                  'https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt'
+                  'https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
                 ],
-                type: 'vector'
+                type: 'vector',
+                minzoom: 5,
+                maxzoom: 14
               },
-              'source-layer': 'tl_2019_us_zcta510',
-              layout: {
-                visibility: 'visible',
-                'text-field': ['get', 'zcta5ce10'],
-                'text-size': [
-                  'interpolate',
-                  ['linear'],
-                  ['zoom'],
-                  9,
-                  10,
-                  14,
-                  22
-                ]
+              'source-layer': 'PLSSSpecialSurvey',
+              "layout": {"visibility": "visible"},
+              "paint": {"line-color": "rgba(0, 120, 146, 1)"}
+            },
+            {
+              id: 'plss-first-division',
+              desc: 'PLSS First Division',
+              type: 'line',
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector',
+                minzoom: 5,
+                maxzoom: 14
               },
-              paint: {
-                'text-color': 'white',
-                'text-halo-color': 'black',
-                'text-halo-width': 0.5
+              'source-layer': 'PLSSFirstDivision',
+              "layout": {"visibility": "visible"},
+              "paint": {
+                "line-color": "rgba(10, 0, 187, 1)",
+                "line-width": 0.5,
+                "line-opacity": 0.5
               }
             },
             {
-              id: 'counties-label', // append 'label' to an already existing id for legend toggling to work
-              type: 'symbol',
-              minzoom: 7,
-              maxzoom: 12,
+              id: 'plss-second-division',
+              desc: 'PLSS Second Division',
+              type: 'line',
               source: {
                 tiles: [
-                  'https://tileservice.geoplatform.gov/vector/be0505bd_9d19_4c07_ac97_09ca5873ed26/{z}/{x}/{y}.mvt'
+                  'https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
                 ],
-                type: 'vector'
+                type: 'vector',
+                minzoom: 5,
+                maxzoom: 14
               },
-              'source-layer': 'tl_2019_us_county',
-              layout: {
-                visibility: 'visible',
-                'text-field': ['get', 'namelsad'],
-                'text-size': [
-                  'interpolate',
-                  ['linear'],
-                  ['zoom'],
-                  7,
-                  10,
-                  14,
-                  32
-                ]
-              },
-              paint: {
-                'text-color': 'white',
-                'text-halo-color': 'black',
-                'text-halo-width': 0.5
+              'source-layer': 'PLSSFirstDivision',
+              "layout": {"visibility": "visible"},
+              "paint": {
+                "line-color": "rgba(255, 0, 0, 1)",
+                "line-width": 0.5,
+                "line-opacity": 0.5
               }
-            }
+            },
+            {
+              id: 'plss-point',
+              desc: 'PLSS Point',
+              type: 'circle',
+              source: {
+                tiles: [
+                  'https://tileservice.geoplatform.gov/vector/9b59f427_c0ad_5f8b_ac22_2dbdac882dfa/{z}/{x}/{y}.mvt'
+                ],
+                type: 'vector',
+                minzoom: 5,
+                maxzoom: 14
+              },
+              'source-layer': 'PLSSPoint',
+              "layout": {"visibility": "visible"},
+              "paint": {"circle-radius": 3, "circle-color": "rgba(239, 53, 53, 1)"}
+            },
           ]
           layers.forEach(layer => {
             map.addLayer(layer)
@@ -497,19 +340,19 @@
           processHighlight(e, 'click')
         })
 
-        map.on('zoomend', function (e) {
-          //check if highlighted boundary polygons are on-screen
-          // if (
-          //   map.queryRenderedFeatures({ layers: ['laHighlights'] }).length > 0
-          // ) {
-          //   //update highlighted inner polygons
-          //   if (
-          //     map.getLayoutProperty('california', 'visibility') === 'visible'
-          //   ) {
-          //     awaitMapUpdate()
-          //   }
-          // }
-        })
+        // map.on('zoomend', function (e) {
+        //   //check if highlighted boundary polygons are on-screen
+        //   if (
+        //     // map.queryRenderedFeatures({ layers: ['laHighlights'] }).length > 0
+        //   ) {
+        //     //update highlighted inner polygons
+        //     if (
+        //       map.getLayoutProperty('california', 'visibility') === 'visible'
+        //     ) {
+        //       awaitMapUpdate()
+        //     }
+        //   }
+        // })
 
         function awaitMapUpdate () {
           if (!map.areTilesLoaded('california')) {
@@ -641,23 +484,23 @@
         }
 
         //highlight the bounding box polygon and update the map
-        function highlightPolygon (name, polygon) {
-          highlightFeatures[name] = []
-          if (polygon.type === 'Feature') {
-            highlightFeatures[name].push(polygon)
-          } else {
-            highlightFeatures[name].push({
-              type: 'Feature',
-              geometry: polygon,
-              properties: {}
-            })
-          }
-          // map.getSource(name).setData({
-          //   type: 'FeatureCollection',
-          //   features: highlightFeatures['laHighlights']
-          // })
-          map.resize()
-        }
+        // function highlightPolygon (name, polygon) {
+        //   highlightFeatures[name] = []
+        //   if (polygon.type === 'Feature') {
+        //     highlightFeatures[name].push(polygon)
+        //   } else {
+        //     highlightFeatures[name].push({
+        //       type: 'Feature',
+        //       geometry: polygon,
+        //       properties: {}
+        //     })
+        //   }
+        //   // map.getSource(name).setData({
+        //   //   type: 'FeatureCollection',
+        //   //   features: highlightFeatures['laHighlights']
+        //   // })
+        //   map.resize()
+        // }
 
         //calculate and return the bounding polygon of the clicked on area
         function calculateBoundingPolygon (layerName, filterName, filterValue) {
