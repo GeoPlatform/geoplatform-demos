@@ -5,7 +5,7 @@
       "lsib": {
         "type": "vector",
         "tiles": [
-          "https://sit-tileservice.geoplatform.gov/vector/d7f708b0_f37c_564d_bdb8_1d632628afa8/{z}/{x}/{y}.mvt"
+          "https://sit-tileservice.geoplatform.info/vector/d7f708b0_f37c_564d_bdb8_1d632628afa8/{z}/{x}/{y}.mvt"
         ],
         "minZoom": 0,
         "maxZoom": 14
