@@ -1,0 +1,73 @@
+{
+    "version": 8,
+    "name": "International Boundary - Rank",
+    "sources": {
+      "lsib": {
+        "type": "vector",
+        "tiles": [
+          "https://sit-tileservice.geoplatform.gov/vector/d7f708b0_f37c_564d_bdb8_1d632628afa8/{z}/{x}/{y}.mvt"
+        ],
+        "minZoom": 0,
+        "maxZoom": 14
+      }
+    },
+    "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
+    "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+    "layers": [
+      {
+        "id": "lsib",
+        "type": "line",
+        "source": "lsib",
+        "source-layer": "lsib",
+        "paint": {
+          "line-color": [
+            "match",
+            ["get", "RANK"],
+            1,
+            "black",
+            2,
+            "red",
+            3,
+            "orange",
+            "purple"
+          ],
+          "line-width": ["match", ["get", "RANK"], 1, 2, 2, 1, 3, 1, 1]
+        }
+      },
+      {
+        "id": "lsib-text",
+        "type": "symbol",
+        "source": "lsib",
+        "source-layer": "lsib",
+        "filter": ["!=", "RANK", 1],
+        "layout": {
+          "text-field": [
+            "concat",
+            "Rank ",
+            ["get", "RANK"],
+            ": ",
+            ["get", "LABEL"],
+            " ",
+            ["get", "NOTES"]
+          ],
+          "text-size": 14,
+          "visibility": "visible",
+          "text-anchor": "bottom-left",
+          "text-font": ["Open Sans Regular"],
+          "text-keep-upright": false,
+          "text-allow-overlap": false,
+          "text-ignore-placement": false,
+          "text-padding": 0.5,
+          "text-justify": "left",
+          "symbol-placement": "point"
+        },
+        "paint": {
+          "text-halo-color": "rgba(245, 242, 242, 1)",
+          "text-color": "rgba(0, 0, 0, 1)",
+          "text-halo-blur": 1,
+          "text-halo-width": 2
+        }
+      }
+    ],
+    "id": "lsib-rank"
+  }
