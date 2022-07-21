@@ -27,7 +27,6 @@ This has changed since the GitHub Pages with Jekyll was written. This website us
 * See [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) 
 for running locally.
 
-
 **Adding Demos**
 * Jekyll pages can be created in either [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) or HTML. 
 Jekyll converts the Markdown to HTML during the build process.
