@@ -5,14 +5,14 @@
       "lsib": {
         "type": "vector",
         "tiles": [
-          "https://sit-tileservice.geoplatform.info/vector/d7f708b0_f37c_564d_bdb8_1d632628afa8/{z}/{x}/{y}.mvt"
+          "https://tileservice.geoplatform.gov/vector/d7f708b0_f37c_564d_bdb8_1d632628afa8/{z}/{x}/{y}.mvt"
         ],
         "minZoom": 0,
         "maxZoom": 14
       }
     },
-    "sprite": "https://sit-tileservice.geoplatform.info/assets/sprites/geoplatform",
-    "glyphs": "https://sit-tileservice.geoplatform.info/assets/fonts/{fontstack}/{range}.pbf",
+    "sprite": "https://tileservice.geoplatform.gov/assets/sprites/geoplatform",
+    "glyphs": "https://tileservice.geoplatform.gov/assets/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
         "id": "lsib",
