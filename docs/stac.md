@@ -186,6 +186,6 @@ Following a similiar approach to how the [MS Planetary Computer](https://planeta
 |:--:|
 | <b>An adaptive search UI is built based on the queryables of a collection</b>|
 
-As shown in above screenshots, a user can use facets to filter collections in the Geoplatform Search interface. Clicking a collection result opens the collections metadata page. From a collection's metadata page, the 'View Items in this Collection' button opens the Collections tab with the specified collection. This search interface is dynamically built using properties from the /queryables endpoint of the selected Collection. It will allow for basic Spatial/Temportal searching but also more advanced searches depending on the user selected queryables.  
+As shown in above screenshots, a user can use facets to filter collections in the Geoplatform Search interface. Clicking a collection result opens the collections metadata page. From a collection's metadata page, the 'View Items in this Collection' button opens the Collections tab with the specified collection. This search interface is dynamically built using properties from the /queryables endpoint of the selected Collection. It will allow for basic Spatial/Temporal searching but also more advanced searches depending on the user selected queryables.  
 
-More thoughts to follow as our STAC intergration and discovery evolves. 
+More thoughts to follow as our STAC integration and discovery evolves. 
