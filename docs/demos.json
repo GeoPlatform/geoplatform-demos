@@ -189,4 +189,14 @@
     "supportLevel": "GP Example",
     "synonyms": [],
     "tags": ["Geospatial", "Maputnik", "MVT"]
+}, {
+    "date": "2022-10-26",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/stac.html",
+    "name": "STAC API Demo",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["stac"]
 }]
