@@ -82,5 +82,12 @@
       "image": "https://kb.geoplatform.gov/_images/marketplace-banner.png",
       "imageAltText": "Image with text reading GeoPlatform Knowledge Base",
       "link": "https://kb.geoplatform.gov/"
+    },
+    {
+      "id": "nadm",
+      "title": "NOAA: North American Drought Monitor",
+      "image": "https://geoplatform.github.io/geoplatform-demos/assets/images/showcase-images/drought-monitor.jpg",
+      "imageAltText": "Heatmap of North American Droughts",
+      "link": "https://nadm-noaa.hub.arcgis.com/pages/2022-nadm-forum-workshop"
     }
   ]
