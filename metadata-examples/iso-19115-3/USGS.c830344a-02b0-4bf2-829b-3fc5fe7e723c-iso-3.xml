@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+   xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+   xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
+   xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+   xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+   xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+   xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+   xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+   xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0"
+   xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0"
+   xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+   xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+   xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+   xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0"
+   xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+   xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+   xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+   xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+   xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
+   xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mds/1.0 https://schemas.isotc211.org/19115/-3/mds/1.0/mds.xsd">
+   <mdb:metadataIdentifier>
+      <mcc:MD_Identifier>
+         <mcc:code>
+            <gco:CharacterString>USGS.c830344a-02b0-4bf2-829b-3fc5fe7e723c</gco:CharacterString>
+         </mcc:code>
+      </mcc:MD_Identifier>
+   </mdb:metadataIdentifier>
+   <mdb:defaultLocale>
+      <lan:PT_Locale>
+         <lan:language>
+            <lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="eng; USA">eng; USA</lan:LanguageCode>
+         </lan:language>
+         <lan:characterEncoding>
+            <lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue="utf8">utf8</lan:MD_CharacterSetCode>
+         </lan:characterEncoding>
+      </lan:PT_Locale>
+   </mdb:defaultLocale>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:contact>
+      <cit:CI_Responsibility>
+         <cit:role>
+            <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+         </cit:role>
+         <cit:party>
+            <cit:CI_Organisation>
+               <cit:name>
+                  <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+               </cit:name>
+               <cit:contactInfo>
+                  <cit:CI_Contact>
+                     <cit:phone>
+                        <cit:CI_Telephone>
+                           <cit:number>
+                              <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                           </cit:number>
+                           <cit:numberType>
+                              <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                           </cit:numberType>
+                        </cit:CI_Telephone>
+                     </cit:phone>
+                     <cit:phone>
+                        <cit:CI_Telephone>
+                           <cit:number>
+                              <gco:CharacterString>508-457-2310</gco:CharacterString>
+                           </cit:number>
+                           <cit:numberType>
+                              <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                           </cit:numberType>
+                        </cit:CI_Telephone>
+                     </cit:phone>
+                     <cit:address>
+                        <cit:CI_Address>
+                           <cit:deliveryPoint>
+                              <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                           </cit:deliveryPoint>
+                           <cit:city>
+                              <gco:CharacterString>Woods Hole</gco:CharacterString>
+                           </cit:city>
+                           <cit:administrativeArea>
+                              <gco:CharacterString>MA</gco:CharacterString>
+                           </cit:administrativeArea>
+                           <cit:postalCode>
+                              <gco:CharacterString>02543-1598</gco:CharacterString>
+                           </cit:postalCode>
+                           <cit:country>
+                              <gco:CharacterString>USA</gco:CharacterString>
+                           </cit:country>
+                           <cit:electronicMailAddress>
+                              <gco:CharacterString>whsc_data_contact@usgs.gov</gco:CharacterString>
+                           </cit:electronicMailAddress>
+                        </cit:CI_Address>
+                     </cit:address>
+                     <cit:contactInstructions>
+                        <gco:CharacterString>The metadata contact email address is a generic address in the event the metadata contact is no longer with the USGS or the email is otherwise invalid.</gco:CharacterString>
+                     </cit:contactInstructions>
+                  </cit:CI_Contact>
+               </cit:contactInfo>
+               <cit:individual>
+                  <cit:CI_Individual>
+                     <cit:name>
+                        <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                     </cit:name>
+                     <cit:positionName>
+                        <gco:CharacterString>Geographer</gco:CharacterString>
+                     </cit:positionName>
+                  </cit:CI_Individual>
+               </cit:individual>
+            </cit:CI_Organisation>
+         </cit:party>
+      </cit:CI_Responsibility>
+   </mdb:contact>
+   <mdb:dateInfo>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime>2021-11-16T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </mdb:dateInfo>
+   <mdb:metadataStandard>
+      <cit:CI_Citation>
+         <cit:title>
+            <gco:CharacterString>ISO 19115 Geographic Information - Metadata</gco:CharacterString>
+         </cit:title>
+         <cit:edition>
+            <gco:CharacterString>ISO 19115:2003/Cor.1:2006(E)</gco:CharacterString>
+         </cit:edition>
+      </cit:CI_Citation>
+   </mdb:metadataStandard>
+   <mdb:spatialRepresentationInfo>
+      <msr:MD_VectorSpatialRepresentation>
+         <msr:geometricObjects>
+            <msr:MD_GeometricObjects>
+               <msr:geometricObjectType>
+                  <msr:MD_GeometricObjectTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode" codeListValue="curve">curve</msr:MD_GeometricObjectTypeCode>
+               </msr:geometricObjectType>
+               <msr:geometricObjectCount>
+                  <gco:Integer>203</gco:Integer>
+               </msr:geometricObjectCount>
+            </msr:MD_GeometricObjects>
+         </msr:geometricObjects>
+      </msr:MD_VectorSpatialRepresentation>
+   </mdb:spatialRepresentationInfo>
+   <mdb:identificationInfo>
+      <mri:MD_DataIdentification>
+         <mri:citation>
+            <cit:CI_Citation>
+               <cit:title>
+                  <gco:CharacterString>Survey lines along which interferometric sonar data were collected by the USGS within Red Brook Harbor, MA, 2009 (RB_BathyBackscatterTrackline.shp)</gco:CharacterString>
+               </cit:title>
+               <cit:date>
+                  <cit:CI_Date>
+                     <cit:date>
+                        <gco:DateTime>2012-01-01T00:00:00</gco:DateTime>
+                     </cit:date>
+                     <cit:dateType>
+                        <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                     </cit:dateType>
+                  </cit:CI_Date>
+               </cit:date>
+               <cit:edition>
+                  <gco:CharacterString>1.0</gco:CharacterString>
+               </cit:edition>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey, Coastal and Marine Geology Program</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole Coastal and Marine Science Center</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString> Woods Hole, Massachusetts</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>Aaron M. Turecek</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>William W. Danforth</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>Wayne E. Baldwin</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:citedResponsibleParty>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                           </cit:name>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </cit:citedResponsibleParty>
+               <cit:presentationForm>
+                  <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</cit:CI_PresentationFormCode>
+               </cit:presentationForm>
+               <cit:series>
+                  <cit:CI_Series>
+                     <cit:name>
+                        <gco:CharacterString>Open-File Report</gco:CharacterString>
+                     </cit:name>
+                     <cit:issueIdentification>
+                        <gco:CharacterString>2010-1091</gco:CharacterString>
+                     </cit:issueIdentification>
+                  </cit:CI_Series>
+               </cit:series>
+               <cit:onlineResource>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>https://doi.org/10.3133/ofr20101091</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </cit:onlineResource>
+               <cit:onlineResource>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://pubs.usgs.gov/of/2010/1091/GIS/shapefile/RB_BathyBackscatterTrackline.zip</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </cit:onlineResource>
+               <cit:onlineResource>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://pubs.usgs.gov/of/2010/1091/html/appendix1.html</gco:CharacterString>
+                     </cit:linkage>
+                  </cit:CI_OnlineResource>
+               </cit:onlineResource>
+            </cit:CI_Citation>
+         </mri:citation>
+         <mri:abstract>
+            <gco:CharacterString>These data were collected under a cooperative agreement with the Massachusetts Office of Coastal Zone Management (CZM) and the U.S. Geological Survey (USGS), Coastal and Marine Geology Program, Woods Hole Coastal and Marine Science Center (WHCMSC). Initiated in 2003, the primary objective of this program is to develop regional geologic framework information for the management of coastal and marine resources. Accurate data and maps of sea-floor geology are important first steps toward protecting fish habitat, delineating marine resources, and assessing environmental changes due to natural or human impacts. The project is focused on the inshore waters (5-30 m deep) of Massachusetts between the New Hampshire border and Cape Cod Bay. Data collected for the mapping cooperative have been released in a series of USGS Open-File Reports (http://woodshole.er.usgs.gov/project-pages/coastal_mass/). This is the spatial dataset for the Red Brook Harbor survey area within Buzzards Bay, Massachusetts. These data are the results of a high-resolution geophysical (bathymetry, backscatter intensity, and seismic reflection) and ground validation (sediment samples and bottom photographs) survey, conducted in 2009. In addition to inclusion within the USGS-CZM geologic mapping effort, these Red Brook Harbor data will be used to assess the shallow-water mapping capability of the geophysical systems deployed for this project, with an emphasis on identifying resolution benchmarks for the interferometric sonar system. (http://woodshole.er.usgs.gov/operations/ia/public_ds_info.php?fa=2009-018-FA)</gco:CharacterString>
+         </mri:abstract>
+         <mri:purpose>
+            <gco:CharacterString>This dataset contains trackline navigation for approximately 240 km of interferometric (Systems Engineering and Assessment Ltd. (SEA) SWATHplus) sonar data that were collected by the U.S. Geological Survey in Red Brook Harbor, Massachusetts, during USGS survey 09018.</gco:CharacterString>
+         </mri:purpose>
+         <mri:status>
+            <mcc:MD_ProgressCode codeList="codeListLocation#MD_ProgressCode" codeListValue="completed">completed</mcc:MD_ProgressCode>
+         </mri:status>
+         <mri:pointOfContact>
+            <cit:CI_Responsibility>
+               <cit:role>
+                  <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+               </cit:role>
+               <cit:party>
+                  <cit:CI_Organisation>
+                     <cit:name>
+                        <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                     </cit:name>
+                     <cit:contactInfo>
+                        <cit:CI_Contact>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:address>
+                              <cit:CI_Address>
+                                 <cit:deliveryPoint>
+                                    <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                 </cit:deliveryPoint>
+                                 <cit:city>
+                                    <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                 </cit:city>
+                                 <cit:administrativeArea>
+                                    <gco:CharacterString>MA</gco:CharacterString>
+                                 </cit:administrativeArea>
+                                 <cit:postalCode>
+                                    <gco:CharacterString>02543-1598</gco:CharacterString>
+                                 </cit:postalCode>
+                                 <cit:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                 </cit:country>
+                                 <cit:electronicMailAddress>
+                                    <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                 </cit:electronicMailAddress>
+                              </cit:CI_Address>
+                           </cit:address>
+                        </cit:CI_Contact>
+                     </cit:contactInfo>
+                     <cit:individual>
+                        <cit:CI_Individual>
+                           <cit:name>
+                              <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                           </cit:name>
+                           <cit:positionName>
+                              <gco:CharacterString>Geographer</gco:CharacterString>
+                           </cit:positionName>
+                        </cit:CI_Individual>
+                     </cit:individual>
+                  </cit:CI_Organisation>
+               </cit:party>
+            </cit:CI_Responsibility>
+         </mri:pointOfContact>
+         <mri:spatialRepresentationType>
+            <mcc:MD_SpatialRepresentationTypeCode codeList="codeListLocation#MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode>
+         </mri:spatialRepresentationType>
+         <mri:topicCategory>
+            <mri:MD_TopicCategoryCode>oceans</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:topicCategory>
+            <mri:MD_TopicCategoryCode>location</mri:MD_TopicCategoryCode>
+         </mri:topicCategory>
+         <mri:extent>
+            <gex:EX_Extent id="boundingExtent">
+               <gex:geographicElement>
+                  <gex:EX_GeographicBoundingBox id="boundingGeographicBoundingBox">
+                     <gex:westBoundLongitude>
+                        <gco:Decimal>-70.678892</gco:Decimal>
+                     </gex:westBoundLongitude>
+                     <gex:eastBoundLongitude>
+                        <gco:Decimal>-70.616102</gco:Decimal>
+                     </gex:eastBoundLongitude>
+                     <gex:southBoundLatitude>
+                        <gco:Decimal>41.661905</gco:Decimal>
+                     </gex:southBoundLatitude>
+                     <gex:northBoundLatitude>
+                        <gco:Decimal>41.692125</gco:Decimal>
+                     </gex:northBoundLatitude>
+                  </gex:EX_GeographicBoundingBox>
+               </gex:geographicElement>
+               <gex:temporalElement>
+                  <gex:EX_TemporalExtent id="boundingTemporalExtent">
+                     <gex:extent>
+                        <gml:TimePeriod gml:id="d11aAbFbB">
+                           <gml:beginPosition>2009-09-28</gml:beginPosition>
+                           <gml:endPosition>2009-10-23</gml:endPosition>
+                        </gml:TimePeriod>
+                     </gex:extent>
+                  </gex:EX_TemporalExtent>
+               </gex:temporalElement>
+            </gex:EX_Extent>
+         </mri:extent>
+         <mri:resourceMaintenance>
+            <mmi:MD_MaintenanceInformation>
+               <mmi:maintenanceAndUpdateFrequency>
+                  <mmi:MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="notPlanned">notPlanned</mmi:MD_MaintenanceFrequencyCode>
+               </mmi:maintenanceAndUpdateFrequency>
+            </mmi:MD_MaintenanceInformation>
+         </mri:resourceMaintenance>
+         <mri:graphicOverview>
+            <mcc:MD_BrowseGraphic>
+               <mcc:fileName>
+                  <gco:CharacterString>http://pubs.usgs.gov/of/2010/1091/GIS/browse_jpg/big/RB_BathyBackscatterTrackline.jpg</gco:CharacterString>
+               </mcc:fileName>
+               <mcc:fileDescription>
+                  <gco:CharacterString>Trackline navigation for interferometric sonar data collected within Red Brook Harbor, MA, 2009</gco:CharacterString>
+               </mcc:fileDescription>
+               <mcc:fileType>
+                  <gco:CharacterString>JPEG</gco:CharacterString>
+               </mcc:fileType>
+            </mcc:MD_BrowseGraphic>
+         </mri:graphicOverview>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>USGS:c830344a-02b0-4bf2-829b-3fc5fe7e723c</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>USGS Metadata Identifier</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>USGS</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Coastal and Marine Geology Program</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>CMGP</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Woods Hole Coastal and Marine Science Center</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>WHCMSC</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Seafloor</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Marine Geology</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>WHCMSC field activity serial number 09018</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>WHCMSC Field Activity 2009-018-FA</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>navigation tracklines</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>SEA Submetrix</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>R/V Rafael</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Bathymetry</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Polyline shapefile</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Backscatter</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>None</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>navigational data</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>marine geophysics</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>geospatial datasets</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>USGS Thesaurus</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>North America</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>United States</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Atlantic Ocean</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Massachusetts</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Buzzards Bay</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Red Brook Harbor</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Cape Cod</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place">place</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>None</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>Seafloor</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>Surface</gco:CharacterString>
+               </mri:keyword>
+               <mri:keyword>
+                  <gco:CharacterString>sea floor</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="stratum">stratum</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>None</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:descriptiveKeywords>
+            <mri:MD_Keywords>
+               <mri:keyword>
+                  <gco:CharacterString>2009</gco:CharacterString>
+               </mri:keyword>
+               <mri:type>
+                  <mri:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="temporal">temporal</mri:MD_KeywordTypeCode>
+               </mri:type>
+               <mri:thesaurusName>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>None</gco:CharacterString>
+                     </cit:title>
+                     <cit:date gco:nilReason="unknown"/>
+                  </cit:CI_Citation>
+               </mri:thesaurusName>
+            </mri:MD_Keywords>
+         </mri:descriptiveKeywords>
+         <mri:resourceConstraints>
+            <mco:MD_Constraints>
+               <mco:useLimitation>
+                  <gco:CharacterString>Neither the U.S. Government, the Department of the Interior, nor the USGS, nor any of their employees, contractors, or subcontractors, make any warranty, express or implied, nor assume any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, nor represent that its use would not infringe on privately owned rights. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the USGS in the use of these data or related materials. Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</gco:CharacterString>
+               </mco:useLimitation>
+            </mco:MD_Constraints>
+         </mri:resourceConstraints>
+         <mri:resourceConstraints>
+            <mco:MD_LegalConstraints>
+               <mco:useConstraints>
+                  <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+               </mco:useConstraints>
+               <mco:otherConstraints>
+                  <gco:CharacterString>Use Constraints: Public domain data from the U.S. Government are freely redistributable with proper metadata and source attribution. Please recognize the U.S. Geological Survey as the source of this information.</gco:CharacterString>
+               </mco:otherConstraints>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:resourceConstraints>
+            <mco:MD_LegalConstraints>
+               <mco:accessConstraints>
+                  <mco:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode>
+               </mco:accessConstraints>
+               <mco:otherConstraints>
+                  <gco:CharacterString>Access Constraints: None</gco:CharacterString>
+               </mco:otherConstraints>
+            </mco:MD_LegalConstraints>
+         </mri:resourceConstraints>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>High-Resolution Geophysical Data Collected Within Red Brook Harbor, Buzzards Bay, Massachusetts, in 2009</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2012-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:edition>
+                        <gco:CharacterString>1.0</gco:CharacterString>
+                     </cit:edition>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address>
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Reston</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString> VA</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron M. Turecek</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>William W. Danforth</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Wayne E. Baldwin</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty/>
+                     <cit:series>
+                        <cit:CI_Series>
+                           <cit:name>
+                              <gco:CharacterString>Open-File Report</gco:CharacterString>
+                           </cit:name>
+                           <cit:issueIdentification>
+                              <gco:CharacterString>2010-1091</gco:CharacterString>
+                           </cit:issueIdentification>
+                        </cit:CI_Series>
+                     </cit:series>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://pubs.usgs.gov/of/2010/1091/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="codeListLocation#DS_AssociationTypeCode" codeListValue="largerWorkCitation">largerWorkCitation</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>High-Resolution Geologic Mapping of the Inner Continental Shelf: Nahant to Gloucester, Massachusetts</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2006-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address>
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Reston</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString> VA</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Brian D. Andrews</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Bradford Butman</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty/>
+                     <cit:series>
+                        <cit:CI_Series>
+                           <cit:name>
+                              <gco:CharacterString>Open-File Report</gco:CharacterString>
+                           </cit:name>
+                           <cit:issueIdentification>
+                              <gco:CharacterString>2005-1293</gco:CharacterString>
+                           </cit:issueIdentification>
+                        </cit:CI_Series>
+                     </cit:series>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://pubs.usgs.gov/of/2005/1293/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="codeListLocation#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>High-Resolution Geologic Mapping of the Inner Continental Shelf: Boston Harbor and Approaches, Massachusetts</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2006-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address>
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Reston</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString> VA</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Seth D. Ackerman</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Bradford Butman</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>William W. Danforth</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>James M. Crocker</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty/>
+                     <cit:series>
+                        <cit:CI_Series>
+                           <cit:name>
+                              <gco:CharacterString>Open-File Report</gco:CharacterString>
+                           </cit:name>
+                           <cit:issueIdentification>
+                              <gco:CharacterString>2006-1008</gco:CharacterString>
+                           </cit:issueIdentification>
+                        </cit:CI_Series>
+                     </cit:series>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://pubs.usgs.gov/of/2006/1008/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="codeListLocation#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>High-Resolution Geologic Mapping of the Inner Continental Shelf: Cape Ann to Salisbury Beach, Massachusetts</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2009-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address>
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Reston</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString> VA</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Brian D. Andrews</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Seth D. Ackerman</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Wayne E. Baldwin</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Christopher J. Hein</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty/>
+                     <cit:series>
+                        <cit:CI_Series>
+                           <cit:name>
+                              <gco:CharacterString>Open-File Report</gco:CharacterString>
+                           </cit:name>
+                           <cit:issueIdentification>
+                              <gco:CharacterString>2007-1373</gco:CharacterString>
+                           </cit:issueIdentification>
+                        </cit:CI_Series>
+                     </cit:series>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://pubs.usgs.gov/of/2007/1373/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="codeListLocation#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:associatedResource>
+            <mri:MD_AssociatedResource>
+               <mri:name>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Geophysical and Sampling Data from the Inner Continental Shelf: Duxbury to Hull, Massachusetts.</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date>
+                              <gco:DateTime>2010-01-01T00:00:00</gco:DateTime>
+                           </cit:date>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:edition>
+                        <gco:CharacterString>1.0</gco:CharacterString>
+                     </cit:edition>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:contactInfo>
+                                    <cit:CI_Contact>
+                                       <cit:address>
+                                          <cit:CI_Address>
+                                             <cit:city>
+                                                <gco:CharacterString>Reston</gco:CharacterString>
+                                             </cit:city>
+                                             <cit:administrativeArea>
+                                                <gco:CharacterString> VA</gco:CharacterString>
+                                             </cit:administrativeArea>
+                                          </cit:CI_Address>
+                                       </cit:address>
+                                    </cit:CI_Contact>
+                                 </cit:contactInfo>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Walter A. Barnhardt</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Seth D. Ackerman</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Brian D. Andrews</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>Wayne E. Baldwin</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                     <cit:citedResponsibleParty/>
+                     <cit:series>
+                        <cit:CI_Series>
+                           <cit:name>
+                              <gco:CharacterString>Open-File Report</gco:CharacterString>
+                           </cit:name>
+                           <cit:issueIdentification>
+                              <gco:CharacterString>2009-1072</gco:CharacterString>
+                           </cit:issueIdentification>
+                        </cit:CI_Series>
+                     </cit:series>
+                     <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                           <cit:linkage>
+                              <gco:CharacterString>http://pubs.usgs.gov/of/2009/1072/</gco:CharacterString>
+                           </cit:linkage>
+                        </cit:CI_OnlineResource>
+                     </cit:onlineResource>
+                  </cit:CI_Citation>
+               </mri:name>
+               <mri:associationType>
+                  <mri:DS_AssociationTypeCode codeList="codeListLocation#DS_AssociationTypeCode" codeListValue="crossReference">crossReference</mri:DS_AssociationTypeCode>
+               </mri:associationType>
+            </mri:MD_AssociatedResource>
+         </mri:associatedResource>
+         <mri:defaultLocale>
+            <lan:PT_Locale>
+               <lan:language>
+                  <lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="eng; USA">eng; USA</lan:LanguageCode>
+               </lan:language>
+               <lan:characterEncoding gco:nilReason="unknown"/>
+            </lan:PT_Locale>
+         </mri:defaultLocale>
+         <mri:environmentDescription>
+            <gco:CharacterString>Native Dataset Environment: Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.1850 Technical Prerequisites: This data is an Environmental Systems Research Institute (ESRI) polyline shapefile. The user must have ArcGIS or ArcView 3.0 or greater software to read and process the data file. In lieu of ArcView or ArcGIS, the user may utilize another GIS application package capable of importing the data. A free data viewer, ArcExplorer, capable of displaying the data is available from ESRI at www.esri.com.</gco:CharacterString>
+         </mri:environmentDescription>
+      </mri:MD_DataIdentification>
+   </mdb:identificationInfo>
+   <mdb:contentInfo>
+      <mrc:MD_FeatureCatalogueDescription>
+         <mrc:includedWithDataset>
+            <gco:Boolean>true</gco:Boolean>
+         </mrc:includedWithDataset>
+         <mrc:featureTypes>
+            <mrc:MD_FeatureTypeInfo>
+               <mrc:featureTypeName>
+                  <gco:ScopedName codeSpace="RB_BathyBackscatterTrackline">
+                  </gco:ScopedName>
+               </mrc:featureTypeName>
+            </mrc:MD_FeatureTypeInfo>
+         </mrc:featureTypes>
+         <mrc:featureCatalogueCitation gco:nilReason="unknown"/>
+      </mrc:MD_FeatureCatalogueDescription>
+   </mdb:contentInfo>
+   <mdb:distributionInfo>
+      <mrd:MD_Distribution>
+         <mrd:distributionFormat>
+            <mrd:MD_Format>
+               <mrd:formatSpecificationCitation>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>SHP</gco:CharacterString>
+                     </cit:title>
+                     <cit:alternateTitle/>
+                     <cit:date gco:nilReason="unknown"/>
+                     <cit:edition>
+                        <gco:CharacterString>ArcGIS 9.3</gco:CharacterString>
+                     </cit:edition>
+                     <cit:identifier>
+                        <mcc:MD_Identifier>
+                           <mcc:code>
+                              <gco:CharacterString>SHP</gco:CharacterString>
+                           </mcc:code>
+                        </mcc:MD_Identifier>
+                     </cit:identifier>
+                  </cit:CI_Citation>
+               </mrd:formatSpecificationCitation>
+            </mrd:MD_Format>
+         </mrd:distributionFormat>
+         <mrd:distributor>
+            <mrd:MD_Distributor>
+               <mrd:distributorContact>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="distributor">distributor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrd:distributorContact>
+               <mrd:distributionOrderProcess>
+                  <mrd:MD_StandardOrderProcess>
+                     <mrd:fees>
+                        <gco:CharacterString>none</gco:CharacterString>
+                     </mrd:fees>
+                  </mrd:MD_StandardOrderProcess>
+               </mrd:distributionOrderProcess>
+            </mrd:MD_Distributor>
+         </mrd:distributor>
+         <mrd:transferOptions>
+            <mrd:MD_DigitalTransferOptions>
+               <mrd:onLine>
+                  <cit:CI_OnlineResource>
+                     <cit:linkage>
+                        <gco:CharacterString>http://pubs.usgs.gov/of/2010/1091/GIS/shapefile/RB_BathyBackscatterTrackline.zip</gco:CharacterString>
+                     </cit:linkage>
+                     <cit:name>
+                        <gco:CharacterString>SHP</gco:CharacterString>
+                     </cit:name>
+                     <cit:description>
+                        <gco:CharacterString>Trackline navigation for interferometric sonar data collected in Red Brook Harbor, Massachusetts, and associated metadata.</gco:CharacterString>
+                     </cit:description>
+                     <cit:function>
+                        <cit:CI_OnLineFunctionCode codeList="http://schemas.opengis.net/iso/19139/20070417/resources/codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode>
+                     </cit:function>
+                  </cit:CI_OnlineResource>
+               </mrd:onLine>
+            </mrd:MD_DigitalTransferOptions>
+         </mrd:transferOptions>
+      </mrd:MD_Distribution>
+   </mdb:distributionInfo>
+   <mdb:dataQualityInfo>
+      <mdq:DQ_DataQuality>
+         <mdq:scope>
+            <mcc:MD_Scope>
+               <mcc:level>
+                  <mcc:MD_ScopeCode codeList="http://schemas.opengis.net/iso/19139/20070417/resources/codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+               </mcc:level>
+            </mcc:MD_Scope>
+         </mdq:scope>
+         <mdq:report>
+            <mdq:DQ_AbsoluteExternalPositionalAccuracy>
+               <mdq:measure>
+                  <mdq:DQ_MeasureReference>
+                     <mdq:nameOfMeasure>
+                        <gco:CharacterString>Horizontal Positional Accuracy Report</gco:CharacterString>
+                     </mdq:nameOfMeasure>
+                  </mdq:DQ_MeasureReference>
+               </mdq:measure>
+               <mdq:evaluationMethod>
+                  <mdq:DQ_FullInspection>
+                     <mdq:evaluationMethodDescription>
+                        <gco:CharacterString>The SWATHplus transducers were mounted on a rigid, vertical pole, at the bow of the R/V Rafael, approximately 0.5 meters below the water line. Navigation antennas (one Differential Global Positioning System (DGPS) antenna and two Real-Time Kinematic (RTK) GPS antennas) were mounted on a horizontal crossbar atop the vertical transducer mount pole. The horizontal positions for soundings were acquired with an Octopus F180 Attitude and Positioning System integrated with a Novatel DGPS. Horizontal sounding positions were recorded to raw sonar data files (SXR) via SWATHplus acquisition software (version 3.06.05.00). Position data from an Ashtech Surveyor RTK GPS, a Novatel DL-V3 RTK GPS, and an CSI LGBX Pro DGP were recorded by HYPACK survey software to HYPACK raw files. A conservative estimate of the positional accuracy of the CSI LGBX Pro DGPS unit is ± 2 meters.</gco:CharacterString>
+                     </mdq:evaluationMethodDescription>
+                     <mdq:evaluationProcedure/>
+                  </mdq:DQ_FullInspection>
+               </mdq:evaluationMethod>
+               <mdq:result gco:nilReason="missing"/>
+               <mdq:result gco:nilReason="missing"/>
+            </mdq:DQ_AbsoluteExternalPositionalAccuracy>
+         </mdq:report>
+         <mdq:report>
+            <mdq:DQ_CompletenessCommission>
+               <mdq:evaluationMethod>
+                  <mdq:DQ_FullInspection>
+                     <mdq:evaluationMethodDescription>
+                        <gco:CharacterString>This shapefile includes trackline navigation from all the interferometric sonar data that was collected within the survey area; however only quality bathymetric soundings along the main survey lines were included in the final bathymetry grid included on this report. Bathymetric and backscatter data along the tielines were not included in the final bathymetry grid and backscatter image.</gco:CharacterString>
+                     </mdq:evaluationMethodDescription>
+                     <mdq:evaluationProcedure/>
+                  </mdq:DQ_FullInspection>
+               </mdq:evaluationMethod>
+               <mdq:result gco:nilReason="unknown"/>
+               <mdq:result gco:nilReason="unknown"/>
+            </mdq:DQ_CompletenessCommission>
+         </mdq:report>
+         <mdq:report>
+            <mdq:DQ_CompletenessOmission>
+               <mdq:evaluationMethod>
+                  <mdq:DQ_FullInspection>
+                     <mdq:evaluationMethodDescription>
+                        <gco:CharacterString>This shapefile includes trackline navigation from all the interferometric sonar data that was collected within the survey area; however only quality bathymetric soundings along the main survey lines were included in the final bathymetry grid included on this report. Bathymetric and backscatter data along the tielines were not included in the final bathymetry grid and backscatter image.</gco:CharacterString>
+                     </mdq:evaluationMethodDescription>
+                     <mdq:evaluationProcedure/>
+                  </mdq:DQ_FullInspection>
+               </mdq:evaluationMethod>
+               <mdq:result gco:nilReason="unknown"/>
+               <mdq:result gco:nilReason="unknown"/>
+            </mdq:DQ_CompletenessOmission>
+         </mdq:report>
+         <mdq:report>
+            <mdq:DQ_ConceptualConsistency>
+               <mdq:measure>
+                  <mdq:DQ_MeasureReference>
+                     <mdq:measureDescription>
+                        <gco:CharacterString>Spurious data points were removed during processing.</gco:CharacterString>
+                     </mdq:measureDescription>
+                  </mdq:DQ_MeasureReference>
+               </mdq:measure>
+               <mdq:result gco:nilReason="unknown"/>
+            </mdq:DQ_ConceptualConsistency>
+         </mdq:report>
+      </mdq:DQ_DataQuality>
+   </mdb:dataQualityInfo>
+   <mdb:resourceLineage>
+      <mrl:LI_Lineage>
+         <mrl:statement>
+            <gco:CharacterString>This lineage was generated by the FGDC CSDGM to 19139 transformation</gco:CharacterString>
+         </mrl:statement>
+         <mrl:scope>
+            <mcc:MD_Scope>
+               <mcc:level>
+                  <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+               </mcc:level>
+            </mcc:MD_Scope>
+         </mrl:scope>
+         <mrl:source>
+            <mrl:LI_Source id="id_Information_unavailable_from_original_metadata.">
+               <mrl:description>
+                  <gco:CharacterString>Source Contribution: Bathymetric and backscatter data were collected using a Systems Engineering and Assessment, Ltd. SWATHplus (234 kHz) interferometric sonar system. The SWATHplus transducers were mounted on a rigid pole, approximately 0.5 m below the water line, from the bow of the of the R/V Rafael of Woods Hole, MA. A CodaOctopus F-180 Attitude and Positioning System, mounted directly above the SWATHplus transducers, measured vertical displacement (heave) and attitude (pitch and roll) of the vessel during data acquisition. An Applied Microsystems Ltd. Micro SV sound velocimeter, mounted adjacent to the SWATHplus transducers, continually measured changes in sound-velocity near the sea surface, and a hand-casted, Applied MicroSystems SV Plus sound velocimeter was used to collect sound-velocity profiles of the entire water column at least once each survey day. SWATHplus acquisition software was used to control the transducers and digitally log sonar data across an 80 m swath in the SWATHplus SXR format. An RTK-corrected GPS signal was transmitted to a beacon aboard the survey vessel once every second from a base station established by USGS personnel in the inner harbor. RTK vertical heights were used to correct tidal offsets during post-processing. To obtain 100 percent coverage of the seafloor, survey lines were spaced approximately 30 m apart. The R/V Rafael maintained an average speed of 5 knots during survey operations. The trackline for survey line l147f1 shows a loop during which interferometric data was still collected. Interferometric sounding and backscatter data for this loop was excluded from bathymetry and backscatter datasets.Source Type: Information unavailable from original metadata.</gco:CharacterString>
+               </mrl:description>
+               <mrl:sourceCitation>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>Information unavailable from original metadata.</gco:CharacterString>
+                     </cit:title>
+                     <cit:date>
+                        <cit:CI_Date>
+                           <cit:date gco:nilReason="unknown"/>
+                           <cit:dateType>
+                              <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                           </cit:dateType>
+                        </cit:CI_Date>
+                     </cit:date>
+                     <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                           <cit:role>
+                              <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+                           </cit:role>
+                           <cit:party>
+                              <cit:CI_Organisation>
+                                 <cit:name>
+                                    <gco:CharacterString>The source information was incomplete and had to be modified to meet the standard. Assumed to be USGS.</gco:CharacterString>
+                                 </cit:name>
+                              </cit:CI_Organisation>
+                           </cit:party>
+                        </cit:CI_Responsibility>
+                     </cit:citedResponsibleParty>
+                  </cit:CI_Citation>
+               </mrl:sourceCitation>
+               <mrl:scope>
+                  <mcc:MD_Scope>
+                     <mcc:level/>
+                     <mcc:extent>
+                        <gex:EX_Extent>
+                           <gex:temporalElement>
+                              <gex:EX_TemporalExtent>
+                                 <gex:extent>
+                                    <gml:TimePeriod gml:id="d11aAdJbFbB">
+                                       <gml:beginPosition>2009-09-28</gml:beginPosition>
+                                       <gml:endPosition>2009-10-23</gml:endPosition>
+                                    </gml:TimePeriod>
+                                 </gex:extent>
+                              </gex:EX_TemporalExtent>
+                           </gex:temporalElement>
+                        </gex:EX_Extent>
+                     </mcc:extent>
+                     <mcc:levelDescription/>
+                  </mcc:MD_Scope>
+               </mrl:scope>
+            </mrl:LI_Source>
+         </mrl:source>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Raw to Processed Conversion: Survey navigation information is stored within each raw (SXR) data file. Each raw SWATHplus bathymetric sonar file (SXR) was converted to a SWATHplus processed file (SXP) using SEA SWATHplus Swath Processor (ver. 3.06.05.00).</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAbAb">
+                     <gml:timePosition>2009-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>CARIS Processing: A new Computer Aided Resource Information System (CARIS) Hydrographic Information Processing System (HIPS) project (ver. 6.1) was created with projection information set to Universal Transverse Mercator (UTM) Zone 19, WGS84. Each SWATHplus processed file (SXP) was imported to the new CARIS project using the Import/Conversion Wizard. Navigation was checked and edited as needed using the Navigation Editor tool.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAcAb">
+                     <gml:timePosition>2009-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>A series of Perl and AWK programming scripts were used to extract and subsample the navigation fixes stored in the CARIS HIPS database. The processing flow for this step follows: A.) Extract navigation for each line in CARIS HDCS directory using Perl script do_CARIS_nav2.pl (which runs the CARIS program printfnav for all the lines in the HDCS dir) and the grep statement below. (Extracted navigation file is tab-delimited in format YYYY-JD HH:MM:SS:FFF DD.LAT DD.LONG SSSSS_VVVVV_YYYY-JD_LLLL AR where YYYY=year, JD=Julian Day, HH=hour, MM=minute, SS=seconds, FFF=fractions of a second, DD.LAT=latitude in decimal degrees, DD.LONG=longitude in decimal degrees, SSSSS=survey name, VVVVV=vessel name, LLLL=linename, AR=accepted or rejected navigation fix) &gt; grep Accepted combined.txt &gt; outputfile B.) The files extracted from CARIS HIPS have 4-5 navigation fixes per second. Each file was subsampled to 1 fix per second by using AWK (see code below) to remove the fractions-of-a-second from the time column then grabbing the first occurrence of each second. &gt; awk '{print $1" "substr($2,1,8)" "$3" "$4" "$5}' 2.ss_combined_grep.txt | awk '$2 != prev { print; prev = $2 }' &gt; 3.ss_nav_awked.txt. C.) Checked that there were no additional spurious fixes outside the survey area using another series of AWK code (see code below), and reformatted for conversion from comma separated value (CSV) data to ESRI point feature class &gt; awk -F" " '{if(substr($4,1,3)!="-70") print $0}' 3.ss_nav_awked.txt &gt; awk -F" " '{if(substr($3,1,1)!="4") print $0}' 3.ss_nav_awked.txt &gt; awk -f reformat_CARIS2Arc_SS.awk 3.ss_nav_awked.txt &gt; SS_bathyNAV_ofr.csv</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAdAb">
+                     <gml:timePosition>2009-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>In ArcMap (version 9.3), navigation text file was added as an event theme (Tools/AddXY) with a defined coordinate system of UTM, Zone 19, WGS84, and then converted to a point shapefile.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAeAb">
+                     <gml:timePosition>2009-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Within ArcMap (version 9.3) XToolsPro (version 5.3.0) was used to convert the navigation point file to a trackline polyline shapefile. The trackline shapefile was checked for spurious fixes. The following fields were added to the polyline shapefile using XToolsPro: FILENAME, YEAR, JULDAY, SURVEYID, DEVICEID, VEHICLEID, LENGTH. Fields were populated as: FILENAME = linename, YEAR = year of survey, JULDAY = Julian day surveyed (via tabular join with nav point shapefile), SURVEYID = USGS survey number, DEVICEID = device used for collection, VEHICLEID = survey vessel, LENGTH = length of each survey line calculated in kilometers (Calculate geometry at attribute table).</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAfAb">
+                     <gml:timePosition>2009-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Tracklines were converted from UTM projection to Geographic (WGS 1984) within Arcmap (version 9.3) using ArcToolBox/Data Management Tools/Projections and Transformations/Feature/Project.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAgAb">
+                     <gml:timePosition>2010-01-01T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>(508) 548-8700 x2230</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>(508) 457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:country>
+                                          <gco:CharacterString>USA</gco:CharacterString>
+                                       </cit:country>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>aturecek@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Geographer</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Edits to the metadata were made to fix any errors that MP v 2.9.32 flagged. This is necessary to enable the metadata to be successfully harvested for various data catalogs. In some cases, this meant adding text "Information unavailable" or "Information unavailable from original metadata" for those required fields that were left blank. Other minor edits were probably performed (title, publisher, publication place, etc.). Fixed URL in abstract. The source information was incomplete and had to be modified to meet the standard. The metadata date (but not the metadata creator) was edited to reflect the date of these changes. The metadata available from a harvester may supersede metadata bundled within a download file. Compare the metadata dates to determine which metadata file is most recent.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAhAb">
+                     <gml:timePosition>2016-04-14T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2251</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>vatnipp@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>VeeAnn A. Cross</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Marine Geologist</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>USGS Thesaurus keywords added to the keyword section.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAiAb">
+                     <gml:timePosition>2018-07-20T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2251</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Road</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>vatnipp@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>VeeAnn A. Cross</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Marine Geologist</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Crossref DOI link was added as the first link in the metadata.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAjAb">
+                     <gml:timePosition>2019-11-18T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2251</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Road</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>vatnipp@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>VeeAnn A. Cross</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Marine Geologist</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+         <mrl:processStep>
+            <mrl:LI_ProcessStep>
+               <mrl:description>
+                  <gco:CharacterString>Added keywords section with USGS persistent identifier as theme keyword.</gco:CharacterString>
+               </mrl:description>
+               <mrl:stepDateTime>
+                  <gml:TimeInstant gml:id="d29aGmAfAkAb">
+                     <gml:timePosition>2020-09-08T00:00:00</gml:timePosition>
+                  </gml:TimeInstant>
+               </mrl:stepDateTime>
+               <mrl:processor>
+                  <cit:CI_Responsibility>
+                     <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="processor">processor</cit:CI_RoleCode>
+                     </cit:role>
+                     <cit:party>
+                        <cit:CI_Organisation>
+                           <cit:name>
+                              <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                           </cit:name>
+                           <cit:contactInfo>
+                              <cit:CI_Contact>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-548-8700 x2251</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:phone>
+                                    <cit:CI_Telephone>
+                                       <cit:number>
+                                          <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                       </cit:number>
+                                       <cit:numberType>
+                                          <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                       </cit:numberType>
+                                    </cit:CI_Telephone>
+                                 </cit:phone>
+                                 <cit:address>
+                                    <cit:CI_Address>
+                                       <cit:deliveryPoint>
+                                          <gco:CharacterString>384 Woods Hole Road</gco:CharacterString>
+                                       </cit:deliveryPoint>
+                                       <cit:city>
+                                          <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                       </cit:city>
+                                       <cit:administrativeArea>
+                                          <gco:CharacterString>MA</gco:CharacterString>
+                                       </cit:administrativeArea>
+                                       <cit:postalCode>
+                                          <gco:CharacterString>02543-1598</gco:CharacterString>
+                                       </cit:postalCode>
+                                       <cit:electronicMailAddress>
+                                          <gco:CharacterString>vatnipp@usgs.gov</gco:CharacterString>
+                                       </cit:electronicMailAddress>
+                                    </cit:CI_Address>
+                                 </cit:address>
+                              </cit:CI_Contact>
+                           </cit:contactInfo>
+                           <cit:individual>
+                              <cit:CI_Individual>
+                                 <cit:name>
+                                    <gco:CharacterString>VeeAnn A. Cross</gco:CharacterString>
+                                 </cit:name>
+                                 <cit:positionName>
+                                    <gco:CharacterString>Marine Geologist</gco:CharacterString>
+                                 </cit:positionName>
+                              </cit:CI_Individual>
+                           </cit:individual>
+                        </cit:CI_Organisation>
+                     </cit:party>
+                  </cit:CI_Responsibility>
+               </mrl:processor>
+            </mrl:LI_ProcessStep>
+         </mrl:processStep>
+      </mrl:LI_Lineage>
+   </mdb:resourceLineage>
+   <mdb:metadataMaintenance>
+      <mmi:MD_MaintenanceInformation>
+         <mmi:maintenanceAndUpdateFrequency>
+            <mmi:MD_MaintenanceFrequencyCode codeList="http://schemas.opengis.net/iso/19139/20070417/resources/codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="unknown">unknown</mmi:MD_MaintenanceFrequencyCode>
+         </mmi:maintenanceAndUpdateFrequency>
+         <mmi:maintenanceNote>
+            <gco:CharacterString> This metadata was automatically generated from the FGDC Content Standards for Digital Geospatial Metadata standard (version FGDC-STD-001-1998) using the 2019-08-12T11:11:00 version of the FGDC CSDGM to ISO 19139 transform.</gco:CharacterString>
+         </mmi:maintenanceNote>
+         <mmi:contact>
+            <cit:CI_Responsibility>
+               <cit:role>
+                  <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+               </cit:role>
+               <cit:party>
+                  <cit:CI_Organisation>
+                     <cit:name>
+                        <gco:CharacterString>U.S. Geological Survey</gco:CharacterString>
+                     </cit:name>
+                     <cit:contactInfo>
+                        <cit:CI_Contact>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>508-548-8700 x2230</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:phone>
+                              <cit:CI_Telephone>
+                                 <cit:number>
+                                    <gco:CharacterString>508-457-2310</gco:CharacterString>
+                                 </cit:number>
+                                 <cit:numberType>
+                                    <cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+                                 </cit:numberType>
+                              </cit:CI_Telephone>
+                           </cit:phone>
+                           <cit:address>
+                              <cit:CI_Address>
+                                 <cit:deliveryPoint>
+                                    <gco:CharacterString>384 Woods Hole Rd.</gco:CharacterString>
+                                 </cit:deliveryPoint>
+                                 <cit:city>
+                                    <gco:CharacterString>Woods Hole</gco:CharacterString>
+                                 </cit:city>
+                                 <cit:administrativeArea>
+                                    <gco:CharacterString>MA</gco:CharacterString>
+                                 </cit:administrativeArea>
+                                 <cit:postalCode>
+                                    <gco:CharacterString>02543-1598</gco:CharacterString>
+                                 </cit:postalCode>
+                                 <cit:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                 </cit:country>
+                                 <cit:electronicMailAddress>
+                                    <gco:CharacterString>whsc_data_contact@usgs.gov</gco:CharacterString>
+                                 </cit:electronicMailAddress>
+                              </cit:CI_Address>
+                           </cit:address>
+                           <cit:contactInstructions>
+                              <gco:CharacterString>The metadata contact email address is a generic address in the event the metadata contact is no longer with the USGS or the email is otherwise invalid.</gco:CharacterString>
+                           </cit:contactInstructions>
+                        </cit:CI_Contact>
+                     </cit:contactInfo>
+                     <cit:individual>
+                        <cit:CI_Individual>
+                           <cit:name>
+                              <gco:CharacterString>Aaron Turecek</gco:CharacterString>
+                           </cit:name>
+                           <cit:positionName>
+                              <gco:CharacterString>Geographer</gco:CharacterString>
+                           </cit:positionName>
+                        </cit:CI_Individual>
+                     </cit:individual>
+                  </cit:CI_Organisation>
+               </cit:party>
+            </cit:CI_Responsibility>
+         </mmi:contact>
+      </mmi:MD_MaintenanceInformation>
+   </mdb:metadataMaintenance>
+</mdb:MD_Metadata>
