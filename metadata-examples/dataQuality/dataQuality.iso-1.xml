@@ -1032,7 +1032,20 @@
    <mdb:dataQualityInfo>
       <mdq:DQ_DataQuality>
          <mdq:scope></mdq:scope>
-         <mdq:report></mdq:report>
+         <mdq:standaloneQualityReport>
+            <mdq:DQ_StandaloneQualityReportInformation>
+               <mdq:reportReference>
+                  <cit:CI_Citation>
+                     <cit:title>
+                        <gco:CharacterString>A report on the validation of a metadata record</gco:CharacterString>
+                     </cit:title>
+                  </cit:CI_Citation>
+               </mdq:reportReference>
+               <mdq:abstract>
+                  <gco:CharacterString>The metadata were tested for validity</gco:CharacterString>
+               </mdq:abstract>
+            </mdq:DQ_StandaloneQualityReportInformation>
+         </mdq:standaloneQualityReport>
       </mdq:DQ_DataQuality>
    </mdb:dataQualityInfo>
  
