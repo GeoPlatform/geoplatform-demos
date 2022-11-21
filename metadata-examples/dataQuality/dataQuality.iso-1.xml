@@ -1026,10 +1026,14 @@
            </mdq:DQ_AbsoluteExternalPositionalAccuracy>
         </mdq:report>
         
-        <!-- Standalone Report -->
-        
-               
+        <!-- Standalone Report -->          
      </mdq:DQ_DataQuality>
+   </mdb:dataQualityInfo>
+   <mdb:dataQualityInfo>
+      <mdq:DQ_DataQuality>
+         <mdq:scope></mdq:scope>
+         <mdq:report></mdq:report>
+      </mdq:DQ_DataQuality>
    </mdb:dataQualityInfo>
  
 
