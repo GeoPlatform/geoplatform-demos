@@ -981,7 +981,7 @@
            </mdq:DQ_TemporalConsistency>
         </mdq:report>
         
-        <!-- TemporalConsistency Report = no CSDGM mapping -->
+        <!-- TemporalValidity Report = no CSDGM mapping -->
         <mdq:report>
            <mdq:DQ_TemporalValidity>
               <mdq:result>
