@@ -970,7 +970,37 @@
            </mdq:DQ_AbsoluteExternalPositionalAccuracy>
         </mdq:report>
         
-               
+        <!-- TemporalConsistency Report = no CSDGM mapping -->
+        <mdq:report>
+           <mdq:DQ_TemporalConsistency>
+              <mdq:result>
+                 <mdq:DQ_DescriptiveResult>
+                    <mdq:statement></mdq:statement>
+                 </mdq:DQ_DescriptiveResult>
+              </mdq:result>
+           </mdq:DQ_TemporalConsistency>
+        </mdq:report>
+        
+        <!-- TemporalConsistency Report = no CSDGM mapping -->
+        <mdq:report>
+           <mdq:DQ_TemporalValidity>
+              <mdq:result>
+                 <mdq:DQ_QuantitativeResult>
+                    <mdq:value></mdq:value>
+                 </mdq:DQ_QuantitativeResult>
+              </mdq:result>
+           </mdq:DQ_TemporalValidity>
+        </mdq:report>
+        
+        <!-- Usability Element Report = no mapping -->
+        <mdq:report>
+           <mdq:DQ_UsabilityElement>
+              <mdq:result></mdq:result>
+           </mdq:DQ_UsabilityElement>
+        </mdq:report>
+        
+        <!-- Derived Element = no mapping -->
+    
         <!-- Coverage Is this represented in CSDGM? -->
         <mdq:report>
            <mdq:DQ_AbsoluteExternalPositionalAccuracy>
@@ -995,9 +1025,13 @@
               </mdq:result>
            </mdq:DQ_AbsoluteExternalPositionalAccuracy>
         </mdq:report>
+        
+        <!-- Standalone Report -->
+        
                
      </mdq:DQ_DataQuality>
    </mdb:dataQualityInfo>
+ 
 
    <mdb:metadataMaintenance>
       <mmi:MD_MaintenanceInformation>
