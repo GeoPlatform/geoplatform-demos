@@ -199,4 +199,15 @@
     "supportLevel": "GP Example",
     "synonyms": [],
     "tags": ["STAC"]
+},
+{
+    "date": "2022-10-26",
+    "img": "https://geoplatform.github.io/geoplatform-demos/assets/images/gp-demo-logo.png",
+    "itemUrl": "https://geoplatform.github.io/geoplatform-demos/tilegarden.html",
+    "name": "Tilegarden for Geoplatform Demo",
+    "type": "Demo Example",
+    "popularity": 10,
+    "supportLevel": "GP Example",
+    "synonyms": [],
+    "tags": ["MVT", "Geospatial"]
 }]
