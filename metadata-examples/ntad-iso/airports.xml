@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<title>Airports (National)- National Geospatial Data Asset (NGDA) Airports</title>
+				<geoform>vector digital data</geoform>
+				<pubdate>19950701</pubdate>
+				<lworkcit>
+					<citeinfo>
+						<pubdate>19950701</pubdate>
+					</citeinfo>
+				</lworkcit>
+			</citeinfo>
+		</citation>
+		<spdom>
+			<bounding>
+				<westbc>-177.381308</westbc>
+				<eastbc>174.113589</eastbc>
+				<northbc>76.533333</northbc>
+				<southbc>-14.331662</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>none</themekt>
+				<themekey>Aviation</themekey>
+				<themekey>NTAD</themekey>
+				<themekey>National Transportation Atlas Database</themekey>
+				<themekey>Transportation</themekey>
+				<themekey>Atlas</themekey>
+				<themekey>Database</themekey>
+				<themekey>Airports</themekey>
+				<themekey>Structures</themekey>
+				<themekey>Airport</themekey>
+				<themekey>Balloonport</themekey>
+				<themekey>Gliderport</themekey>
+				<themekey>Heliport</themekey>
+				<themekey>Seaplane Base</themekey>
+				<themekey>Ultralight</themekey>
+			</theme>
+			<place>
+				<placekt>none</placekt>
+				<placekey>USA</placekey>
+				<placekey>National</placekey>
+			</place>
+			<theme>
+				<themekt>NGDA Portfolio Themes</themekt>
+				<themekey>NGDA</themekey>
+				<themekey>National Geospatial Data Asset</themekey>
+				<themekey>Transportation</themekey>
+			</theme>
+		</keywords>
+		<datacred>Acknowledgement of the Assistant Secretary for Research and Technology/Bureau of Transportation Statistics (BTS) National Transportation Atlas Database (NTAD). The Federal Aviation Administration (FAA) develops and maintains the textual data from which this geospatial layer was derived.</datacred>
+		<descript>
+			<abstract>The Aviation Facilities dataset was compiled on July 16, 2020, is from the Federal Aviation Administration(FAA), and is part of the U.S. Department of Transportation (USDOT)/Bureau of Transportation Statistics’ (BTS') National Transportation Atlas Database (NTAD). The Airports dataset includes all official and operational aerodromes  and is part of the U.S. Department of Transportation (USDOT)/Bureau of Transportation Statistics (BTS) National Transportation Atlas Database (NTAD). The Airports database is a geographic point database of official operational aerodromes in the United States and U.S. Territories. Attribute data is provided on the physical and operational characteristics of the aerodrome, current usage including enplanements and aircraft operations, congestion levels and usage categories. This geospatial data is derived from the FAA's National Airspace System Resource Aeronautical Data Product.</abstract>
+			<purpose>The dataset provides users with information about airport locations and attributes and can be used for national and regional analysis applications.</purpose>
+		</descript>
+		<status>
+			<update/>
+		</status>
+		<useconst>NTAD datasets are intended for public usage and are not for sale/resale</useconst>
+		<accconst>unrestricted</accconst>
+		<crossref>
+			<citeinfo>
+				<pubdate>19950701</pubdate>
+			</citeinfo>
+		</crossref>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Federal Aviation Administration(FAA)</cntorg>
+					<cntper>Doug Sage</cntper>
+				</cntorgp>
+				<cntpos>Air Traffic Control Spec</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical</addrtype>
+					<address>800 Independence Avenue, SW</address>
+					<city>Washington</city>
+					<state>DC</state>
+					<postal>20910</postal>
+					<country>United States</country>
+				</cntaddr>
+				<cntvoice>301-427-4891</cntvoice>
+				<cntemail>doug.sage@faa.gov</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.8.1.14362</native>
+	</idinfo>
+	<dataqual>
+		<logic>Unknown</logic>
+		<complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Unknown</horizpar>
+			</horizpa>
+			<vertacc>
+				<vertaccr>Unknown</vertaccr>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc/>
+				<procdate/>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Entity point</sdtstype>
+				<ptvctcnt>19850</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+					<mapprojp>
+						<otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]</otherprj>
+					</mapprojp>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.0001</absres>
+						<ordres>0.0001</ordres>
+					</coordrep>
+					<plandu>meter</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>D WGS 1984</horizdn>
+				<ellips>WGS 1984</ellips>
+				<semiaxis>6378137.0</semiaxis>
+				<denflat>298.257223563</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>Airports (National)- National Geospatial Data Asset (NGDA) Airports</enttypl>
+			</enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated. </udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features</udom>
+					<edom>
+						<edomv>None</edomv>
+						<edomvd>point Shapes as defined by ArcView</edomvd>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SiteNumber</attrlabl>
+				<attrdef>A unique identifying number followed by an asterisk and the 'landing facility type' code. The SITE_NO forms the key to the airport record in the the NFDC (5010) database. Example. *A</attrdef>
+				<attrdefs>FAA</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>List of Official Airport Site Numbers</codesetn>
+						<codesets>FAA</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FacilityTy</attrlabl>
+				<attrdef>Landing Facility Type</attrdef>
+				<attrdefs>FAA</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>AIRPORT</edomv>
+						<edomvd>Airport Facility</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>BALLOONPORT</edomv>
+						<edomvd>Balloon Launch and Landing Facility</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>SEAPLANE BASE</edomv>
+						<edomvd>Facility for sea plane operations</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>GLIDERPORT</edomv>
+						<edomvd>Facility for glider operatoins</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>HELIPORT</edomv>
+						<edomvd>Facility for helicopter operations </edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>STOLPORT</edomv>
+						<edomvd>Short Take Off and Landing Facility</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+					<edom>
+						<edomv>ULTRALIGHT</edomv>
+						<edomvd>Facility for ultralight operations</edomvd>
+						<edomvds>OST-R/BTS</edomvds>
+					</edom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LocationID</attrlabl>
+				<attrdef>A unique 3-4 character identifier assigned to the landing favility (i.e. airport).</attrdef>
+				<attrdefs>FAA</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>List of Official LOC ID Codes</codesetn>
+						<codesets>FAA</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>EffectiveD</attrlabl>
+				<attrdef>Information Effective Data (MM/DD/YYY). This data coincides with the 56-day charting and publication cycle date. </attrdef>
+				<attrdefs>FAA</attrdefs>
+				<attrdomv>
+					<udom>date value</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>EffectiveD</attrlabl>
+				<attrdef>Information Effective Data (MM/DD/YYY). This data coincides with the 56-day charting and publication cycle date. </attrdef>
+				<attrdefs>FAA</attrdefs>
+			</attr>
+		</detailed>
+	</eainfo>
+	<metainfo>
+		<metd>20211015</metd>
+		<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<mettc>local time</mettc>
+		<metc>
+			<ptcontact>
+				<cntinfo>
+					<cntorgp>
+						<cntorg>Federal Aviation Administration(FAA)</cntorg>
+						<cntper>Doug Sage</cntper>
+					</cntorgp>
+					<cntpos>Air Traffic Control Spec</cntpos>
+					<cntaddr>
+						<addrtype>mailing and physical</addrtype>
+						<address>800 Independence Avenue, SW</address>
+						<city>Washington</city>
+						<state>DC</state>
+						<postal>20910</postal>
+						<country>United States</country>
+					</cntaddr>
+					<cntvoice>301-427-4891</cntvoice>
+					<cntemail>doug.sage@faa.gov</cntemail>
+				</cntinfo>
+			</ptcontact>
+		</metc>
+	</metainfo>
+	<distinfo>
+		<distrib>
+			<ptcontact>
+				<cntinfo>
+					<cntorgp>
+						<cntorg>Federal Aviation Administration(FAA)</cntorg>
+						<cntper>Doug Sage</cntper>
+					</cntorgp>
+					<cntpos>Air Traffic Control Spec</cntpos>
+					<cntaddr>
+						<addrtype>mailing and physical</addrtype>
+						<address>800 Independence Avenue, SW</address>
+						<city>Washington</city>
+						<state>DC</state>
+						<postal>20910</postal>
+						<country>United States</country>
+					</cntaddr>
+					<cntvoice>301-427-4891</cntvoice>
+					<cntemail>doug.sage@faa.gov</cntemail>
+				</cntinfo>
+			</ptcontact>
+		</distrib>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>ESRI Shapefile</formname>
+					<formverd>2021</formverd>
+					<formspec>download</formspec>
+					<filedec>ZIP</filedec>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>https://doi.org/10.21949/1522006</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<digform>
+				<digtinfo>
+					<formname>AZURE Cloud ArcGIS Server (OGC WMS)</formname>
+					<formverd>2021</formverd>
+					<formspec>https://www.ogc.org/standards/wms</formspec>
+					<formcont>OGC WMS Map Service for visualizing geospatial information</formcont>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>https://doi.org/10.21949/1522007</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+		</stdorder>
+	</distinfo>
+</metadata>
