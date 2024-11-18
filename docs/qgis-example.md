@@ -3,7 +3,7 @@
 ## QGIS example using a zip code tile service and WMS to add a zip code layers
 This example goes through the steps to create a new project in QGIS and then add a basemap, a vector tile layer, and a WMS layer.
 
-This example will be using services listed on the Beta Geoplatform [Census 5-Digit ZIP Code Tabulation Area](https://beta.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) metadata page
+This example will be using services listed on the Geoplatform [Series Information for 2020 Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/a6fbf798-67f5-4a74-984f-e4374938d994) metadata page.
 
 * Vector Tile Service:  https://tileservice.geoplatform.gov/vector/edd18cd7_7adc_4428_a6d9_81072155427e/{z}/{x}/{y}.mvt
 
