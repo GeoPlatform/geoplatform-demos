@@ -1,7 +1,7 @@
 ## Modify a JSFiddle and add it to your web page
 This example goes through the steps to modify an [OpenLayers](https://openlayers.org/) JSFiddle demo to use a different tile server. First this we will test our changes in JSFiddle using the embed link. The example will show how to add the JSFiddle to a web page and then show moving HTML, CSS and JS to the web site. 
 
-The steps below will first change the fiddle to use a [zip code layer](https://beta.geoplatform.gov/metadata/895888d3-4f32-5143-88e2-e7b3612891f0) [Vector Tile Service](https://tileservice.geoplatform.gov/?config=edd18cd7_7adc_4428_a6d9_81072155427e&tileType=vector).
+The steps below will first change the fiddle to use a [Series Information for 2020 Census 5-Digit ZIP Code Tabulation Area](https://www.geoplatform.gov/metadata/a6fbf798-67f5-4a74-984f-e4374938d994) [Vector Tile Service](https://tileservice.geoplatform.gov/?config=edd18cd7_7adc_4428_a6d9_81072155427e&tileType=vector).
 
 1. Go to the OpenLayers [JSFiddle](https://jsfiddle.net/fgdc_gp_demos/dtL1aufb/28/).
 ![Screenshot from 2021-05-10 17-28-24](https://user-images.githubusercontent.com/64213093/117741688-3ff83380-b1c0-11eb-9422-37b3221a8f06.png)
