@@ -16,7 +16,8 @@ POSTGRES_SECRET=sit/rds/postgres-magic
 POSTGRES_USER=$(aws secretsmanager get-secret-value --secret-id ${POSTGRES_SECRET} --region us-east-1 --query 'SecretString' --output text | jq -r '.username')
 POSTGRES_PASSWORD=$(aws secretsmanager get-secret-value --secret-id ${POSTGRES_SECRET} --region us-east-1 --query 'SecretString' --output text | jq -r '.password')
 DSN_CONNECTION="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@sit-postgres-stac.cymsqtsduz19.us-east-1.rds.amazonaws.com:5432/postgres"
-BASE_URL=s3://gp-sit-us-east-1-public-configs/stac/national_map/collections
+STAC_URL=s3://gp-sit-us-east-1-public-configs/stac
+BASE_URL=$STAC_URL/national_map/collections
 echo "DSN_CONNECTION: $DSN_CONNECTION"
 echo "BASE_URL: $BASE_URL"
 
@@ -27,6 +28,7 @@ python3.8 -m pip install "pypgstac[psycopg]==0.8.*"
 # copy from s3
 cd /tmp
 mkdir data
+aws s3 cp $STAC_URL/collection_geoplatform.ndjson ./data/collection_geoplatform.ndjson
 aws s3 cp $BASE_URL/collections.ndjson ./data/collections.ndjson
 aws s3 cp $BASE_URL/high_resolution_nhd_features.ndjson ./data/high_resolution_nhd_features.ndjson
 aws s3 cp $BASE_URL/landcover_by_state_features.ndjson ./data/landcover_by_state_features.ndjson
@@ -44,23 +46,32 @@ aws s3 cp $BASE_URL/wbd_by_huc2_features.ndjson ./data/wbd_by_huc2_features.ndjs
 
 echo "running pypgstac commands"
 
-# load collection
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections ./data/collections.ndjson
+# comment out this line if migrating or populating pgstac schema for first time
+# echo "running migration command"
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION migrate
+echo "running geoplatform commands"
 
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections --method upsert ./data/collection_geoplatform.ndjson
+
+echo "running collections commands"
+
+# load collection
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections --method upsert ./data/collections.ndjson
+echo "running items commands"
 # load items
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/high_resolution_nhd_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/landcover_by_state_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/map_indicees_by_state_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_arce_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_bil_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_filegdb101_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_geotiff_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_shapefile_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/small_scale_tiff_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/struct_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/topo_map_vector_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/tran_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/wbd_by_huc2_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/high_resolution_nhd_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/landcover_by_state_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/map_indicees_by_state_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_arce_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_bil_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_filegdb101_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_geotiff_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_shapefile_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/small_scale_tiff_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/struct_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/topo_map_vector_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/tran_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/wbd_by_huc2_features.ndjson
 
 echo "finished"
 

@@ -16,7 +16,8 @@ POSTGRES_SECRET=sit/rds/postgres-magic
 POSTGRES_USER=$(aws secretsmanager get-secret-value --secret-id ${POSTGRES_SECRET} --region us-east-1 --query 'SecretString' --output text | jq -r '.username')
 POSTGRES_PASSWORD=$(aws secretsmanager get-secret-value --secret-id ${POSTGRES_SECRET} --region us-east-1 --query 'SecretString' --output text | jq -r '.password')
 DSN_CONNECTION="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@sit-postgres-stac.cymsqtsduz19.us-east-1.rds.amazonaws.com:5432/postgres"
-BASE_URL=s3://gp-sit-us-east-1-public-configs/stac/census/collections
+STAC_URL=s3://gp-sit-us-east-1-public-configs/stac
+BASE_URL=$STAC_URL/census/collections
 echo "DSN_CONNECTION: $DSN_CONNECTION"
 echo "BASE_URL: $BASE_URL"
 
@@ -27,6 +28,7 @@ python3.8 -m pip install "pypgstac[psycopg]==0.8.*"
 # copy from s3
 cd /tmp
 mkdir data
+aws s3 cp $STAC_URL/collection_geoplatform.ndjson ./data/collection_geoplatform.ndjson
 aws s3 cp $BASE_URL/collections.ndjson ./data/collections.ndjson
 aws s3 cp $BASE_URL/addr_features.ndjson ./data/addr_features.ndjson
 aws s3 cp $BASE_URL/addrfeat_features.ndjson ./data/addrfeat_features.ndjson
@@ -81,64 +83,72 @@ aws s3 cp $BASE_URL/unsd_features.ndjson ./data/unsd_features.ndjson
 aws s3 cp $BASE_URL/vtd20_features.ndjson ./data/vtd20_features.ndjson
 aws s3 cp $BASE_URL/zcta520_features.ndjson ./data/zcta520_features.ndjson
 
-echo "running pypgstac commands"
+# comment out this line if migrating or populating pgstac schema for first time
+# echo "running migration command"
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION migrate
+
+echo "running geoplatform commands"
+
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections --method upsert ./data/collection_geoplatform.ndjson
+
+echo "running collections commands"
 
 # load collection
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections ./data/collections.ndjson
-
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load collections --method upsert ./data/collections.ndjson
+echo "running items commands"
 # load items
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/addr_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/addrfeat_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/addrfn_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/aiannh_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/aitsn_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/anrc_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/arealm_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/areawater_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/bg_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/cbsa_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/cd118_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/cnecta_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/coastline_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/concity_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/county_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/cousub_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/csa_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/edges_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/elsd_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/estate_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/faces_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/facesah_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/facesal_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/facesmil_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/featnames_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/linearwater_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/metdiv_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/mil_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/necta_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/nectadiv_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/place_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/pointlm_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/primaryroads_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/prisecroads_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/puma20_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/rails_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/roads_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/scsd_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/sdadm_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/sldl_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/sldu_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/state_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/subbarrio_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/tabblock20_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/tbg_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/tract_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/ttract_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/uac20_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/uga20_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/unsd_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/vtd20_features.ndjson
-python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items ./data/zcta520_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/addr_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/addrfeat_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/addrfn_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/aiannh_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/aitsn_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/anrc_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/arealm_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/areawater_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/bg_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/cbsa_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/cd118_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/cnecta_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/coastline_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/concity_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/county_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/cousub_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/csa_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/edges_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/elsd_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/estate_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/faces_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/facesah_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/facesal_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/facesmil_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/featnames_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/linearwater_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/metdiv_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/mil_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/necta_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/nectadiv_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/place_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/pointlm_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/primaryroads_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/prisecroads_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/puma20_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/rails_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/roads_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/scsd_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/sdadm_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/sldl_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/sldu_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/state_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/subbarrio_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/tabblock20_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/tbg_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/tract_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/ttract_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/uac20_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/uga20_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/unsd_features.ndjson
+# python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/vtd20_features.ndjson
+python3 -m pypgstac.pypgstac --dsn $DSN_CONNECTION load items --method upsert ./data/zcta520_features.ndjson
 
 
 echo "finished"
